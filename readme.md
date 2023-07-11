@@ -10,8 +10,9 @@ Ever since the early 2000s, people have been developing quadrupeds and bipeds su
 
 ## High level goals (WIP)
 
-[] Take inspration from earlier work and minic similar designs
-[] Develop feedforward walking algorithm through trial and error
-[] Plan sensors and compute
-[] Initially have everything on breadboards but slowly transition to PCB
-[] Interate mechanically while developing feedback walking algorithms that accomendate a wider range of movements such as jumping, turning, walking on hills, and walking on rough/slippery terrain
+- [ ] Take inspration from earlier work and minic similar designs
+- [x] Purchase equipments (printers, servos, etc.)
+- [ ] Develop feedforward walking algorithm through trial and error
+- [ ] Plan sensors and compute
+- [ ] Initially have everything on breadboards but slowly transition to PCB
+- [ ] Interate mechanically while developing feedback walking algorithms that accomendate a wider range of movements such as jumping, turning, walking on hills, and walking on rough/slippery terrain
