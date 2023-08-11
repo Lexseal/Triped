@@ -1,0 +1,524 @@
+<?xml version="1.0" ?>
+<robot name="Triped" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Triped_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Triped_description)/urdf/Triped.trans" />
+<xacro:include filename="$(find Triped_description)/urdf/Triped.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.29999999999999977 0.002819220522697178 -0.018268314912160678" rpy="0 0 0"/>
+    <mass value="0.1757688053142464"/>
+    <inertia ixx="0.000131" iyy="0.000131" izz="0.000257" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_7_1">
+  <inertial>
+    <origin xyz="-0.012444434964551943 0.0004572862700335852 2.3437537285259102e-07" rpy="0 0 0"/>
+    <mass value="0.05681321383283272"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="6e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.334457 -0.013741 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.334457 -0.013741 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_8_1">
+  <inertial>
+    <origin xyz="0.005826157473749316 -0.011006146504216378 2.3443497752101417e-07" rpy="0 0 0"/>
+    <mass value="0.056813213832833276"/>
+    <inertia ixx="4e-06" iyy="3e-06" izz="6e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.29223 0.032482 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.29223 0.032482 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_9_1">
+  <inertial>
+    <origin xyz="0.006618277490802571 0.010548521802274634 2.3443497750019748e-07" rpy="0 0 0"/>
+    <mass value="0.05681321383283352"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.273313 -0.027199 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.273313 -0.027199 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_6_1">
+  <inertial>
+    <origin xyz="0.006265484650720077 0.010754317370285215 0.00040768815100020867" rpy="0 0 0"/>
+    <mass value="0.05681321383283365"/>
+    <inertia ixx="5e-06" iyy="4e-06" izz="4e-06" ixy="-1e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.269334 -0.024591 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.269334 -0.024591 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_5_1">
+  <inertial>
+    <origin xyz="0.006180683830604161 -0.010803431808095225 0.0004076881510002052" rpy="0 0 0"/>
+    <mass value="0.0568132138328333"/>
+    <inertia ixx="5e-06" iyy="4e-06" izz="4e-06" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.296478 0.034624 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.296478 0.034624 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_4_1">
+  <inertial>
+    <origin xyz="-0.012446168481324071 4.977600590196432e-05 0.0004076880913956339" rpy="0 0 0"/>
+    <mass value="0.05681321383283373"/>
+    <inertia ixx="3e-06" iyy="6e-06" izz="4e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.334188 -0.01849 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.334188 -0.01849 0.021891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_3_1">
+  <inertial>
+    <origin xyz="0.010959246446309023 -0.005914329033999341 2.0625278938923852e-07" rpy="0 0 0"/>
+    <mass value="0.05681321383283354"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.297718 -0.04981 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.297718 -0.04981 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_2_1">
+  <inertial>
+    <origin xyz="-0.010601373641961231 -0.006534260499228391 2.0625278941352465e-07" rpy="0 0 0"/>
+    <mass value="0.05681321383283315"/>
+    <inertia ixx="4e-06" iyy="3e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.260446 0.022652 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.260446 0.022652 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_1_1">
+  <inertial>
+    <origin xyz="-0.00035787280434712576 0.012448251101319707 2.0625278945862746e-07" rpy="0 0 0"/>
+    <mass value="0.056813213832833935"/>
+    <inertia ixx="4e-06" iyy="3e-06" izz="6e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.341836 0.0187 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.341836 0.0187 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/servo_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="holder_3_1">
+  <inertial>
+    <origin xyz="-0.011928104676090512 -0.0008368610120133707 -0.004922377216219281" rpy="0 0 0"/>
+    <mass value="0.01270962879806373"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.254578 -0.03075 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.254578 -0.03075 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="holder_2_1">
+  <inertial>
+    <origin xyz="0.005240074017050178 0.010748697067850255 -0.004922377216219274" rpy="0 0 0"/>
+    <mass value="0.012709628798063744"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.298523 0.050483 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.298523 0.050483 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="holder_1_1">
+  <inertial>
+    <origin xyz="0.0066880306590405 -0.009912174487744969 -0.004922377275823887" rpy="0 0 0"/>
+    <mass value="0.012709628798063744"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.346899 -0.028191 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.346899 -0.028191 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_1">
+  <inertial>
+    <origin xyz="0.004435812317048482 0.012450267398115566 -0.025869299731319517" rpy="0 0 0"/>
+    <mass value="0.02443333886444788"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="4e-06" ixy="-1e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.271097 -0.021567 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.271097 -0.021567 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_1">
+  <inertial>
+    <origin xyz="0.008564894984045668 -0.010066061313577387 -0.025869299731319448" rpy="0 0 0"/>
+    <mass value="0.024433338864447915"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="4e-06" ixy="1e-06" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.298216 0.031586 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.298216 0.031586 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_1">
+  <inertial>
+    <origin xyz="-0.012999707301094343 -0.002383544516446196 -0.025869299790924144" rpy="0 0 0"/>
+    <mass value="0.024433338864447915"/>
+    <inertia ixx="5e-06" iyy="6e-06" izz="4e-06" ixy="0.0" iyz="-1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.330688 -0.018476 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.330688 -0.018476 0.016881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foot_3_1">
+  <inertial>
+    <origin xyz="0.008302420898782858 0.014249390945855114 -0.018859401725519927" rpy="0 0 0"/>
+    <mass value="0.01400317930423439"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.270746 -0.021652 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.270746 -0.021652 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foot_1_1">
+  <inertial>
+    <origin xyz="-0.016491210448172477 6.594988468514376e-05 -0.01885940178512461" rpy="0 0 0"/>
+    <mass value="0.014003179304234387"/>
+    <inertia ixx="2e-06" iyy="4e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.330937 -0.018737 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.330937 -0.018737 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foot_2_1">
+  <inertial>
+    <origin xyz="0.008188789549389397 -0.014314679262448449 -0.018859401725519885" rpy="0 0 0"/>
+    <mass value="0.014003179304234383"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.298317 0.031932 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.298317 0.031932 0.052031" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Triped_description/meshes/foot_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<joint name="base_to_servo_1" type="fixed">
+  <origin xyz="-0.341836 -0.0187 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo_1_1"/>
+</joint>
+
+<joint name="base_to_servo_2" type="fixed">
+  <origin xyz="-0.260446 -0.022652 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo_2_1"/>
+</joint>
+
+<joint name="base_to_servo_3" type="fixed">
+  <origin xyz="-0.297718 0.04981 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo_3_1"/>
+</joint>
+
+<joint name="holder_to_servo_4" type="fixed">
+  <origin xyz="0.012711 -0.009701 -0.00501" rpy="0 0 0"/>
+  <parent link="holder_1_1"/>
+  <child link="servo_4_1"/>
+</joint>
+
+<joint name="holder_to_servo_5" type="fixed">
+  <origin xyz="0.002045 0.015859 -0.00501" rpy="0 0 0"/>
+  <parent link="holder_2_1"/>
+  <child link="servo_5_1"/>
+</joint>
+
+<joint name="holder_to_servo_6" type="fixed">
+  <origin xyz="-0.014756 -0.006159 -0.00501" rpy="0 0 0"/>
+  <parent link="holder_3_1"/>
+  <child link="servo_6_1"/>
+</joint>
+
+<joint name="leg_to_servo_7" type="fixed">
+  <origin xyz="-0.003769 -0.004735 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_1_1"/>
+  <child link="servo_7_1"/>
+</joint>
+
+<joint name="leg_to_servo_8" type="fixed">
+  <origin xyz="0.005986 -0.000896 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_2_1"/>
+  <child link="servo_8_1"/>
+</joint>
+
+<joint name="leg_to_servo_9" type="fixed">
+  <origin xyz="-0.002216 0.005632 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_3_1"/>
+  <child link="servo_9_1"/>
+</joint>
+
+<joint name="revolute_holder_10" type="continuous">
+  <origin xyz="-0.346899 0.028191 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="holder_1_1"/>
+  <axis xyz="-0.003977 -0.999992 0.0"/>
+</joint>
+
+<joint name="revolute_holder_11" type="continuous">
+  <origin xyz="-0.298523 -0.050483 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="holder_2_1"/>
+  <axis xyz="0.868007 0.496552 -0.0"/>
+</joint>
+
+<joint name="revolute_holder_12" type="continuous">
+  <origin xyz="-0.254578 0.03075 -0.016881" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="holder_3_1"/>
+  <axis xyz="-0.86403 0.50344 -0.0"/>
+</joint>
+
+<joint name="revolulte_leg_13" type="continuous">
+  <origin xyz="0.016211 -0.009715 0.0" rpy="0 0 0"/>
+  <parent link="holder_1_1"/>
+  <child link="leg_1_1"/>
+  <axis xyz="0.999992 -0.003977 0.0"/>
+</joint>
+
+<joint name="revolulte_leg_14" type="continuous">
+  <origin xyz="0.000307 0.018897 0.0" rpy="0 0 0"/>
+  <parent link="holder_2_1"/>
+  <child link="leg_2_1"/>
+  <axis xyz="-0.496552 0.868007 -0.0"/>
+</joint>
+
+<joint name="revolulte_leg_15" type="continuous">
+  <origin xyz="-0.016519 -0.009183 0.0" rpy="0 0 0"/>
+  <parent link="holder_3_1"/>
+  <child link="leg_3_1"/>
+  <axis xyz="-0.50344 -0.86403 0.0"/>
+</joint>
+
+<joint name="revolute_foot_16" type="continuous">
+  <origin xyz="-0.000249 0.000261 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_1_1"/>
+  <child link="foot_1_1"/>
+  <axis xyz="0.999992 -0.003977 0.0"/>
+</joint>
+
+<joint name="revolute_foot_17" type="continuous">
+  <origin xyz="-0.000101 -0.000346 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_2_1"/>
+  <child link="foot_2_1"/>
+  <axis xyz="-0.496552 0.868007 -0.0"/>
+</joint>
+
+<joint name="revolute_foot_18" type="continuous">
+  <origin xyz="0.000351 8.5e-05 -0.03515" rpy="0 0 0"/>
+  <parent link="leg_3_1"/>
+  <child link="foot_3_1"/>
+  <axis xyz="-0.50344 -0.86403 0.0"/>
+</joint>
+
+</robot>
