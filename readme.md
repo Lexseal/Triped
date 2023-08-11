@@ -8,11 +8,15 @@ Ever since the early 2000s, people have been developing quadrupeds and bipeds su
 1. They are more techincally challenging than other widely studied robots. They can represent a robot dog with one missing leg.
 2. They are more stable than bipeds while also being a bit cheaper than quadrupeds since they have fewer legs that need to be actuated.
 
-## High level goals (WIP)
+## High-level Goals (WIP)
 
-- [ ] Take inspration from earlier work and minic similar designs
+- [x] Take inspration from earlier work and minic similar designs
 - [x] Purchase equipments (printers, servos, etc.)
 - [ ] Develop feedforward walking algorithm through trial and error
 - [ ] Plan sensors and compute
 - [ ] Initially have everything on breadboards but slowly transition to PCB
 - [ ] Interate mechanically while developing feedback walking algorithms that accomendate a wider range of movements such as jumping, turning, walking on hills, and walking on rough/slippery terrain
+
+## Simulation Software
+
+After some back and forth and reading [this article](https://arxiv.org/pdf/2103.04616.pdf), I have decided to go with [Pybullet](https://github.com/bulletphysics/bullet3). Although that is the slowest environment to run, most of the RL training time is spent on actual training rather than the simulation itself. Thus, Pybullet's ease of use, its native python interface, and big community is a huge plus.
