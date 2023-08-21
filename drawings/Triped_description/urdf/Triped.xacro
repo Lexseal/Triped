@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="Triped" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<mujoco> 
+  <compiler meshdir="../meshes/" balanceinertia="true" />
+</mujoco>
+
 <xacro:include filename="$(find Triped_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find Triped_description)/urdf/Triped.trans" />
 <xacro:include filename="$(find Triped_description)/urdf/Triped.gazebo" />

@@ -1,0 +1,650 @@
+[2023-08-18 14:19:51,633][02760] Saving configuration to /Users/xinsonglin/Triped/train_dir/exp_ant_1/config.json...
+[2023-08-18 14:19:51,653][02760] Rollout worker 0 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 1 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 2 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 3 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 4 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 5 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 6 uses device cpu
+[2023-08-18 14:19:51,654][02760] Rollout worker 7 uses device cpu
+[2023-08-18 14:19:51,654][02760] In synchronous mode, we only accumulate one batch. Setting num_batches_to_accumulate to 1
+[2023-08-18 14:24:09,701][02911] Saving configuration to /Users/xinsonglin/Triped/train_dir/exp_ant_1/config.json...
+[2023-08-18 14:24:09,723][02911] Rollout worker 0 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 1 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 2 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 3 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 4 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 5 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 6 uses device cpu
+[2023-08-18 14:24:09,724][02911] Rollout worker 7 uses device cpu
+[2023-08-18 14:24:09,724][02911] In synchronous mode, we only accumulate one batch. Setting num_batches_to_accumulate to 1
+[2023-08-18 14:24:09,899][02911] InferenceWorker_p0-w0: min num requests: 2
+[2023-08-18 14:24:09,938][02911] Starting all processes...
+[2023-08-18 14:24:09,939][02911] Starting process learner_proc0
+[2023-08-18 14:24:09,994][02911] Starting all processes...
+[2023-08-18 14:24:10,111][02911] Starting process inference_proc0-0
+[2023-08-18 14:24:10,117][02911] Starting process rollout_proc0
+[2023-08-18 14:24:10,120][02911] Starting process rollout_proc1
+[2023-08-18 14:24:10,123][02911] Starting process rollout_proc2
+[2023-08-18 14:24:10,136][02911] Starting process rollout_proc3
+[2023-08-18 14:24:10,136][02911] Starting process rollout_proc4
+[2023-08-18 14:24:10,141][02911] Starting process rollout_proc6
+[2023-08-18 14:24:10,140][02911] Starting process rollout_proc5
+[2023-08-18 14:24:10,146][02911] Starting process rollout_proc7
+[2023-08-18 14:24:11,876][02925] Starting seed is not provided
+[2023-08-18 14:24:11,876][02925] Initializing actor-critic model on device cpu
+[2023-08-18 14:24:11,877][02925] RunningMeanStd input shape: (27,)
+[2023-08-18 14:24:11,878][02925] RunningMeanStd input shape: (1,)
+[2023-08-18 14:24:11,964][02925] Created Actor Critic model with architecture:
+[2023-08-18 14:24:11,965][02925] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): MultiInputEncoder(
+    (encoders): ModuleDict(
+      (obs): MlpEncoder(
+        (mlp_head): RecursiveScriptModule(
+          original_name=Sequential
+          (0): RecursiveScriptModule(original_name=Linear)
+          (1): RecursiveScriptModule(original_name=Tanh)
+          (2): RecursiveScriptModule(original_name=Linear)
+          (3): RecursiveScriptModule(original_name=Tanh)
+        )
+      )
+    )
+  )
+  (core): ModelCoreIdentity()
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=64, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationContinuousNonAdaptiveStddev(
+    (distribution_linear): Linear(in_features=64, out_features=8, bias=True)
+  )
+)
+[2023-08-18 14:24:11,969][02925] Using optimizer <class 'torch.optim.adam.Adam'>
+[2023-08-18 14:24:11,971][02925] No checkpoints found
+[2023-08-18 14:24:11,971][02925] Did not load from checkpoint, starting from scratch!
+[2023-08-18 14:24:11,971][02925] Initialized policy 0 weights for model version 0
+[2023-08-18 14:24:11,972][02925] LearnerWorker_p0 finished initialization!
+[2023-08-18 14:24:12,095][02930] On MacOS, not setting affinity
+[2023-08-18 14:24:12,124][02932] On MacOS, not setting affinity
+[2023-08-18 14:24:12,124][02929] On MacOS, not setting affinity
+[2023-08-18 14:24:12,124][02931] On MacOS, not setting affinity
+[2023-08-18 14:24:12,126][02926] RunningMeanStd input shape: (27,)
+[2023-08-18 14:24:12,130][02926] RunningMeanStd input shape: (1,)
+[2023-08-18 14:24:12,130][02928] On MacOS, not setting affinity
+[2023-08-18 14:24:12,137][02933] On MacOS, not setting affinity
+[2023-08-18 14:24:12,158][02934] On MacOS, not setting affinity
+[2023-08-18 14:24:12,159][02927] On MacOS, not setting affinity
+[2023-08-18 14:24:12,176][02911] Inference worker 0-0 is ready!
+[2023-08-18 14:24:12,176][02911] All inference workers are ready! Signal rollout workers to start!
+[2023-08-18 14:24:12,277][02930] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,277][02930] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,280][02931] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,280][02931] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,280][02933] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,280][02933] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,282][02928] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,282][02928] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,290][02934] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,290][02934] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,292][02930] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,293][02927] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,293][02927] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,295][02932] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,296][02932] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,296][02929] Decorrelating experience for 0 frames...
+[2023-08-18 14:24:12,296][02929] Decorrelating experience for 64 frames...
+[2023-08-18 14:24:12,296][02928] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,297][02931] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,302][02933] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,307][02927] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,308][02934] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,310][02932] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,313][02929] Decorrelating experience for 128 frames...
+[2023-08-18 14:24:12,327][02931] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,327][02930] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,330][02933] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,337][02928] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,342][02932] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,346][02927] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,349][02934] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,359][02929] Decorrelating experience for 192 frames...
+[2023-08-18 14:24:12,381][02931] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,386][02930] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,390][02933] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,392][02932] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,410][02928] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,425][02929] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,426][02934] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,430][02927] Decorrelating experience for 256 frames...
+[2023-08-18 14:24:12,458][02930] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,461][02931] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,470][02933] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,483][02932] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,487][02928] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,491][02929] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,499][02934] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,514][02927] Decorrelating experience for 320 frames...
+[2023-08-18 14:24:12,530][02930] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,560][02931] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,574][02933] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,578][02928] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,584][02929] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,587][02932] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,606][02927] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,611][02934] Decorrelating experience for 384 frames...
+[2023-08-18 14:24:12,657][02931] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,664][02933] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,667][02930] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,692][02928] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,703][02929] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,707][02927] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,707][02934] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:12,719][02932] Decorrelating experience for 448 frames...
+[2023-08-18 14:24:13,641][02911] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 12288. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:24:13,641][02911] Avg episode reward: [(0, '-152.897')]
+[2023-08-18 14:24:15,097][02926] Updated weights for policy 0, policy_version 80 (0.0002)
+[2023-08-18 14:24:17,429][02926] Updated weights for policy 0, policy_version 160 (0.0002)
+[2023-08-18 14:24:18,641][02911] Fps is (10 sec: 18020.9, 60 sec: 18020.9, 300 sec: 18020.9). Total num frames: 102400. Throughput: 0: 19036.8. Samples: 95192. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:24:18,641][02911] Avg episode reward: [(0, '-134.296')]
+[2023-08-18 14:24:18,642][02925] Saving new best policy, reward=-134.296!
+[2023-08-18 14:24:19,824][02926] Updated weights for policy 0, policy_version 240 (0.0002)
+[2023-08-18 14:24:22,067][02926] Updated weights for policy 0, policy_version 320 (0.0002)
+[2023-08-18 14:24:23,640][02911] Fps is (10 sec: 17613.1, 60 sec: 17613.1, 300 sec: 17613.1). Total num frames: 188416. Throughput: 0: 14798.7. Samples: 147984. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:24:23,641][02911] Avg episode reward: [(0, '-77.681')]
+[2023-08-18 14:24:23,643][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000000368_188416.pth...
+[2023-08-18 14:24:23,645][02925] Saving new best policy, reward=-77.681!
+[2023-08-18 14:24:24,386][02926] Updated weights for policy 0, policy_version 400 (0.0002)
+[2023-08-18 14:24:26,793][02926] Updated weights for policy 0, policy_version 480 (0.0002)
+[2023-08-18 14:24:28,642][02911] Fps is (10 sec: 17201.1, 60 sec: 17474.3, 300 sec: 17474.3). Total num frames: 274432. Throughput: 0: 16895.7. Samples: 253464. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:24:28,642][02911] Avg episode reward: [(0, '-40.621')]
+[2023-08-18 14:24:28,643][02925] Saving new best policy, reward=-40.621!
+[2023-08-18 14:24:29,320][02926] Updated weights for policy 0, policy_version 560 (0.0002)
+[2023-08-18 14:24:29,890][02911] Heartbeat connected on Batcher_0
+[2023-08-18 14:24:29,892][02911] Heartbeat connected on LearnerWorker_p0
+[2023-08-18 14:24:29,902][02911] Heartbeat connected on InferenceWorker_p0-w0
+[2023-08-18 14:24:29,909][02911] Heartbeat connected on RolloutWorker_w0
+[2023-08-18 14:24:29,914][02911] Heartbeat connected on RolloutWorker_w2
+[2023-08-18 14:24:29,914][02911] Heartbeat connected on RolloutWorker_w1
+[2023-08-18 14:24:29,922][02911] Heartbeat connected on RolloutWorker_w3
+[2023-08-18 14:24:29,925][02911] Heartbeat connected on RolloutWorker_w4
+[2023-08-18 14:24:29,930][02911] Heartbeat connected on RolloutWorker_w5
+[2023-08-18 14:24:29,936][02911] Heartbeat connected on RolloutWorker_w6
+[2023-08-18 14:24:29,943][02911] Heartbeat connected on RolloutWorker_w7
+[2023-08-18 14:24:31,995][02926] Updated weights for policy 0, policy_version 640 (0.0003)
+[2023-08-18 14:24:33,643][02911] Fps is (10 sec: 16788.7, 60 sec: 17200.8, 300 sec: 17200.8). Total num frames: 356352. Throughput: 0: 17409.2. Samples: 348232. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:24:33,644][02911] Avg episode reward: [(0, '47.490')]
+[2023-08-18 14:24:33,644][02925] Saving new best policy, reward=47.490!
+[2023-08-18 14:24:34,340][02926] Updated weights for policy 0, policy_version 720 (0.0002)
+[2023-08-18 14:24:36,634][02926] Updated weights for policy 0, policy_version 800 (0.0002)
+[2023-08-18 14:24:38,643][02911] Fps is (10 sec: 16793.7, 60 sec: 17202.1, 300 sec: 17202.1). Total num frames: 442368. Throughput: 0: 16057.8. Samples: 401472. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:24:38,643][02911] Avg episode reward: [(0, '193.989')]
+[2023-08-18 14:24:38,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000000864_442368.pth...
+[2023-08-18 14:24:38,648][02925] Saving new best policy, reward=193.989!
+[2023-08-18 14:24:39,011][02926] Updated weights for policy 0, policy_version 880 (0.0002)
+[2023-08-18 14:24:41,321][02926] Updated weights for policy 0, policy_version 960 (0.0002)
+[2023-08-18 14:24:43,643][02911] Fps is (10 sec: 17203.0, 60 sec: 17201.6, 300 sec: 17201.6). Total num frames: 528384. Throughput: 0: 16901.2. Samples: 507084. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:24:43,644][02911] Avg episode reward: [(0, '435.010')]
+[2023-08-18 14:24:43,663][02925] Saving new best policy, reward=435.010!
+[2023-08-18 14:24:43,664][02926] Updated weights for policy 0, policy_version 1040 (0.0002)
+[2023-08-18 14:24:46,741][02926] Updated weights for policy 0, policy_version 1120 (0.0003)
+[2023-08-18 14:24:48,643][02911] Fps is (10 sec: 15973.7, 60 sec: 16851.1, 300 sec: 16851.1). Total num frames: 602112. Throughput: 0: 17087.0. Samples: 598080. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:24:48,643][02911] Avg episode reward: [(0, '657.206')]
+[2023-08-18 14:24:48,643][02925] Saving new best policy, reward=657.206!
+[2023-08-18 14:24:49,118][02926] Updated weights for policy 0, policy_version 1200 (0.0002)
+[2023-08-18 14:24:51,407][02926] Updated weights for policy 0, policy_version 1280 (0.0002)
+[2023-08-18 14:24:53,643][02911] Fps is (10 sec: 16384.6, 60 sec: 16997.3, 300 sec: 16997.3). Total num frames: 692224. Throughput: 0: 16282.2. Samples: 651328. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:24:53,644][02911] Avg episode reward: [(0, '760.676')]
+[2023-08-18 14:24:53,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000001352_692224.pth...
+[2023-08-18 14:24:53,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000000368_188416.pth
+[2023-08-18 14:24:53,648][02925] Saving new best policy, reward=760.676!
+[2023-08-18 14:24:53,775][02926] Updated weights for policy 0, policy_version 1360 (0.0002)
+[2023-08-18 14:24:56,140][02926] Updated weights for policy 0, policy_version 1440 (0.0002)
+[2023-08-18 14:24:58,511][02926] Updated weights for policy 0, policy_version 1520 (0.0002)
+[2023-08-18 14:24:58,641][02911] Fps is (10 sec: 17616.3, 60 sec: 17021.1, 300 sec: 17021.1). Total num frames: 778240. Throughput: 0: 16775.5. Samples: 754900. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:24:58,641][02911] Avg episode reward: [(0, '1032.729')]
+[2023-08-18 14:24:58,641][02925] Saving new best policy, reward=1032.729!
+[2023-08-18 14:25:00,755][02926] Updated weights for policy 0, policy_version 1600 (0.0002)
+[2023-08-18 14:25:02,970][02926] Updated weights for policy 0, policy_version 1680 (0.0002)
+[2023-08-18 14:25:03,643][02911] Fps is (10 sec: 17612.2, 60 sec: 17120.3, 300 sec: 17120.3). Total num frames: 868352. Throughput: 0: 17090.8. Samples: 864320. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:25:03,644][02911] Avg episode reward: [(0, '1226.434')]
+[2023-08-18 14:25:03,644][02925] Saving new best policy, reward=1226.434!
+[2023-08-18 14:25:05,327][02926] Updated weights for policy 0, policy_version 1760 (0.0002)
+[2023-08-18 14:25:07,595][02926] Updated weights for policy 0, policy_version 1840 (0.0003)
+[2023-08-18 14:25:08,641][02911] Fps is (10 sec: 18022.2, 60 sec: 17203.1, 300 sec: 17203.1). Total num frames: 958464. Throughput: 0: 17081.3. Samples: 916648. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:25:08,641][02911] Avg episode reward: [(0, '1415.078')]
+[2023-08-18 14:25:08,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000001872_958464.pth...
+[2023-08-18 14:25:08,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000000864_442368.pth
+[2023-08-18 14:25:08,648][02925] Saving new best policy, reward=1415.078!
+[2023-08-18 14:25:09,870][02926] Updated weights for policy 0, policy_version 1920 (0.0002)
+[2023-08-18 14:25:12,158][02926] Updated weights for policy 0, policy_version 2000 (0.0002)
+[2023-08-18 14:25:13,641][02911] Fps is (10 sec: 18026.7, 60 sec: 17271.3, 300 sec: 17271.3). Total num frames: 1048576. Throughput: 0: 17133.3. Samples: 1024444. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:13,641][02911] Avg episode reward: [(0, '1516.440')]
+[2023-08-18 14:25:13,642][02925] Saving new best policy, reward=1516.440!
+[2023-08-18 14:25:14,435][02926] Updated weights for policy 0, policy_version 2080 (0.0002)
+[2023-08-18 14:25:16,714][02926] Updated weights for policy 0, policy_version 2160 (0.0002)
+[2023-08-18 14:25:18,641][02911] Fps is (10 sec: 18021.9, 60 sec: 17271.5, 300 sec: 17329.1). Total num frames: 1138688. Throughput: 0: 17414.1. Samples: 1131828. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:18,641][02911] Avg episode reward: [(0, '1722.801')]
+[2023-08-18 14:25:18,642][02925] Saving new best policy, reward=1722.801!
+[2023-08-18 14:25:19,038][02926] Updated weights for policy 0, policy_version 2240 (0.0002)
+[2023-08-18 14:25:21,335][02926] Updated weights for policy 0, policy_version 2320 (0.0002)
+[2023-08-18 14:25:23,628][02926] Updated weights for policy 0, policy_version 2400 (0.0002)
+[2023-08-18 14:25:23,643][02911] Fps is (10 sec: 18018.9, 60 sec: 17339.0, 300 sec: 17378.2). Total num frames: 1228800. Throughput: 0: 17412.2. Samples: 1185032. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:25:23,643][02911] Avg episode reward: [(0, '1716.044')]
+[2023-08-18 14:25:23,650][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000002400_1228800.pth...
+[2023-08-18 14:25:23,651][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000001352_692224.pth
+[2023-08-18 14:25:25,822][02926] Updated weights for policy 0, policy_version 2480 (0.0002)
+[2023-08-18 14:25:28,124][02926] Updated weights for policy 0, policy_version 2560 (0.0002)
+[2023-08-18 14:25:28,644][02911] Fps is (10 sec: 18017.9, 60 sec: 17407.6, 300 sec: 17421.0). Total num frames: 1318912. Throughput: 0: 17501.5. Samples: 1294652. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:28,644][02911] Avg episode reward: [(0, '2027.783')]
+[2023-08-18 14:25:28,645][02925] Saving new best policy, reward=2027.783!
+[2023-08-18 14:25:30,378][02926] Updated weights for policy 0, policy_version 2640 (0.0002)
+[2023-08-18 14:25:32,735][02926] Updated weights for policy 0, policy_version 2720 (0.0003)
+[2023-08-18 14:25:33,645][02911] Fps is (10 sec: 17609.9, 60 sec: 17475.9, 300 sec: 17407.1). Total num frames: 1404928. Throughput: 0: 17828.6. Samples: 1400400. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:25:33,645][02911] Avg episode reward: [(0, '2266.850')]
+[2023-08-18 14:25:33,646][02925] Saving new best policy, reward=2266.850!
+[2023-08-18 14:25:35,240][02926] Updated weights for policy 0, policy_version 2800 (0.0003)
+[2023-08-18 14:25:37,729][02926] Updated weights for policy 0, policy_version 2880 (0.0002)
+[2023-08-18 14:25:38,641][02911] Fps is (10 sec: 16797.8, 60 sec: 17408.3, 300 sec: 17347.7). Total num frames: 1486848. Throughput: 0: 17711.4. Samples: 1448304. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:38,641][02911] Avg episode reward: [(0, '2452.235')]
+[2023-08-18 14:25:38,643][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000002904_1486848.pth...
+[2023-08-18 14:25:38,644][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000001872_958464.pth
+[2023-08-18 14:25:38,644][02925] Saving new best policy, reward=2452.235!
+[2023-08-18 14:25:40,473][02926] Updated weights for policy 0, policy_version 2960 (0.0002)
+[2023-08-18 14:25:43,530][02926] Updated weights for policy 0, policy_version 3040 (0.0003)
+[2023-08-18 14:25:43,646][02911] Fps is (10 sec: 15152.6, 60 sec: 17134.1, 300 sec: 17156.6). Total num frames: 1556480. Throughput: 0: 17445.6. Samples: 1540048. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:43,647][02911] Avg episode reward: [(0, '2543.267')]
+[2023-08-18 14:25:43,649][02925] Saving new best policy, reward=2543.267!
+[2023-08-18 14:25:46,186][02926] Updated weights for policy 0, policy_version 3120 (0.0002)
+[2023-08-18 14:25:48,483][02926] Updated weights for policy 0, policy_version 3200 (0.0002)
+[2023-08-18 14:25:48,641][02911] Fps is (10 sec: 15155.8, 60 sec: 17272.0, 300 sec: 17117.0). Total num frames: 1638400. Throughput: 0: 17094.7. Samples: 1633536. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:25:48,641][02911] Avg episode reward: [(0, '2607.094')]
+[2023-08-18 14:25:48,642][02925] Saving new best policy, reward=2607.094!
+[2023-08-18 14:25:50,893][02926] Updated weights for policy 0, policy_version 3280 (0.0002)
+[2023-08-18 14:25:53,317][02926] Updated weights for policy 0, policy_version 3360 (0.0002)
+[2023-08-18 14:25:53,644][02911] Fps is (10 sec: 16797.1, 60 sec: 17202.9, 300 sec: 17120.7). Total num frames: 1724416. Throughput: 0: 17049.0. Samples: 1683912. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:53,644][02911] Avg episode reward: [(0, '2626.871')]
+[2023-08-18 14:25:53,650][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000003368_1724416.pth...
+[2023-08-18 14:25:53,655][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000002400_1228800.pth
+[2023-08-18 14:25:53,656][02925] Saving new best policy, reward=2626.871!
+[2023-08-18 14:25:55,908][02926] Updated weights for policy 0, policy_version 3440 (0.0002)
+[2023-08-18 14:25:58,317][02926] Updated weights for policy 0, policy_version 3520 (0.0002)
+[2023-08-18 14:25:58,642][02911] Fps is (10 sec: 16791.2, 60 sec: 17134.5, 300 sec: 17085.9). Total num frames: 1806336. Throughput: 0: 16863.7. Samples: 1783328. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:25:58,642][02911] Avg episode reward: [(0, '2675.776')]
+[2023-08-18 14:25:58,643][02925] Saving new best policy, reward=2675.776!
+[2023-08-18 14:26:01,013][02926] Updated weights for policy 0, policy_version 3600 (0.0003)
+[2023-08-18 14:26:03,459][02926] Updated weights for policy 0, policy_version 3680 (0.0002)
+[2023-08-18 14:26:03,641][02911] Fps is (10 sec: 15979.6, 60 sec: 16930.8, 300 sec: 17017.0). Total num frames: 1884160. Throughput: 0: 16629.1. Samples: 1880136. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:26:03,641][02911] Avg episode reward: [(0, '2640.253')]
+[2023-08-18 14:26:06,088][02926] Updated weights for policy 0, policy_version 3760 (0.0002)
+[2023-08-18 14:26:08,587][02926] Updated weights for policy 0, policy_version 3840 (0.0002)
+[2023-08-18 14:26:08,641][02911] Fps is (10 sec: 15975.9, 60 sec: 16793.5, 300 sec: 16989.4). Total num frames: 1966080. Throughput: 0: 16487.2. Samples: 1926928. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:08,642][02911] Avg episode reward: [(0, '2736.533')]
+[2023-08-18 14:26:08,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000003840_1966080.pth...
+[2023-08-18 14:26:08,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000002904_1486848.pth
+[2023-08-18 14:26:08,648][02925] Saving new best policy, reward=2736.533!
+[2023-08-18 14:26:11,185][02926] Updated weights for policy 0, policy_version 3920 (0.0002)
+[2023-08-18 14:26:13,642][02911] Fps is (10 sec: 15972.1, 60 sec: 16588.4, 300 sec: 16929.9). Total num frames: 2043904. Throughput: 0: 16197.4. Samples: 2023516. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:26:13,643][02911] Avg episode reward: [(0, '2581.041')]
+[2023-08-18 14:26:13,765][02926] Updated weights for policy 0, policy_version 4000 (0.0002)
+[2023-08-18 14:26:16,265][02926] Updated weights for policy 0, policy_version 4080 (0.0002)
+[2023-08-18 14:26:18,601][02926] Updated weights for policy 0, policy_version 4160 (0.0002)
+[2023-08-18 14:26:18,641][02911] Fps is (10 sec: 16383.7, 60 sec: 16520.4, 300 sec: 16940.9). Total num frames: 2129920. Throughput: 0: 16050.8. Samples: 2122636. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:26:18,643][02911] Avg episode reward: [(0, '2692.945')]
+[2023-08-18 14:26:20,944][02926] Updated weights for policy 0, policy_version 4240 (0.0002)
+[2023-08-18 14:26:23,275][02926] Updated weights for policy 0, policy_version 4320 (0.0002)
+[2023-08-18 14:26:23,644][02911] Fps is (10 sec: 17200.1, 60 sec: 16451.9, 300 sec: 16950.7). Total num frames: 2215936. Throughput: 0: 16149.8. Samples: 2175096. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:26:23,644][02911] Avg episode reward: [(0, '2720.789')]
+[2023-08-18 14:26:23,648][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000004328_2215936.pth...
+[2023-08-18 14:26:23,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000003368_1724416.pth
+[2023-08-18 14:26:25,639][02926] Updated weights for policy 0, policy_version 4400 (0.0002)
+[2023-08-18 14:26:27,981][02926] Updated weights for policy 0, policy_version 4480 (0.0002)
+[2023-08-18 14:26:28,641][02911] Fps is (10 sec: 17203.8, 60 sec: 16384.7, 300 sec: 16960.4). Total num frames: 2301952. Throughput: 0: 16461.1. Samples: 2280712. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:28,641][02911] Avg episode reward: [(0, '2875.478')]
+[2023-08-18 14:26:28,642][02925] Saving new best policy, reward=2875.478!
+[2023-08-18 14:26:30,317][02926] Updated weights for policy 0, policy_version 4560 (0.0002)
+[2023-08-18 14:26:32,573][02926] Updated weights for policy 0, policy_version 4640 (0.0002)
+[2023-08-18 14:26:33,641][02911] Fps is (10 sec: 17617.9, 60 sec: 16453.2, 300 sec: 16998.3). Total num frames: 2392064. Throughput: 0: 16743.0. Samples: 2386980. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:26:33,642][02911] Avg episode reward: [(0, '2896.800')]
+[2023-08-18 14:26:33,643][02925] Saving new best policy, reward=2896.800!
+[2023-08-18 14:26:34,869][02926] Updated weights for policy 0, policy_version 4720 (0.0002)
+[2023-08-18 14:26:37,293][02926] Updated weights for policy 0, policy_version 4800 (0.0002)
+[2023-08-18 14:26:38,641][02911] Fps is (10 sec: 17612.5, 60 sec: 16520.5, 300 sec: 17005.4). Total num frames: 2478080. Throughput: 0: 16780.5. Samples: 2438984. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:38,642][02911] Avg episode reward: [(0, '2971.325')]
+[2023-08-18 14:26:38,647][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000004840_2478080.pth...
+[2023-08-18 14:26:38,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000003840_1966080.pth
+[2023-08-18 14:26:38,649][02925] Saving new best policy, reward=2971.325!
+[2023-08-18 14:26:39,654][02926] Updated weights for policy 0, policy_version 4880 (0.0002)
+[2023-08-18 14:26:42,028][02926] Updated weights for policy 0, policy_version 4960 (0.0002)
+[2023-08-18 14:26:43,643][02911] Fps is (10 sec: 17199.7, 60 sec: 16794.4, 300 sec: 17011.7). Total num frames: 2564096. Throughput: 0: 16873.7. Samples: 2542664. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:43,644][02911] Avg episode reward: [(0, '3016.971')]
+[2023-08-18 14:26:43,644][02925] Saving new best policy, reward=3016.971!
+[2023-08-18 14:26:44,361][02926] Updated weights for policy 0, policy_version 5040 (0.0002)
+[2023-08-18 14:26:46,587][02926] Updated weights for policy 0, policy_version 5120 (0.0002)
+[2023-08-18 14:26:48,643][02911] Fps is (10 sec: 17608.9, 60 sec: 16929.3, 300 sec: 17044.3). Total num frames: 2654208. Throughput: 0: 17111.0. Samples: 2650176. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:48,644][02911] Avg episode reward: [(0, '2874.026')]
+[2023-08-18 14:26:48,907][02926] Updated weights for policy 0, policy_version 5200 (0.0002)
+[2023-08-18 14:26:51,179][02926] Updated weights for policy 0, policy_version 5280 (0.0002)
+[2023-08-18 14:26:53,466][02926] Updated weights for policy 0, policy_version 5360 (0.0002)
+[2023-08-18 14:26:53,641][02911] Fps is (10 sec: 18027.1, 60 sec: 16999.4, 300 sec: 17075.2). Total num frames: 2744320. Throughput: 0: 17255.8. Samples: 2703432. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:26:53,641][02911] Avg episode reward: [(0, '2968.029')]
+[2023-08-18 14:26:53,645][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000005360_2744320.pth...
+[2023-08-18 14:26:53,646][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000004328_2215936.pth
+[2023-08-18 14:26:55,748][02926] Updated weights for policy 0, policy_version 5440 (0.0002)
+[2023-08-18 14:26:58,064][02926] Updated weights for policy 0, policy_version 5520 (0.0002)
+[2023-08-18 14:26:58,641][02911] Fps is (10 sec: 18027.1, 60 sec: 17135.3, 300 sec: 17103.9). Total num frames: 2834432. Throughput: 0: 17503.1. Samples: 2811128. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:26:58,641][02911] Avg episode reward: [(0, '2872.442')]
+[2023-08-18 14:27:00,389][02926] Updated weights for policy 0, policy_version 5600 (0.0002)
+[2023-08-18 14:27:02,654][02926] Updated weights for policy 0, policy_version 5680 (0.0002)
+[2023-08-18 14:27:03,641][02911] Fps is (10 sec: 18022.1, 60 sec: 17339.8, 300 sec: 17130.9). Total num frames: 2924544. Throughput: 0: 17654.3. Samples: 2917072. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:03,641][02911] Avg episode reward: [(0, '3116.338')]
+[2023-08-18 14:27:03,643][02925] Saving new best policy, reward=3116.338!
+[2023-08-18 14:27:04,975][02926] Updated weights for policy 0, policy_version 5760 (0.0002)
+[2023-08-18 14:27:07,245][02926] Updated weights for policy 0, policy_version 5840 (0.0002)
+[2023-08-18 14:27:08,644][02911] Fps is (10 sec: 18016.4, 60 sec: 17475.4, 300 sec: 17156.0). Total num frames: 3014656. Throughput: 0: 17695.7. Samples: 2971400. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:08,644][02911] Avg episode reward: [(0, '2866.777')]
+[2023-08-18 14:27:08,655][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000005888_3014656.pth...
+[2023-08-18 14:27:08,658][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000004840_2478080.pth
+[2023-08-18 14:27:09,551][02926] Updated weights for policy 0, policy_version 5920 (0.0002)
+[2023-08-18 14:27:11,968][02926] Updated weights for policy 0, policy_version 6000 (0.0002)
+[2023-08-18 14:27:13,644][02911] Fps is (10 sec: 17607.9, 60 sec: 17612.4, 300 sec: 17157.4). Total num frames: 3100672. Throughput: 0: 17675.6. Samples: 3076160. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:13,644][02911] Avg episode reward: [(0, '2803.053')]
+[2023-08-18 14:27:14,285][02926] Updated weights for policy 0, policy_version 6080 (0.0002)
+[2023-08-18 14:27:16,625][02926] Updated weights for policy 0, policy_version 6160 (0.0002)
+[2023-08-18 14:27:18,640][02911] Fps is (10 sec: 17209.5, 60 sec: 17613.1, 300 sec: 17158.9). Total num frames: 3186688. Throughput: 0: 17650.3. Samples: 3181228. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:27:18,641][02911] Avg episode reward: [(0, '2980.410')]
+[2023-08-18 14:27:18,968][02926] Updated weights for policy 0, policy_version 6240 (0.0002)
+[2023-08-18 14:27:21,218][02926] Updated weights for policy 0, policy_version 6320 (0.0002)
+[2023-08-18 14:27:23,462][02926] Updated weights for policy 0, policy_version 6400 (0.0003)
+[2023-08-18 14:27:23,641][02911] Fps is (10 sec: 17618.0, 60 sec: 17682.1, 300 sec: 17181.6). Total num frames: 3276800. Throughput: 0: 17709.5. Samples: 3235904. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:27:23,641][02911] Avg episode reward: [(0, '3144.830')]
+[2023-08-18 14:27:23,644][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000006400_3276800.pth...
+[2023-08-18 14:27:23,647][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000005360_2744320.pth
+[2023-08-18 14:27:23,647][02925] Saving new best policy, reward=3144.830!
+[2023-08-18 14:27:25,741][02926] Updated weights for policy 0, policy_version 6480 (0.0002)
+[2023-08-18 14:27:28,006][02926] Updated weights for policy 0, policy_version 6560 (0.0002)
+[2023-08-18 14:27:28,644][02911] Fps is (10 sec: 18017.0, 60 sec: 17748.6, 300 sec: 17202.9). Total num frames: 3366912. Throughput: 0: 17814.1. Samples: 3344300. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:28,644][02911] Avg episode reward: [(0, '3194.763')]
+[2023-08-18 14:27:28,644][02925] Saving new best policy, reward=3194.763!
+[2023-08-18 14:27:30,268][02926] Updated weights for policy 0, policy_version 6640 (0.0002)
+[2023-08-18 14:27:32,613][02926] Updated weights for policy 0, policy_version 6720 (0.0002)
+[2023-08-18 14:27:33,642][02911] Fps is (10 sec: 18020.4, 60 sec: 17749.2, 300 sec: 17223.6). Total num frames: 3457024. Throughput: 0: 17787.2. Samples: 3450572. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:33,642][02911] Avg episode reward: [(0, '3038.537')]
+[2023-08-18 14:27:35,052][02926] Updated weights for policy 0, policy_version 6800 (0.0002)
+[2023-08-18 14:27:37,389][02926] Updated weights for policy 0, policy_version 6880 (0.0002)
+[2023-08-18 14:27:38,644][02911] Fps is (10 sec: 17611.8, 60 sec: 17748.5, 300 sec: 17222.9). Total num frames: 3543040. Throughput: 0: 17735.9. Samples: 3501604. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:38,645][02911] Avg episode reward: [(0, '2909.532')]
+[2023-08-18 14:27:38,650][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000006920_3543040.pth...
+[2023-08-18 14:27:38,652][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000005888_3014656.pth
+[2023-08-18 14:27:39,705][02926] Updated weights for policy 0, policy_version 6960 (0.0002)
+[2023-08-18 14:27:42,004][02926] Updated weights for policy 0, policy_version 7040 (0.0002)
+[2023-08-18 14:27:43,640][02911] Fps is (10 sec: 17205.5, 60 sec: 17750.2, 300 sec: 17222.7). Total num frames: 3629056. Throughput: 0: 17712.1. Samples: 3608164. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:43,641][02911] Avg episode reward: [(0, '3039.124')]
+[2023-08-18 14:27:44,389][02926] Updated weights for policy 0, policy_version 7120 (0.0002)
+[2023-08-18 14:27:46,844][02926] Updated weights for policy 0, policy_version 7200 (0.0002)
+[2023-08-18 14:27:48,641][02911] Fps is (10 sec: 17209.2, 60 sec: 17681.9, 300 sec: 17222.3). Total num frames: 3715072. Throughput: 0: 17616.8. Samples: 3709824. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:27:48,641][02911] Avg episode reward: [(0, '3101.776')]
+[2023-08-18 14:27:49,224][02926] Updated weights for policy 0, policy_version 7280 (0.0002)
+[2023-08-18 14:27:51,516][02926] Updated weights for policy 0, policy_version 7360 (0.0002)
+[2023-08-18 14:27:53,640][02911] Fps is (10 sec: 17203.3, 60 sec: 17612.9, 300 sec: 17221.8). Total num frames: 3801088. Throughput: 0: 17573.5. Samples: 3762140. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:53,641][02911] Avg episode reward: [(0, '3074.528')]
+[2023-08-18 14:27:53,647][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000007432_3805184.pth...
+[2023-08-18 14:27:53,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000006400_3276800.pth
+[2023-08-18 14:27:53,868][02926] Updated weights for policy 0, policy_version 7440 (0.0002)
+[2023-08-18 14:27:56,152][02926] Updated weights for policy 0, policy_version 7520 (0.0002)
+[2023-08-18 14:27:58,428][02926] Updated weights for policy 0, policy_version 7600 (0.0002)
+[2023-08-18 14:27:58,642][02911] Fps is (10 sec: 17610.1, 60 sec: 17612.4, 300 sec: 17239.5). Total num frames: 3891200. Throughput: 0: 17626.6. Samples: 3869332. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:27:58,642][02911] Avg episode reward: [(0, '2915.122')]
+[2023-08-18 14:28:00,722][02926] Updated weights for policy 0, policy_version 7680 (0.0002)
+[2023-08-18 14:28:03,010][02926] Updated weights for policy 0, policy_version 7760 (0.0002)
+[2023-08-18 14:28:03,641][02911] Fps is (10 sec: 18021.5, 60 sec: 17612.8, 300 sec: 17256.6). Total num frames: 3981312. Throughput: 0: 17679.5. Samples: 3976816. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:28:03,641][02911] Avg episode reward: [(0, '3414.800')]
+[2023-08-18 14:28:03,642][02925] Saving new best policy, reward=3414.800!
+[2023-08-18 14:28:05,217][02926] Updated weights for policy 0, policy_version 7840 (0.0002)
+[2023-08-18 14:28:07,448][02926] Updated weights for policy 0, policy_version 7920 (0.0002)
+[2023-08-18 14:28:08,643][02911] Fps is (10 sec: 18429.6, 60 sec: 17681.3, 300 sec: 17290.1). Total num frames: 4075520. Throughput: 0: 17694.6. Samples: 4032208. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:28:08,645][02911] Avg episode reward: [(0, '3075.851')]
+[2023-08-18 14:28:08,648][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000007960_4075520.pth...
+[2023-08-18 14:28:08,650][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000006920_3543040.pth
+[2023-08-18 14:28:09,756][02926] Updated weights for policy 0, policy_version 8000 (0.0002)
+[2023-08-18 14:28:12,010][02926] Updated weights for policy 0, policy_version 8080 (0.0002)
+[2023-08-18 14:28:13,641][02911] Fps is (10 sec: 18431.4, 60 sec: 17750.0, 300 sec: 17305.5). Total num frames: 4165632. Throughput: 0: 17695.3. Samples: 4140552. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:28:13,641][02911] Avg episode reward: [(0, '3266.747')]
+[2023-08-18 14:28:14,303][02926] Updated weights for policy 0, policy_version 8160 (0.0002)
+[2023-08-18 14:28:16,489][02926] Updated weights for policy 0, policy_version 8240 (0.0002)
+[2023-08-18 14:28:18,643][02911] Fps is (10 sec: 18022.7, 60 sec: 17816.8, 300 sec: 17320.0). Total num frames: 4255744. Throughput: 0: 17771.9. Samples: 4250332. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-18 14:28:18,644][02911] Avg episode reward: [(0, '3207.284')]
+[2023-08-18 14:28:18,747][02926] Updated weights for policy 0, policy_version 8320 (0.0002)
+[2023-08-18 14:28:20,984][02926] Updated weights for policy 0, policy_version 8400 (0.0002)
+[2023-08-18 14:28:23,282][02926] Updated weights for policy 0, policy_version 8480 (0.0002)
+[2023-08-18 14:28:23,644][02911] Fps is (10 sec: 18018.3, 60 sec: 17816.7, 300 sec: 17334.1). Total num frames: 4345856. Throughput: 0: 17851.1. Samples: 4304896. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:28:23,644][02911] Avg episode reward: [(0, '3132.816')]
+[2023-08-18 14:28:23,650][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000008488_4345856.pth...
+[2023-08-18 14:28:23,651][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000007432_3805184.pth
+[2023-08-18 14:28:25,557][02926] Updated weights for policy 0, policy_version 8560 (0.0002)
+[2023-08-18 14:28:27,812][02926] Updated weights for policy 0, policy_version 8640 (0.0002)
+[2023-08-18 14:28:28,641][02911] Fps is (10 sec: 18027.3, 60 sec: 17818.5, 300 sec: 17347.8). Total num frames: 4435968. Throughput: 0: 17894.0. Samples: 4413396. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:28:28,641][02911] Avg episode reward: [(0, '3215.873')]
+[2023-08-18 14:28:30,100][02926] Updated weights for policy 0, policy_version 8720 (0.0002)
+[2023-08-18 14:28:32,389][02926] Updated weights for policy 0, policy_version 8800 (0.0002)
+[2023-08-18 14:28:33,641][02911] Fps is (10 sec: 18026.3, 60 sec: 17817.7, 300 sec: 17360.7). Total num frames: 4526080. Throughput: 0: 17992.5. Samples: 4519500. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:28:33,642][02911] Avg episode reward: [(0, '3273.376')]
+[2023-08-18 14:28:34,876][02926] Updated weights for policy 0, policy_version 8880 (0.0002)
+[2023-08-18 14:28:37,205][02926] Updated weights for policy 0, policy_version 8960 (0.0002)
+[2023-08-18 14:28:38,640][02911] Fps is (10 sec: 17613.0, 60 sec: 17818.7, 300 sec: 17357.8). Total num frames: 4612096. Throughput: 0: 17956.4. Samples: 4570176. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:28:38,641][02911] Avg episode reward: [(0, '2941.948')]
+[2023-08-18 14:28:38,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000009008_4612096.pth...
+[2023-08-18 14:28:38,647][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000007960_4075520.pth
+[2023-08-18 14:28:39,618][02926] Updated weights for policy 0, policy_version 9040 (0.0002)
+[2023-08-18 14:28:41,929][02926] Updated weights for policy 0, policy_version 9120 (0.0002)
+[2023-08-18 14:28:43,641][02911] Fps is (10 sec: 16794.7, 60 sec: 17749.2, 300 sec: 17339.7). Total num frames: 4694016. Throughput: 0: 17874.0. Samples: 4673636. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-18 14:28:43,641][02911] Avg episode reward: [(0, '3245.963')]
+[2023-08-18 14:28:44,406][02926] Updated weights for policy 0, policy_version 9200 (0.0002)
+[2023-08-18 14:28:46,734][02926] Updated weights for policy 0, policy_version 9280 (0.0002)
+[2023-08-18 14:28:48,640][02911] Fps is (10 sec: 16793.6, 60 sec: 17749.4, 300 sec: 17337.3). Total num frames: 4780032. Throughput: 0: 17759.1. Samples: 4775968. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:28:48,641][02911] Avg episode reward: [(0, '2883.051')]
+[2023-08-18 14:28:49,196][02926] Updated weights for policy 0, policy_version 9360 (0.0002)
+[2023-08-18 14:28:51,656][02926] Updated weights for policy 0, policy_version 9440 (0.0002)
+[2023-08-18 14:28:53,640][02911] Fps is (10 sec: 17203.8, 60 sec: 17749.3, 300 sec: 17334.9). Total num frames: 4866048. Throughput: 0: 17622.2. Samples: 4825152. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-18 14:28:53,641][02911] Avg episode reward: [(0, '3002.084')]
+[2023-08-18 14:28:53,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000009504_4866048.pth...
+[2023-08-18 14:28:53,647][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000008488_4345856.pth
+[2023-08-18 14:28:54,024][02926] Updated weights for policy 0, policy_version 9520 (0.0002)
+[2023-08-18 14:28:56,337][02926] Updated weights for policy 0, policy_version 9600 (0.0002)
+[2023-08-18 14:28:58,640][02911] Fps is (10 sec: 17203.2, 60 sec: 17681.6, 300 sec: 17332.6). Total num frames: 4952064. Throughput: 0: 17564.5. Samples: 4930940. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:28:58,641][02911] Avg episode reward: [(0, '2957.033')]
+[2023-08-18 14:28:58,722][02926] Updated weights for policy 0, policy_version 9680 (0.0002)
+[2023-08-18 14:29:01,237][02926] Updated weights for policy 0, policy_version 9760 (0.0002)
+[2023-08-18 14:29:03,530][02926] Updated weights for policy 0, policy_version 9840 (0.0002)
+[2023-08-18 14:29:03,643][02911] Fps is (10 sec: 17198.1, 60 sec: 17612.1, 300 sec: 17330.2). Total num frames: 5038080. Throughput: 0: 17377.6. Samples: 5032324. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:29:03,644][02911] Avg episode reward: [(0, '2712.543')]
+[2023-08-18 14:29:05,897][02926] Updated weights for policy 0, policy_version 9920 (0.0002)
+[2023-08-18 14:29:08,318][02926] Updated weights for policy 0, policy_version 10000 (0.0002)
+[2023-08-18 14:29:08,641][02911] Fps is (10 sec: 17201.5, 60 sec: 17476.8, 300 sec: 17328.1). Total num frames: 5124096. Throughput: 0: 17319.4. Samples: 5084232. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:29:08,642][02911] Avg episode reward: [(0, '2871.907')]
+[2023-08-18 14:29:08,645][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000010008_5124096.pth...
+[2023-08-18 14:29:08,647][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000009008_4612096.pth
+[2023-08-18 14:29:10,658][02926] Updated weights for policy 0, policy_version 10080 (0.0002)
+[2023-08-18 14:29:13,009][02926] Updated weights for policy 0, policy_version 10160 (0.0002)
+[2023-08-18 14:29:13,641][02911] Fps is (10 sec: 17208.1, 60 sec: 17408.2, 300 sec: 17314.3). Total num frames: 5210112. Throughput: 0: 17196.2. Samples: 5187224. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:29:13,641][02911] Avg episode reward: [(0, '2781.701')]
+[2023-08-18 14:29:15,279][02926] Updated weights for policy 0, policy_version 10240 (0.0002)
+[2023-08-18 14:29:17,624][02926] Updated weights for policy 0, policy_version 10320 (0.0002)
+[2023-08-18 14:29:18,644][02911] Fps is (10 sec: 17611.2, 60 sec: 17408.3, 300 sec: 17328.0). Total num frames: 5300224. Throughput: 0: 17205.4. Samples: 5293760. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:29:18,645][02911] Avg episode reward: [(0, '2731.048')]
+[2023-08-18 14:29:20,000][02926] Updated weights for policy 0, policy_version 10400 (0.0002)
+[2023-08-18 14:29:22,282][02926] Updated weights for policy 0, policy_version 10480 (0.0002)
+[2023-08-18 14:29:23,643][02911] Fps is (10 sec: 17608.3, 60 sec: 17339.9, 300 sec: 17328.1). Total num frames: 5386240. Throughput: 0: 17253.7. Samples: 5346636. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:29:23,643][02911] Avg episode reward: [(0, '3013.083')]
+[2023-08-18 14:29:23,648][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000010520_5386240.pth...
+[2023-08-18 14:29:23,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000009504_4866048.pth
+[2023-08-18 14:29:24,640][02926] Updated weights for policy 0, policy_version 10560 (0.0002)
+[2023-08-18 14:29:27,069][02926] Updated weights for policy 0, policy_version 10640 (0.0002)
+[2023-08-18 14:29:28,643][02911] Fps is (10 sec: 17201.6, 60 sec: 17270.7, 300 sec: 17342.0). Total num frames: 5472256. Throughput: 0: 17249.9. Samples: 5449924. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:29:28,644][02911] Avg episode reward: [(0, '2664.511')]
+[2023-08-18 14:29:29,432][02926] Updated weights for policy 0, policy_version 10720 (0.0002)
+[2023-08-18 14:29:31,669][02926] Updated weights for policy 0, policy_version 10800 (0.0002)
+[2023-08-18 14:29:33,641][02911] Fps is (10 sec: 17617.1, 60 sec: 17271.7, 300 sec: 17356.0). Total num frames: 5562368. Throughput: 0: 17338.6. Samples: 5556208. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:29:33,641][02911] Avg episode reward: [(0, '2897.230')]
+[2023-08-18 14:29:34,003][02926] Updated weights for policy 0, policy_version 10880 (0.0002)
+[2023-08-18 14:29:36,315][02926] Updated weights for policy 0, policy_version 10960 (0.0002)
+[2023-08-18 14:29:38,643][02911] Fps is (10 sec: 17613.0, 60 sec: 17270.7, 300 sec: 17355.9). Total num frames: 5648384. Throughput: 0: 17429.3. Samples: 5609520. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:29:38,643][02911] Avg episode reward: [(0, '2603.442')]
+[2023-08-18 14:29:38,645][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000011032_5648384.pth...
+[2023-08-18 14:29:38,646][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000010008_5124096.pth
+[2023-08-18 14:29:38,678][02926] Updated weights for policy 0, policy_version 11040 (0.0002)
+[2023-08-18 14:29:40,976][02926] Updated weights for policy 0, policy_version 11120 (0.0002)
+[2023-08-18 14:29:43,257][02926] Updated weights for policy 0, policy_version 11200 (0.0002)
+[2023-08-18 14:29:43,643][02911] Fps is (10 sec: 17607.9, 60 sec: 17407.2, 300 sec: 17411.4). Total num frames: 5738496. Throughput: 0: 17405.7. Samples: 5714248. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:29:43,644][02911] Avg episode reward: [(0, '2743.075')]
+[2023-08-18 14:29:45,659][02926] Updated weights for policy 0, policy_version 11280 (0.0002)
+[2023-08-18 14:29:48,013][02926] Updated weights for policy 0, policy_version 11360 (0.0002)
+[2023-08-18 14:29:48,640][02911] Fps is (10 sec: 17617.9, 60 sec: 17408.1, 300 sec: 17397.8). Total num frames: 5824512. Throughput: 0: 17502.4. Samples: 5819876. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:29:48,641][02911] Avg episode reward: [(0, '2765.496')]
+[2023-08-18 14:29:50,317][02926] Updated weights for policy 0, policy_version 11440 (0.0002)
+[2023-08-18 14:29:52,665][02926] Updated weights for policy 0, policy_version 11520 (0.0002)
+[2023-08-18 14:29:53,641][02911] Fps is (10 sec: 17617.0, 60 sec: 17476.1, 300 sec: 17411.5). Total num frames: 5914624. Throughput: 0: 17526.1. Samples: 5872896. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:29:53,641][02911] Avg episode reward: [(0, '2796.093')]
+[2023-08-18 14:29:53,644][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000011552_5914624.pth...
+[2023-08-18 14:29:53,646][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000010520_5386240.pth
+[2023-08-18 14:29:55,083][02926] Updated weights for policy 0, policy_version 11600 (0.0002)
+[2023-08-18 14:29:57,485][02926] Updated weights for policy 0, policy_version 11680 (0.0002)
+[2023-08-18 14:29:58,643][02911] Fps is (10 sec: 17198.3, 60 sec: 17407.2, 300 sec: 17383.7). Total num frames: 5996544. Throughput: 0: 17510.4. Samples: 5975240. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:29:58,643][02911] Avg episode reward: [(0, '2640.565')]
+[2023-08-18 14:29:59,777][02926] Updated weights for policy 0, policy_version 11760 (0.0002)
+[2023-08-18 14:30:02,008][02926] Updated weights for policy 0, policy_version 11840 (0.0002)
+[2023-08-18 14:30:03,644][02911] Fps is (10 sec: 17608.4, 60 sec: 17544.5, 300 sec: 17397.4). Total num frames: 6090752. Throughput: 0: 17538.6. Samples: 6083016. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:03,644][02911] Avg episode reward: [(0, '2786.200')]
+[2023-08-18 14:30:04,289][02926] Updated weights for policy 0, policy_version 11920 (0.0002)
+[2023-08-18 14:30:06,624][02926] Updated weights for policy 0, policy_version 12000 (0.0002)
+[2023-08-18 14:30:08,644][02911] Fps is (10 sec: 18021.6, 60 sec: 17543.9, 300 sec: 17383.6). Total num frames: 6176768. Throughput: 0: 17563.3. Samples: 6136992. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:08,644][02911] Avg episode reward: [(0, '2644.218')]
+[2023-08-18 14:30:08,647][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000012064_6176768.pth...
+[2023-08-18 14:30:08,650][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000011032_5648384.pth
+[2023-08-18 14:30:08,910][02926] Updated weights for policy 0, policy_version 12080 (0.0002)
+[2023-08-18 14:30:11,229][02926] Updated weights for policy 0, policy_version 12160 (0.0002)
+[2023-08-18 14:30:13,466][02926] Updated weights for policy 0, policy_version 12240 (0.0002)
+[2023-08-18 14:30:13,641][02911] Fps is (10 sec: 17616.7, 60 sec: 17612.6, 300 sec: 17383.7). Total num frames: 6266880. Throughput: 0: 17634.7. Samples: 6243448. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:13,641][02911] Avg episode reward: [(0, '2712.159')]
+[2023-08-18 14:30:15,704][02926] Updated weights for policy 0, policy_version 12320 (0.0002)
+[2023-08-18 14:30:18,050][02926] Updated weights for policy 0, policy_version 12400 (0.0002)
+[2023-08-18 14:30:18,641][02911] Fps is (10 sec: 18027.3, 60 sec: 17613.3, 300 sec: 17383.8). Total num frames: 6356992. Throughput: 0: 17662.9. Samples: 6351044. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:18,641][02911] Avg episode reward: [(0, '2792.492')]
+[2023-08-18 14:30:20,394][02926] Updated weights for policy 0, policy_version 12480 (0.0002)
+[2023-08-18 14:30:22,643][02926] Updated weights for policy 0, policy_version 12560 (0.0002)
+[2023-08-18 14:30:23,643][02911] Fps is (10 sec: 18020.1, 60 sec: 17681.2, 300 sec: 17383.8). Total num frames: 6447104. Throughput: 0: 17679.9. Samples: 6405104. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:30:23,643][02911] Avg episode reward: [(0, '3278.888')]
+[2023-08-18 14:30:23,648][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000012592_6447104.pth...
+[2023-08-18 14:30:23,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000011552_5914624.pth
+[2023-08-18 14:30:25,061][02926] Updated weights for policy 0, policy_version 12640 (0.0002)
+[2023-08-18 14:30:27,343][02926] Updated weights for policy 0, policy_version 12720 (0.0002)
+[2023-08-18 14:30:28,640][02911] Fps is (10 sec: 17613.7, 60 sec: 17681.9, 300 sec: 17384.0). Total num frames: 6533120. Throughput: 0: 17690.3. Samples: 6510260. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:30:28,641][02911] Avg episode reward: [(0, '2885.801')]
+[2023-08-18 14:30:29,667][02926] Updated weights for policy 0, policy_version 12800 (0.0002)
+[2023-08-18 14:30:32,025][02926] Updated weights for policy 0, policy_version 12880 (0.0002)
+[2023-08-18 14:30:33,642][02911] Fps is (10 sec: 17614.3, 60 sec: 17680.7, 300 sec: 17411.4). Total num frames: 6623232. Throughput: 0: 17674.0. Samples: 6615232. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:33,642][02911] Avg episode reward: [(0, '2695.288')]
+[2023-08-18 14:30:34,324][02926] Updated weights for policy 0, policy_version 12960 (0.0002)
+[2023-08-18 14:30:36,666][02926] Updated weights for policy 0, policy_version 13040 (0.0002)
+[2023-08-18 14:30:38,643][02911] Fps is (10 sec: 17607.8, 60 sec: 17681.1, 300 sec: 17467.2). Total num frames: 6709248. Throughput: 0: 17676.1. Samples: 6668360. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:38,643][02911] Avg episode reward: [(0, '3071.110')]
+[2023-08-18 14:30:38,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000013104_6709248.pth...
+[2023-08-18 14:30:38,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000012064_6176768.pth
+[2023-08-18 14:30:39,048][02926] Updated weights for policy 0, policy_version 13120 (0.0002)
+[2023-08-18 14:30:41,397][02926] Updated weights for policy 0, policy_version 13200 (0.0002)
+[2023-08-18 14:30:43,642][02911] Fps is (10 sec: 17202.9, 60 sec: 17613.2, 300 sec: 17480.8). Total num frames: 6795264. Throughput: 0: 17703.1. Samples: 6771856. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:30:43,642][02911] Avg episode reward: [(0, '3126.070')]
+[2023-08-18 14:30:43,743][02926] Updated weights for policy 0, policy_version 13280 (0.0002)
+[2023-08-18 14:30:46,221][02926] Updated weights for policy 0, policy_version 13360 (0.0002)
+[2023-08-18 14:30:48,640][02911] Fps is (10 sec: 16798.6, 60 sec: 17544.6, 300 sec: 17467.2). Total num frames: 6877184. Throughput: 0: 17565.4. Samples: 6873400. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-18 14:30:48,640][02911] Avg episode reward: [(0, '3198.422')]
+[2023-08-18 14:30:48,666][02926] Updated weights for policy 0, policy_version 13440 (0.0002)
+[2023-08-18 14:30:51,503][02926] Updated weights for policy 0, policy_version 13520 (0.0002)
+[2023-08-18 14:30:53,641][02911] Fps is (10 sec: 15975.8, 60 sec: 17339.7, 300 sec: 17453.2). Total num frames: 6955008. Throughput: 0: 17360.3. Samples: 6918160. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:53,641][02911] Avg episode reward: [(0, '3268.306')]
+[2023-08-18 14:30:53,670][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000013592_6959104.pth...
+[2023-08-18 14:30:53,671][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000012592_6447104.pth
+[2023-08-18 14:30:53,911][02926] Updated weights for policy 0, policy_version 13600 (0.0002)
+[2023-08-18 14:30:56,351][02926] Updated weights for policy 0, policy_version 13680 (0.0002)
+[2023-08-18 14:30:58,644][02911] Fps is (10 sec: 16377.8, 60 sec: 17407.8, 300 sec: 17480.7). Total num frames: 7041024. Throughput: 0: 17225.1. Samples: 7018624. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:30:58,644][02911] Avg episode reward: [(0, '3416.352')]
+[2023-08-18 14:30:58,645][02925] Saving new best policy, reward=3416.352!
+[2023-08-18 14:30:58,728][02926] Updated weights for policy 0, policy_version 13760 (0.0002)
+[2023-08-18 14:31:01,031][02926] Updated weights for policy 0, policy_version 13840 (0.0002)
+[2023-08-18 14:31:03,465][02926] Updated weights for policy 0, policy_version 13920 (0.0002)
+[2023-08-18 14:31:03,643][02911] Fps is (10 sec: 17199.4, 60 sec: 17271.5, 300 sec: 17494.7). Total num frames: 7127040. Throughput: 0: 17145.7. Samples: 7122640. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:31:03,644][02911] Avg episode reward: [(0, '3140.368')]
+[2023-08-18 14:31:05,824][02926] Updated weights for policy 0, policy_version 14000 (0.0002)
+[2023-08-18 14:31:08,091][02926] Updated weights for policy 0, policy_version 14080 (0.0002)
+[2023-08-18 14:31:08,644][02911] Fps is (10 sec: 17613.2, 60 sec: 17339.7, 300 sec: 17536.4). Total num frames: 7217152. Throughput: 0: 17110.7. Samples: 7175104. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-18 14:31:08,644][02911] Avg episode reward: [(0, '3185.570')]
+[2023-08-18 14:31:08,647][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000014096_7217152.pth...
+[2023-08-18 14:31:08,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000013104_6709248.pth
+[2023-08-18 14:31:10,338][02926] Updated weights for policy 0, policy_version 14160 (0.0002)
+[2023-08-18 14:31:12,554][02926] Updated weights for policy 0, policy_version 14240 (0.0002)
+[2023-08-18 14:31:13,641][02911] Fps is (10 sec: 18026.8, 60 sec: 17339.9, 300 sec: 17550.4). Total num frames: 7307264. Throughput: 0: 17193.7. Samples: 7283984. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:31:13,641][02911] Avg episode reward: [(0, '3351.432')]
+[2023-08-18 14:31:14,874][02926] Updated weights for policy 0, policy_version 14320 (0.0002)
+[2023-08-18 14:31:17,084][02926] Updated weights for policy 0, policy_version 14400 (0.0002)
+[2023-08-18 14:31:18,641][02911] Fps is (10 sec: 18028.5, 60 sec: 17339.9, 300 sec: 17564.4). Total num frames: 7397376. Throughput: 0: 17269.8. Samples: 7392348. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-18 14:31:18,641][02911] Avg episode reward: [(0, '3267.444')]
+[2023-08-18 14:31:19,433][02926] Updated weights for policy 0, policy_version 14480 (0.0002)
+[2023-08-18 14:31:21,742][02926] Updated weights for policy 0, policy_version 14560 (0.0002)
+[2023-08-18 14:31:23,642][02911] Fps is (10 sec: 18020.6, 60 sec: 17339.9, 300 sec: 17578.0). Total num frames: 7487488. Throughput: 0: 17283.1. Samples: 7446076. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:31:23,642][02911] Avg episode reward: [(0, '2982.717')]
+[2023-08-18 14:31:23,648][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000014624_7487488.pth...
+[2023-08-18 14:31:23,649][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000013592_6959104.pth
+[2023-08-18 14:31:24,030][02926] Updated weights for policy 0, policy_version 14640 (0.0002)
+[2023-08-18 14:31:26,380][02926] Updated weights for policy 0, policy_version 14720 (0.0002)
+[2023-08-18 14:31:28,640][02911] Fps is (10 sec: 17612.7, 60 sec: 17339.7, 300 sec: 17564.3). Total num frames: 7573504. Throughput: 0: 17331.1. Samples: 7551732. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-18 14:31:28,641][02911] Avg episode reward: [(0, '3345.277')]
+[2023-08-18 14:31:28,643][02926] Updated weights for policy 0, policy_version 14800 (0.0002)
+[2023-08-18 14:31:30,932][02926] Updated weights for policy 0, policy_version 14880 (0.0002)
+[2023-08-18 14:31:33,191][02926] Updated weights for policy 0, policy_version 14960 (0.0002)
+[2023-08-18 14:31:33,643][02911] Fps is (10 sec: 17610.7, 60 sec: 17339.4, 300 sec: 17578.0). Total num frames: 7663616. Throughput: 0: 17470.3. Samples: 7659612. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:31:33,643][02911] Avg episode reward: [(0, '3255.185')]
+[2023-08-18 14:31:35,462][02926] Updated weights for policy 0, policy_version 15040 (0.0002)
+[2023-08-18 14:31:37,754][02926] Updated weights for policy 0, policy_version 15120 (0.0002)
+[2023-08-18 14:31:38,643][02911] Fps is (10 sec: 18017.9, 60 sec: 17408.1, 300 sec: 17592.0). Total num frames: 7753728. Throughput: 0: 17677.3. Samples: 7713672. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-18 14:31:38,643][02911] Avg episode reward: [(0, '3482.067')]
+[2023-08-18 14:31:38,646][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000015144_7753728.pth...
+[2023-08-18 14:31:38,648][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000014096_7217152.pth
+[2023-08-18 14:31:38,648][02925] Saving new best policy, reward=3482.067!
+[2023-08-18 14:31:40,082][02926] Updated weights for policy 0, policy_version 15200 (0.0002)
+[2023-08-18 14:31:42,415][02926] Updated weights for policy 0, policy_version 15280 (0.0002)
+[2023-08-18 14:31:43,286][02911] Keyboard interrupt detected in the event loop EvtLoop [Runner_EvtLoop, process=main process 2911], exiting...
+[2023-08-18 14:31:43,287][02911] Runner profile tree view:
+main_loop: 453.3485
+[2023-08-18 14:31:43,287][02911] Collected {0: 7835648}, FPS: 17283.9
+[2023-08-18 14:31:43,287][02929] Stopping RolloutWorker_w2...
+[2023-08-18 14:31:43,288][02931] Stopping RolloutWorker_w4...
+[2023-08-18 14:31:43,288][02929] Loop rollout_proc2_evt_loop terminating...
+[2023-08-18 14:31:43,288][02931] Loop rollout_proc4_evt_loop terminating...
+[2023-08-18 14:31:43,288][02932] Stopping RolloutWorker_w6...
+[2023-08-18 14:31:43,288][02933] Stopping RolloutWorker_w7...
+[2023-08-18 14:31:43,288][02927] Stopping RolloutWorker_w0...
+[2023-08-18 14:31:43,288][02932] Loop rollout_proc6_evt_loop terminating...
+[2023-08-18 14:31:43,288][02933] Loop rollout_proc7_evt_loop terminating...
+[2023-08-18 14:31:43,288][02927] Loop rollout_proc0_evt_loop terminating...
+[2023-08-18 14:31:43,289][02928] Stopping RolloutWorker_w1...
+[2023-08-18 14:31:43,293][02934] Stopping RolloutWorker_w5...
+[2023-08-18 14:31:43,291][02925] Stopping Batcher_0...
+[2023-08-18 14:31:43,292][02930] Stopping RolloutWorker_w3...
+[2023-08-18 14:31:43,294][02934] Loop rollout_proc5_evt_loop terminating...
+[2023-08-18 14:31:43,294][02925] Loop batcher_evt_loop terminating...
+[2023-08-18 14:31:43,294][02928] Loop rollout_proc1_evt_loop terminating...
+[2023-08-18 14:31:43,294][02930] Loop rollout_proc3_evt_loop terminating...
+[2023-08-18 14:31:43,294][02926] Weights refcount: 2 0
+[2023-08-18 14:31:43,295][02926] Stopping InferenceWorker_p0-w0...
+[2023-08-18 14:31:43,295][02926] Loop inference_proc0-0_evt_loop terminating...
+[2023-08-18 14:31:43,293][02925] Saving /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000015304_7835648.pth...
+[2023-08-18 14:31:43,304][02925] Removing /Users/xinsonglin/Triped/train_dir/exp_ant_1/checkpoint_p0/checkpoint_000014624_7487488.pth
+[2023-08-18 14:31:43,305][02925] Stopping LearnerWorker_p0...
+[2023-08-18 14:31:43,305][02925] Loop learner_proc0_evt_loop terminating...
