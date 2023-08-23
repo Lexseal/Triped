@@ -1,0 +1,125 @@
+<mujoco model="Triped">
+  <compiler angle="radian" meshdir="../meshes/" autolimits="true"/>
+  <statistic meansize="0.0627647" extent="0.390788" center="-0.195394 -0.00267196 -0.0184402"/>
+  
+  <option gravity='0 0 -9.806' iterations='50' solver='Newton' timestep='0.002'/>
+
+  <default>
+    <geom contype="1" conaffinity="1" friction="0.6 0.3 0.3" rgba="0.5 0.6 0.7 1" margin="0.001" group="0"/>
+    <light castshadow="false" diffuse="1 1 1"/>
+    <camera fovy="60"/>
+    <joint damping="0.01" armature="0.01" frictionloss="0.2"/>
+  </default>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1.0 1.0 1.0" rgb2="1.0 1.0 1.0" width="512" height="512"/>
+    <texture name="plane" type="2d" builtin="flat" rgb1="1 1 1" rgb2="1 1 1" width="512" height="512" mark="cross" markrgb="0 0 0"/>
+    <material name="plane" reflectance="0.0" texture="plane" texrepeat="3 3" texuniform="true"/>
+  </asset>
+  
+  <asset>
+    <mesh name="base_link" file="base_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_7_1" file="servo_7_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_8_1" file="servo_8_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_9_1" file="servo_9_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_6_1" file="servo_6_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_5_1" file="servo_5_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_4_1" file="servo_4_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_3_1" file="servo_3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_2_1" file="servo_2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_1_1" file="servo_1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="holder_3_1" file="holder_3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="holder_2_1" file="holder_2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="holder_1_1" file="holder_1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="leg_3_1" file="leg_3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="leg_2_1" file="leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="leg_1_1" file="leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="foot_3_1" file="foot_3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="foot_1_1" file="foot_1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="foot_2_1" file="foot_2_1.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <light directional="true" diffuse=".8 .8 .8" pos="0 0 10" dir="0 0 -10"/>
+    <camera name="track" mode="trackcom" pos="0 -1.3 1.6" xyaxes="1 0 0 0 0.707 0.707"/>
+    <geom name='floor' type='plane' conaffinity='1' condim='3' contype='1' rgba="0.5 0.9 0.9 0.1" material='plane' pos='0 0 0' size='0 0 1'/>
+
+    <body name="base_link">
+      <inertial pos="-0.3 0.00281922 -0.0175852" quat="0.500043 0.499957 -0.500043 0.499957" mass="0.346208" diaginertia="0.000592462 0.000300897 0.000299898"/>
+      <joint name="floating_base" type="free"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base_link"/>
+      <geom type="mesh" mesh="base_link"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_1_1"/>
+      <geom type="mesh" mesh="servo_1_1"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_2_1"/>
+      <geom type="mesh" mesh="servo_2_1"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_3_1"/>
+      <geom type="mesh" mesh="servo_3_1"/>
+      <body name="holder_1_1" pos="-0.346899 0.028191 -0.016881">
+        <inertial pos="0.00143907 -0.00969893 -0.00466082" quat="0.4976 0.504908 0.502539 0.49489" mass="0.0695228" diaginertia="7.42966e-06 5.42953e-06 4.00136e-06"/>
+        <joint name="revolute_holder_10" pos="0 0 0" axis="-0.003977 -0.999992 0"/>
+        <geom pos="0.346899 -0.028191 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="holder_1_1"/>
+        <geom pos="0.346899 -0.028191 0.016881" type="mesh" mesh="holder_1_1"/>
+        <geom pos="0.346899 -0.028191 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_4_1"/>
+        <geom pos="0.346899 -0.028191 0.016881" type="mesh" mesh="servo_4_1"/>
+        <body name="leg_1_1" pos="0.016211 -0.009715 0">
+          <inertial pos="-0.015247 -0.00370808 -0.0323588" quat="0.525308 -0.406794 -0.0801766 0.743063" mass="0.0812466" diaginertia="1.24622e-05 9.84419e-06 9.11215e-06"/>
+          <joint name="revolulte_leg_13" pos="0 0 0" axis="0.999992 -0.003977 0"/>
+          <geom pos="0.330688 -0.018476 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="leg_1_1"/>
+          <geom pos="0.330688 -0.018476 0.016881" type="mesh" mesh="leg_1_1"/>
+          <geom pos="0.330688 -0.018476 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_7_1"/>
+          <geom pos="0.330688 -0.018476 0.016881" type="mesh" mesh="servo_7_1"/>
+          <body name="foot_1_1" pos="-0.000249 0.000261 -0.03515">
+            <inertial pos="-0.0164912 6.59499e-05 -0.0188594" quat="0.707107 0 0 0.707107" mass="0.0140032" diaginertia="4e-06 2e-06 2e-06"/>
+            <joint name="revolute_foot_16" pos="0 0 0" axis="0.999992 -0.003977 0"/>
+            <geom pos="0.330937 -0.018737 0.052031" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="foot_1_1"/>
+            <geom pos="0.330937 -0.018737 0.052031" type="mesh" mesh="foot_1_1"/>
+          </body>
+        </body>
+      </body>
+      <body name="holder_2_1" pos="-0.298523 -0.050483 -0.016881">
+        <inertial pos="0.00767988 0.00609634 -0.00466082" quat="0.688123 0.674363 0.187157 0.191556" mass="0.0695228" diaginertia="7.04652e-06 5.42965e-06 4.38439e-06"/>
+        <joint name="revolute_holder_11" pos="0 0 0" axis="0.868007 0.496552 0"/>
+        <geom pos="0.298523 0.050483 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="holder_2_1"/>
+        <geom pos="0.298523 0.050483 0.016881" type="mesh" mesh="holder_2_1"/>
+        <geom pos="0.298523 0.050483 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_5_1"/>
+        <geom pos="0.298523 0.050483 0.016881" type="mesh" mesh="servo_5_1"/>
+        <body name="leg_2_1" pos="0.000307 0.018897 0">
+          <inertial pos="0.0108356 -0.01135 -0.0323588" quat="0.773832 0.561796 -0.0153664 0.292118" mass="0.0812466" diaginertia="1.23258e-05 1.01201e-05 8.97261e-06"/>
+          <joint name="revolulte_leg_14" pos="0 0 0" axis="-0.496552 0.868007 0"/>
+          <geom pos="0.298216 0.031586 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="leg_2_1"/>
+          <geom pos="0.298216 0.031586 0.016881" type="mesh" mesh="leg_2_1"/>
+          <geom pos="0.298216 0.031586 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_8_1"/>
+          <geom pos="0.298216 0.031586 0.016881" type="mesh" mesh="servo_8_1"/>
+          <body name="foot_2_1" pos="-0.000101 -0.000346 -0.03515">
+            <inertial pos="0.00818879 -0.0143147 -0.0188594" quat="0.680193 0.680193 0.193229 0.193229" mass="0.0140032" diaginertia="2.33333e-06 2.33333e-06 2.33333e-06"/>
+            <joint name="revolute_foot_17" pos="0 0 0" axis="-0.496552 0.868007 0"/>
+            <geom pos="0.298317 0.031932 0.052031" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="foot_2_1"/>
+            <geom pos="0.298317 0.031932 0.052031" type="mesh" mesh="foot_2_1"/>
+          </body>
+        </body>
+      </body>
+      <body name="holder_3_1" pos="-0.254578 0.03075 -0.016881">
+        <inertial pos="-0.00911895 0.00360225 -0.00466082" quat="0.673039 0.686945 -0.195739 -0.191862" mass="0.0695228" diaginertia="7.04827e-06 5.42965e-06 4.38263e-06"/>
+        <joint name="revolute_holder_12" pos="0 0 0" axis="-0.86403 0.50344 0"/>
+        <geom pos="0.254578 -0.03075 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="holder_3_1"/>
+        <geom pos="0.254578 -0.03075 0.016881" type="mesh" mesh="holder_3_1"/>
+        <geom pos="0.254578 -0.03075 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_6_1"/>
+        <geom pos="0.254578 -0.03075 0.016881" type="mesh" mesh="servo_6_1"/>
+        <body name="leg_3_1" pos="-0.016519 -0.009183 0">
+          <inertial pos="0.00441236 0.0150587 -0.0323588" quat="0.877067 -0.262135 0.345268 -0.206948" mass="0.0812466" diaginertia="1.22518e-05 9.77892e-06 9.38781e-06"/>
+          <joint name="revolulte_leg_15" pos="0 0 0" axis="-0.50344 -0.86403 0"/>
+          <geom pos="0.271097 -0.021567 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="leg_3_1"/>
+          <geom pos="0.271097 -0.021567 0.016881" type="mesh" mesh="leg_3_1"/>
+          <geom pos="0.271097 -0.021567 0.016881" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="servo_9_1"/>
+          <geom pos="0.271097 -0.021567 0.016881" type="mesh" mesh="servo_9_1"/>
+          <body name="foot_3_1" pos="0.000351 8.5e-05 -0.03515">
+            <inertial pos="0.00830242 0.0142494 -0.0188594" quat="0.680193 0.680193 -0.193229 -0.193229" mass="0.0140032" diaginertia="2.33333e-06 2.33333e-06 2.33333e-06"/>
+            <joint name="revolute_foot_18" pos="0 0 0" axis="-0.50344 -0.86403 0"/>
+            <geom pos="0.270746 -0.021652 0.052031" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="foot_3_1"/>
+            <geom pos="0.270746 -0.021652 0.052031" type="mesh" mesh="foot_3_1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

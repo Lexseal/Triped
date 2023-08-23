@@ -1,13 +1,21 @@
 <?xml version="1.0" ?>
 <robot name="Triped" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<mujoco> 
-  <compiler meshdir="../meshes/" balanceinertia="true" />
+<mujoco>
+  <compiler meshdir="../meshes/" balanceinertia="true" discardvisual="false" />
 </mujoco>
 
 <xacro:include filename="$(find Triped_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find Triped_description)/urdf/Triped.trans" />
 <xacro:include filename="$(find Triped_description)/urdf/Triped.gazebo" />
+
+<link name="world"/>
+<joint name="floating_base" type="floating">
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+
 <link name="base_link">
   <inertial>
     <origin xyz="-0.29999999999999977 0.002819220522697178 -0.018268314912160678" rpy="0 0 0"/>
