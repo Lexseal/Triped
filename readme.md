@@ -16,6 +16,7 @@ Ever since the early 2000s, people have been developing quadrupeds and bipeds su
 - [ ] Plan sensors and compute
 - [ ] Initially have everything on breadboards but slowly transition to PCB
 - [ ] Interate mechanically while developing feedback walking algorithms that accomendate a wider range of movements such as jumping, turning, walking on hills, and walking on rough/slippery terrain
+- [ ] Set up gymnasium+pybullet environment for reinforcement learning
 
 ## Simulation Software
 
