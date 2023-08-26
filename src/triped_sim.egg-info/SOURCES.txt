@@ -1,0 +1,6 @@
+setup.py
+triped_sim.egg-info/PKG-INFO
+triped_sim.egg-info/SOURCES.txt
+triped_sim.egg-info/dependency_links.txt
+triped_sim.egg-info/requires.txt
+triped_sim.egg-info/top_level.txt
