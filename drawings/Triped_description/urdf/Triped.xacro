@@ -9,12 +9,12 @@
 <xacro:include filename="$(find Triped_description)/urdf/Triped.trans" />
 <xacro:include filename="$(find Triped_description)/urdf/Triped.gazebo" />
 
-<link name="world"/>
+<!-- <link name="world"/>
 <joint name="floating_base" type="floating">
   <origin rpy="0 0 0" xyz="0 0 0"/>
   <parent link="world"/>
   <child link="base_link"/>
-</joint>
+</joint> -->
 
 <link name="base_link">
   <inertial>
@@ -29,12 +29,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_7_1">
@@ -50,12 +50,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.334457 -0.013741 0.052031" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_8_1">
@@ -71,12 +71,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.29223 0.032482 0.052031" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_9_1">
@@ -92,12 +92,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.273313 -0.027199 0.052031" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_9_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_6_1">
@@ -113,12 +113,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.269334 -0.024591 0.021891" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_5_1">
@@ -134,12 +134,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.296478 0.034624 0.021891" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_4_1">
@@ -155,12 +155,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.334188 -0.01849 0.021891" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_3_1">
@@ -176,12 +176,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.297718 -0.04981 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_2_1">
@@ -197,12 +197,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.260446 0.022652 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="servo_1_1">
@@ -218,12 +218,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.341836 0.0187 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/servo_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="holder_3_1">
@@ -239,12 +239,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.254578 -0.03075 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="holder_2_1">
@@ -260,12 +260,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.298523 0.050483 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="holder_1_1">
@@ -281,12 +281,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.346899 -0.028191 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="leg_3_1">
@@ -302,12 +302,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.271097 -0.021567 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/leg_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="leg_2_1">
@@ -323,12 +323,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.298216 0.031586 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="leg_1_1">
@@ -344,12 +344,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!-- <collision>
     <origin xyz="0.330688 -0.018476 0.016881" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://Triped_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-  </collision>
+  </collision> -->
 </link>
 
 <link name="foot_3_1">

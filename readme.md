@@ -21,3 +21,13 @@ Ever since the early 2000s, people have been developing quadrupeds and bipeds su
 ## Simulation Software
 
 After some back and forth and reading [this article](https://arxiv.org/pdf/2103.04616.pdf), I have decided to go with [Pybullet](https://github.com/bulletphysics/bullet3). Although that is the slowest environment to run, most of the RL training time is spent on actual training rather than the simulation itself. Thus, Pybullet's ease of use, its native python interface, and big community is a huge plus.
+
+## Mesh Simplification
+
+Before any simplification and using the original stl as collision body, the simulation ran 211fps.
+
+After removing all the collision bodies other than the feet, the simulation ran 222fps.
+
+After reducing the complexity of the feet, the simulation ran 208fps???
+
+Seems to be within run to run variation. I guess the simplification is not worth it.
