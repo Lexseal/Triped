@@ -1,0 +1,2057 @@
+[2023-08-29 13:58:38,067][02050] Saving configuration to /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/config.json...
+[2023-08-29 13:58:38,089][02050] Rollout worker 0 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 1 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 2 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 3 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 4 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 5 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 6 uses device cpu
+[2023-08-29 13:58:38,090][02050] Rollout worker 7 uses device cpu
+[2023-08-29 13:58:38,090][02050] In synchronous mode, we only accumulate one batch. Setting num_batches_to_accumulate to 1
+[2023-08-29 13:58:38,262][02050] InferenceWorker_p0-w0: min num requests: 2
+[2023-08-29 13:58:38,296][02050] Starting all processes...
+[2023-08-29 13:58:38,296][02050] Starting process learner_proc0
+[2023-08-29 13:58:38,352][02050] Starting all processes...
+[2023-08-29 13:58:38,443][02050] Starting process inference_proc0-0
+[2023-08-29 13:58:38,457][02050] Starting process rollout_proc0
+[2023-08-29 13:58:38,470][02050] Starting process rollout_proc1
+[2023-08-29 13:58:38,476][02050] Starting process rollout_proc2
+[2023-08-29 13:58:38,479][02050] Starting process rollout_proc3
+[2023-08-29 13:58:38,483][02050] Starting process rollout_proc4
+[2023-08-29 13:58:38,489][02050] Starting process rollout_proc5
+[2023-08-29 13:58:38,495][02050] Starting process rollout_proc6
+[2023-08-29 13:58:38,515][02050] Starting process rollout_proc7
+[2023-08-29 13:58:41,008][02059] Starting seed is not provided
+[2023-08-29 13:58:41,008][02059] Initializing actor-critic model on device cpu
+[2023-08-29 13:58:41,009][02059] RunningMeanStd input shape: (8,)
+[2023-08-29 13:58:41,009][02059] RunningMeanStd input shape: (1,)
+[2023-08-29 13:58:41,058][02059] Created Actor Critic model with architecture:
+[2023-08-29 13:58:41,058][02059] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): MultiInputEncoder(
+    (encoders): ModuleDict(
+      (obs): MlpEncoder(
+        (mlp_head): RecursiveScriptModule(
+          original_name=Sequential
+          (0): RecursiveScriptModule(original_name=Linear)
+          (1): RecursiveScriptModule(original_name=ELU)
+          (2): RecursiveScriptModule(original_name=Linear)
+          (3): RecursiveScriptModule(original_name=ELU)
+        )
+      )
+    )
+  )
+  (core): ModelCoreIdentity()
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=64, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=64, out_features=18, bias=True)
+  )
+)
+[2023-08-29 13:58:41,063][02059] Using optimizer <class 'torch.optim.adam.Adam'>
+[2023-08-29 13:58:41,064][02059] No checkpoints found
+[2023-08-29 13:58:41,064][02059] Did not load from checkpoint, starting from scratch!
+[2023-08-29 13:58:41,064][02059] Initialized policy 0 weights for model version 0
+[2023-08-29 13:58:41,065][02059] LearnerWorker_p0 finished initialization!
+[2023-08-29 13:58:41,091][02063] On MacOS, not setting affinity
+[2023-08-29 13:58:41,118][02068] On MacOS, not setting affinity
+[2023-08-29 13:58:41,118][02066] On MacOS, not setting affinity
+[2023-08-29 13:58:41,123][02061] On MacOS, not setting affinity
+[2023-08-29 13:58:41,134][02062] On MacOS, not setting affinity
+[2023-08-29 13:58:41,153][02065] On MacOS, not setting affinity
+[2023-08-29 13:58:41,158][02067] On MacOS, not setting affinity
+[2023-08-29 13:58:41,158][02060] RunningMeanStd input shape: (8,)
+[2023-08-29 13:58:41,159][02060] RunningMeanStd input shape: (1,)
+[2023-08-29 13:58:41,178][02064] On MacOS, not setting affinity
+[2023-08-29 13:58:41,203][02050] Inference worker 0-0 is ready!
+[2023-08-29 13:58:41,204][02050] All inference workers are ready! Signal rollout workers to start!
+[2023-08-29 13:58:41,421][02065] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,421][02063] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,423][02067] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,424][02066] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,429][02062] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,439][02068] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,443][02061] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,454][02064] Decorrelating experience for 0 frames...
+[2023-08-29 13:58:41,555][02066] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,562][02065] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,568][02062] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,571][02063] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,576][02067] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,582][02061] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,582][02068] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:41,590][02064] Decorrelating experience for 64 frames...
+[2023-08-29 13:58:42,101][02050] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 4096. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 13:58:44,498][02060] Updated weights for policy 0, policy_version 80 (0.0003)
+[2023-08-29 13:58:47,102][02050] Fps is (10 sec: 13923.8, 60 sec: 13923.8, 300 sec: 13923.8). Total num frames: 73728. Throughput: 0: 7291.4. Samples: 36464. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 13:58:47,455][02060] Updated weights for policy 0, policy_version 160 (0.0002)
+[2023-08-29 13:58:49,848][02050] Keyboard interrupt detected in the event loop EvtLoop [Runner_EvtLoop, process=main process 2050], exiting...
+[2023-08-29 13:58:49,848][02050] Runner profile tree view:
+main_loop: 11.5529
+[2023-08-29 13:58:49,848][02050] Collected {0: 114688}, FPS: 9927.2
+[2023-08-29 13:58:49,848][02062] Stopping RolloutWorker_w1...
+[2023-08-29 13:58:49,849][02062] Loop rollout_proc1_evt_loop terminating...
+[2023-08-29 13:58:49,848][02059] Stopping Batcher_0...
+[2023-08-29 13:58:49,849][02067] Stopping RolloutWorker_w6...
+[2023-08-29 13:58:49,849][02068] Stopping RolloutWorker_w7...
+[2023-08-29 13:58:49,848][02066] Stopping RolloutWorker_w5...
+[2023-08-29 13:58:49,849][02068] Loop rollout_proc7_evt_loop terminating...
+[2023-08-29 13:58:49,849][02059] Loop batcher_evt_loop terminating...
+[2023-08-29 13:58:49,849][02066] Loop rollout_proc5_evt_loop terminating...
+[2023-08-29 13:58:49,849][02059] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000224_114688.pth...
+[2023-08-29 13:58:49,849][02063] Stopping RolloutWorker_w2...
+[2023-08-29 13:58:49,849][02067] Loop rollout_proc6_evt_loop terminating...
+[2023-08-29 13:58:49,851][02059] Stopping LearnerWorker_p0...
+[2023-08-29 13:58:49,851][02059] Loop learner_proc0_evt_loop terminating...
+[2023-08-29 13:58:49,852][02063] Loop rollout_proc2_evt_loop terminating...
+[2023-08-29 13:58:49,854][02061] Stopping RolloutWorker_w0...
+[2023-08-29 13:58:49,855][02064] Stopping RolloutWorker_w3...
+[2023-08-29 13:58:49,855][02064] Loop rollout_proc3_evt_loop terminating...
+[2023-08-29 13:58:49,855][02061] Loop rollout_proc0_evt_loop terminating...
+[2023-08-29 13:58:49,872][02065] Stopping RolloutWorker_w4...
+[2023-08-29 13:58:49,872][02065] Loop rollout_proc4_evt_loop terminating...
+[2023-08-29 13:58:49,882][02060] Weights refcount: 2 0
+[2023-08-29 13:58:49,885][02060] Stopping InferenceWorker_p0-w0...
+[2023-08-29 13:58:49,885][02060] Loop inference_proc0-0_evt_loop terminating...
+[2023-08-29 13:59:32,931][02125] Saving configuration to /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/config.json...
+[2023-08-29 13:59:32,952][02125] Rollout worker 0 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 1 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 2 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 3 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 4 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 5 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 6 uses device cpu
+[2023-08-29 13:59:32,952][02125] Rollout worker 7 uses device cpu
+[2023-08-29 13:59:32,952][02125] In synchronous mode, we only accumulate one batch. Setting num_batches_to_accumulate to 1
+[2023-08-29 13:59:33,131][02125] InferenceWorker_p0-w0: min num requests: 2
+[2023-08-29 13:59:33,167][02125] Starting all processes...
+[2023-08-29 13:59:33,167][02125] Starting process learner_proc0
+[2023-08-29 13:59:33,227][02125] Starting all processes...
+[2023-08-29 13:59:33,236][02125] Starting process inference_proc0-0
+[2023-08-29 13:59:33,240][02125] Starting process rollout_proc0
+[2023-08-29 13:59:33,246][02125] Starting process rollout_proc1
+[2023-08-29 13:59:33,249][02125] Starting process rollout_proc2
+[2023-08-29 13:59:33,250][02125] Starting process rollout_proc3
+[2023-08-29 13:59:33,250][02125] Starting process rollout_proc4
+[2023-08-29 13:59:33,251][02125] Starting process rollout_proc5
+[2023-08-29 13:59:33,259][02125] Starting process rollout_proc6
+[2023-08-29 13:59:33,263][02125] Starting process rollout_proc7
+[2023-08-29 13:59:35,237][02136] On MacOS, not setting affinity
+[2023-08-29 13:59:35,256][02143] On MacOS, not setting affinity
+[2023-08-29 13:59:35,292][02139] On MacOS, not setting affinity
+[2023-08-29 13:59:35,292][02137] On MacOS, not setting affinity
+[2023-08-29 13:59:35,292][02140] On MacOS, not setting affinity
+[2023-08-29 13:59:35,297][02138] On MacOS, not setting affinity
+[2023-08-29 13:59:35,303][02141] On MacOS, not setting affinity
+[2023-08-29 13:59:35,305][02134] Starting seed is not provided
+[2023-08-29 13:59:35,308][02134] Initializing actor-critic model on device cpu
+[2023-08-29 13:59:35,308][02134] RunningMeanStd input shape: (8,)
+[2023-08-29 13:59:35,309][02134] RunningMeanStd input shape: (1,)
+[2023-08-29 13:59:35,353][02134] Created Actor Critic model with architecture:
+[2023-08-29 13:59:35,356][02134] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): MultiInputEncoder(
+    (encoders): ModuleDict(
+      (obs): MlpEncoder(
+        (mlp_head): RecursiveScriptModule(
+          original_name=Sequential
+          (0): RecursiveScriptModule(original_name=Linear)
+          (1): RecursiveScriptModule(original_name=ELU)
+          (2): RecursiveScriptModule(original_name=Linear)
+          (3): RecursiveScriptModule(original_name=ELU)
+        )
+      )
+    )
+  )
+  (core): ModelCoreIdentity()
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=64, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=64, out_features=18, bias=True)
+  )
+)
+[2023-08-29 13:59:35,357][02134] Using optimizer <class 'torch.optim.adam.Adam'>
+[2023-08-29 13:59:35,360][02134] Loading state from checkpoint /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000224_114688.pth...
+[2023-08-29 13:59:35,361][02134] Loading model from checkpoint
+[2023-08-29 13:59:35,365][02134] Loaded experiment state at self.train_step=224, self.env_steps=114688
+[2023-08-29 13:59:35,367][02134] Initialized policy 0 weights for model version 224
+[2023-08-29 13:59:35,368][02134] LearnerWorker_p0 finished initialization!
+[2023-08-29 13:59:35,369][02135] RunningMeanStd input shape: (8,)
+[2023-08-29 13:59:35,371][02135] RunningMeanStd input shape: (1,)
+[2023-08-29 13:59:35,377][02142] On MacOS, not setting affinity
+[2023-08-29 13:59:35,414][02125] Inference worker 0-0 is ready!
+[2023-08-29 13:59:35,414][02125] All inference workers are ready! Signal rollout workers to start!
+[2023-08-29 13:59:35,506][02139] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,512][02142] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,514][02140] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,522][02138] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,531][02136] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,559][02141] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,576][02143] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,580][02137] Decorrelating experience for 0 frames...
+[2023-08-29 13:59:35,667][02136] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,668][02141] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,670][02140] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,689][02138] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,702][02139] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,706][02137] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,716][02143] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:35,730][02142] Decorrelating experience for 64 frames...
+[2023-08-29 13:59:36,961][02125] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 135168. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 13:59:38,048][02135] Updated weights for policy 0, policy_version 304 (0.0002)
+[2023-08-29 13:59:40,413][02135] Updated weights for policy 0, policy_version 384 (0.0002)
+[2023-08-29 13:59:41,962][02125] Fps is (10 sec: 17200.6, 60 sec: 17200.6, 300 sec: 17200.6). Total num frames: 221184. Throughput: 0: 19957.0. Samples: 99800. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 13:59:42,803][02135] Updated weights for policy 0, policy_version 464 (0.0002)
+[2023-08-29 13:59:43,261][02134] KL-divergence is very high: 133.5418
+[2023-08-29 13:59:45,158][02135] Updated weights for policy 0, policy_version 544 (0.0002)
+[2023-08-29 13:59:46,962][02125] Fps is (10 sec: 17202.0, 60 sec: 17202.0, 300 sec: 17202.0). Total num frames: 307200. Throughput: 0: 15134.0. Samples: 151350. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 13:59:47,504][02135] Updated weights for policy 0, policy_version 624 (0.0002)
+[2023-08-29 13:59:49,758][02135] Updated weights for policy 0, policy_version 704 (0.0002)
+[2023-08-29 13:59:50,717][02125] Keyboard interrupt detected in the event loop EvtLoop [Runner_EvtLoop, process=main process 2125], exiting...
+[2023-08-29 13:59:50,717][02142] Stopping RolloutWorker_w6...
+[2023-08-29 13:59:50,717][02141] Stopping RolloutWorker_w5...
+[2023-08-29 13:59:50,718][02139] Stopping RolloutWorker_w3...
+[2023-08-29 13:59:50,718][02142] Loop rollout_proc6_evt_loop terminating...
+[2023-08-29 13:59:50,718][02141] Loop rollout_proc5_evt_loop terminating...
+[2023-08-29 13:59:50,718][02136] Stopping RolloutWorker_w0...
+[2023-08-29 13:59:50,718][02139] Loop rollout_proc3_evt_loop terminating...
+[2023-08-29 13:59:50,718][02136] Loop rollout_proc0_evt_loop terminating...
+[2023-08-29 13:59:50,718][02143] Stopping RolloutWorker_w7...
+[2023-08-29 13:59:50,718][02143] Loop rollout_proc7_evt_loop terminating...
+[2023-08-29 13:59:50,718][02138] Stopping RolloutWorker_w2...
+[2023-08-29 13:59:50,718][02138] Loop rollout_proc2_evt_loop terminating...
+[2023-08-29 13:59:50,718][02137] Stopping RolloutWorker_w1...
+[2023-08-29 13:59:50,719][02137] Loop rollout_proc1_evt_loop terminating...
+[2023-08-29 13:59:50,718][02140] Stopping RolloutWorker_w4...
+[2023-08-29 13:59:50,730][02140] Loop rollout_proc4_evt_loop terminating...
+[2023-08-29 13:59:50,720][02134] Stopping Batcher_0...
+[2023-08-29 13:59:50,717][02125] Runner profile tree view:
+main_loop: 17.5511
+[2023-08-29 13:59:50,731][02125] Collected {0: 376832}, FPS: 14936.0
+[2023-08-29 13:59:50,731][02134] Loop batcher_evt_loop terminating...
+[2023-08-29 13:59:50,724][02134] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000736_376832.pth...
+[2023-08-29 13:59:50,744][02134] Stopping LearnerWorker_p0...
+[2023-08-29 13:59:50,744][02134] Loop learner_proc0_evt_loop terminating...
+[2023-08-29 13:59:50,765][02135] Weights refcount: 2 0
+[2023-08-29 13:59:50,766][02135] Stopping InferenceWorker_p0-w0...
+[2023-08-29 13:59:50,766][02135] Loop inference_proc0-0_evt_loop terminating...
+[2023-08-29 14:01:03,660][02257] Saving configuration to /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/config.json...
+[2023-08-29 14:01:03,682][02257] Rollout worker 0 uses device cpu
+[2023-08-29 14:01:03,682][02257] Rollout worker 1 uses device cpu
+[2023-08-29 14:01:03,682][02257] Rollout worker 2 uses device cpu
+[2023-08-29 14:01:03,682][02257] Rollout worker 3 uses device cpu
+[2023-08-29 14:01:03,682][02257] Rollout worker 4 uses device cpu
+[2023-08-29 14:01:03,683][02257] Rollout worker 5 uses device cpu
+[2023-08-29 14:01:03,683][02257] Rollout worker 6 uses device cpu
+[2023-08-29 14:01:03,683][02257] Rollout worker 7 uses device cpu
+[2023-08-29 14:01:03,683][02257] In synchronous mode, we only accumulate one batch. Setting num_batches_to_accumulate to 1
+[2023-08-29 14:01:03,861][02257] InferenceWorker_p0-w0: min num requests: 2
+[2023-08-29 14:01:03,898][02257] Starting all processes...
+[2023-08-29 14:01:03,898][02257] Starting process learner_proc0
+[2023-08-29 14:01:03,954][02257] Starting all processes...
+[2023-08-29 14:01:03,992][02257] Starting process inference_proc0-0
+[2023-08-29 14:01:04,001][02257] Starting process rollout_proc0
+[2023-08-29 14:01:04,013][02257] Starting process rollout_proc1
+[2023-08-29 14:01:04,037][02257] Starting process rollout_proc2
+[2023-08-29 14:01:04,051][02257] Starting process rollout_proc4
+[2023-08-29 14:01:04,055][02257] Starting process rollout_proc5
+[2023-08-29 14:01:04,059][02257] Starting process rollout_proc6
+[2023-08-29 14:01:04,064][02257] Starting process rollout_proc7
+[2023-08-29 14:01:04,040][02257] Starting process rollout_proc3
+[2023-08-29 14:01:05,954][02277] On MacOS, not setting affinity
+[2023-08-29 14:01:05,961][02269] Starting seed is not provided
+[2023-08-29 14:01:05,963][02269] Initializing actor-critic model on device cpu
+[2023-08-29 14:01:05,963][02269] RunningMeanStd input shape: (8,)
+[2023-08-29 14:01:05,964][02269] RunningMeanStd input shape: (1,)
+[2023-08-29 14:01:05,965][02274] On MacOS, not setting affinity
+[2023-08-29 14:01:05,982][02278] On MacOS, not setting affinity
+[2023-08-29 14:01:06,004][02272] On MacOS, not setting affinity
+[2023-08-29 14:01:06,004][02273] On MacOS, not setting affinity
+[2023-08-29 14:01:06,004][02276] On MacOS, not setting affinity
+[2023-08-29 14:01:06,016][02269] Created Actor Critic model with architecture:
+[2023-08-29 14:01:06,016][02269] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): MultiInputEncoder(
+    (encoders): ModuleDict(
+      (obs): MlpEncoder(
+        (mlp_head): RecursiveScriptModule(
+          original_name=Sequential
+          (0): RecursiveScriptModule(original_name=Linear)
+          (1): RecursiveScriptModule(original_name=ELU)
+          (2): RecursiveScriptModule(original_name=Linear)
+          (3): RecursiveScriptModule(original_name=ELU)
+        )
+      )
+    )
+  )
+  (core): ModelCoreIdentity()
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=64, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=64, out_features=18, bias=True)
+  )
+)
+[2023-08-29 14:01:06,021][02269] Using optimizer <class 'torch.optim.adam.Adam'>
+[2023-08-29 14:01:06,024][02269] Loading state from checkpoint /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000736_376832.pth...
+[2023-08-29 14:01:06,025][02269] Loading model from checkpoint
+[2023-08-29 14:01:06,029][02269] Loaded experiment state at self.train_step=736, self.env_steps=376832
+[2023-08-29 14:01:06,032][02269] Initialized policy 0 weights for model version 736
+[2023-08-29 14:01:06,033][02269] LearnerWorker_p0 finished initialization!
+[2023-08-29 14:01:06,034][02270] RunningMeanStd input shape: (8,)
+[2023-08-29 14:01:06,036][02270] RunningMeanStd input shape: (1,)
+[2023-08-29 14:01:06,045][02271] On MacOS, not setting affinity
+[2023-08-29 14:01:06,053][02275] On MacOS, not setting affinity
+[2023-08-29 14:01:06,079][02257] Inference worker 0-0 is ready!
+[2023-08-29 14:01:06,080][02257] All inference workers are ready! Signal rollout workers to start!
+[2023-08-29 14:01:06,185][02273] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,188][02275] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,190][02276] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,195][02274] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,198][02277] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,198][02272] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,205][02278] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,210][02271] Decorrelating experience for 0 frames...
+[2023-08-29 14:01:06,328][02276] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,336][02272] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,338][02273] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,339][02275] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,339][02277] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,347][02274] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,347][02271] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:06,358][02278] Decorrelating experience for 64 frames...
+[2023-08-29 14:01:07,662][02257] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 397312. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:08,665][02270] Updated weights for policy 0, policy_version 816 (0.0002)
+[2023-08-29 14:01:10,837][02270] Updated weights for policy 0, policy_version 896 (0.0002)
+[2023-08-29 14:01:12,663][02257] Fps is (10 sec: 18019.3, 60 sec: 18019.3, 300 sec: 18019.3). Total num frames: 487424. Throughput: 0: 21059.0. Samples: 105313. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:01:13,118][02270] Updated weights for policy 0, policy_version 976 (0.0002)
+[2023-08-29 14:01:15,515][02270] Updated weights for policy 0, policy_version 1056 (0.0002)
+[2023-08-29 14:01:17,663][02257] Fps is (10 sec: 18021.1, 60 sec: 18021.1, 300 sec: 18021.1). Total num frames: 577536. Throughput: 0: 15919.3. Samples: 159204. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:01:17,663][02257] Avg episode reward: [(0, '-33769.784')]
+[2023-08-29 14:01:17,664][02269] Saving new best policy, reward=-33769.784!
+[2023-08-29 14:01:17,737][02270] Updated weights for policy 0, policy_version 1136 (0.0002)
+[2023-08-29 14:01:19,945][02270] Updated weights for policy 0, policy_version 1216 (0.0002)
+[2023-08-29 14:01:22,328][02270] Updated weights for policy 0, policy_version 1296 (0.0002)
+[2023-08-29 14:01:22,663][02257] Fps is (10 sec: 18022.7, 60 sec: 18021.6, 300 sec: 18021.6). Total num frames: 667648. Throughput: 0: 17661.8. Samples: 264939. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:22,664][02257] Avg episode reward: [(0, '-33769.784')]
+[2023-08-29 14:01:23,847][02257] Heartbeat connected on Batcher_0
+[2023-08-29 14:01:23,854][02257] Heartbeat connected on LearnerWorker_p0
+[2023-08-29 14:01:23,862][02257] Heartbeat connected on InferenceWorker_p0-w0
+[2023-08-29 14:01:23,866][02257] Heartbeat connected on RolloutWorker_w0
+[2023-08-29 14:01:23,871][02257] Heartbeat connected on RolloutWorker_w1
+[2023-08-29 14:01:23,876][02257] Heartbeat connected on RolloutWorker_w2
+[2023-08-29 14:01:23,881][02257] Heartbeat connected on RolloutWorker_w3
+[2023-08-29 14:01:23,885][02257] Heartbeat connected on RolloutWorker_w4
+[2023-08-29 14:01:23,890][02257] Heartbeat connected on RolloutWorker_w5
+[2023-08-29 14:01:23,894][02257] Heartbeat connected on RolloutWorker_w6
+[2023-08-29 14:01:23,898][02257] Heartbeat connected on RolloutWorker_w7
+[2023-08-29 14:01:24,883][02270] Updated weights for policy 0, policy_version 1376 (0.0002)
+[2023-08-29 14:01:27,202][02270] Updated weights for policy 0, policy_version 1456 (0.0002)
+[2023-08-29 14:01:27,662][02257] Fps is (10 sec: 17613.6, 60 sec: 17817.4, 300 sec: 17817.4). Total num frames: 753664. Throughput: 0: 18326.1. Samples: 366527. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:01:27,663][02257] Avg episode reward: [(0, '-32315.751')]
+[2023-08-29 14:01:27,663][02269] Saving new best policy, reward=-32315.751!
+[2023-08-29 14:01:28,614][02269] KL-divergence is very high: 148.2714
+[2023-08-29 14:01:29,624][02270] Updated weights for policy 0, policy_version 1536 (0.0002)
+[2023-08-29 14:01:32,009][02270] Updated weights for policy 0, policy_version 1616 (0.0002)
+[2023-08-29 14:01:32,663][02257] Fps is (10 sec: 16793.7, 60 sec: 17530.4, 300 sec: 17530.4). Total num frames: 835584. Throughput: 0: 16711.9. Samples: 417808. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:32,663][02257] Avg episode reward: [(0, '-32315.751')]
+[2023-08-29 14:01:34,489][02270] Updated weights for policy 0, policy_version 1696 (0.0002)
+[2023-08-29 14:01:36,770][02270] Updated weights for policy 0, policy_version 1776 (0.0002)
+[2023-08-29 14:01:37,664][02257] Fps is (10 sec: 16790.7, 60 sec: 17475.1, 300 sec: 17475.1). Total num frames: 921600. Throughput: 0: 17339.1. Samples: 520208. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:37,664][02257] Avg episode reward: [(0, '-40243.279')]
+[2023-08-29 14:01:39,136][02270] Updated weights for policy 0, policy_version 1856 (0.0002)
+[2023-08-29 14:01:41,417][02270] Updated weights for policy 0, policy_version 1936 (0.0002)
+[2023-08-29 14:01:42,664][02257] Fps is (10 sec: 17611.3, 60 sec: 17553.5, 300 sec: 17553.5). Total num frames: 1011712. Throughput: 0: 17904.5. Samples: 626684. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:42,664][02257] Avg episode reward: [(0, '-40243.279')]
+[2023-08-29 14:01:43,872][02270] Updated weights for policy 0, policy_version 2016 (0.0002)
+[2023-08-29 14:01:46,125][02270] Updated weights for policy 0, policy_version 2096 (0.0002)
+[2023-08-29 14:01:47,663][02257] Fps is (10 sec: 18024.7, 60 sec: 17612.5, 300 sec: 17612.5). Total num frames: 1101824. Throughput: 0: 16960.4. Samples: 678429. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:01:47,663][02257] Avg episode reward: [(0, '-37792.610')]
+[2023-08-29 14:01:48,260][02270] Updated weights for policy 0, policy_version 2176 (0.0002)
+[2023-08-29 14:01:50,483][02270] Updated weights for policy 0, policy_version 2256 (0.0002)
+[2023-08-29 14:01:52,664][02257] Fps is (10 sec: 17612.0, 60 sec: 17566.5, 300 sec: 17566.5). Total num frames: 1187840. Throughput: 0: 17536.0. Samples: 789156. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:52,665][02257] Avg episode reward: [(0, '-39378.139')]
+[2023-08-29 14:01:52,956][02270] Updated weights for policy 0, policy_version 2336 (0.0002)
+[2023-08-29 14:01:55,183][02270] Updated weights for policy 0, policy_version 2416 (0.0002)
+[2023-08-29 14:01:57,416][02270] Updated weights for policy 0, policy_version 2496 (0.0002)
+[2023-08-29 14:01:57,663][02257] Fps is (10 sec: 18021.9, 60 sec: 17694.4, 300 sec: 17694.4). Total num frames: 1282048. Throughput: 0: 17555.1. Samples: 895294. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:01:57,663][02257] Avg episode reward: [(0, '-39378.139')]
+[2023-08-29 14:01:59,674][02270] Updated weights for policy 0, policy_version 2576 (0.0002)
+[2023-08-29 14:02:01,926][02270] Updated weights for policy 0, policy_version 2656 (0.0002)
+[2023-08-29 14:02:02,662][02257] Fps is (10 sec: 18027.1, 60 sec: 17650.2, 300 sec: 17650.2). Total num frames: 1368064. Throughput: 0: 17580.4. Samples: 950298. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:02,662][02257] Avg episode reward: [(0, '-42305.740')]
+[2023-08-29 14:02:04,318][02270] Updated weights for policy 0, policy_version 2736 (0.0002)
+[2023-08-29 14:02:06,491][02270] Updated weights for policy 0, policy_version 2816 (0.0002)
+[2023-08-29 14:02:07,663][02257] Fps is (10 sec: 18022.6, 60 sec: 17749.1, 300 sec: 17749.1). Total num frames: 1462272. Throughput: 0: 17602.0. Samples: 1057031. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:07,663][02257] Avg episode reward: [(0, '-42305.740')]
+[2023-08-29 14:02:08,723][02270] Updated weights for policy 0, policy_version 2896 (0.0002)
+[2023-08-29 14:02:11,209][02270] Updated weights for policy 0, policy_version 2976 (0.0002)
+[2023-08-29 14:02:12,664][02257] Fps is (10 sec: 18018.6, 60 sec: 17680.9, 300 sec: 17706.9). Total num frames: 1548288. Throughput: 0: 17700.8. Samples: 1163084. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:12,664][02257] Avg episode reward: [(0, '-40927.609')]
+[2023-08-29 14:02:13,398][02270] Updated weights for policy 0, policy_version 3056 (0.0002)
+[2023-08-29 14:02:15,651][02270] Updated weights for policy 0, policy_version 3136 (0.0002)
+[2023-08-29 14:02:17,664][02257] Fps is (10 sec: 18020.6, 60 sec: 17749.0, 300 sec: 17787.9). Total num frames: 1642496. Throughput: 0: 17814.9. Samples: 1219502. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:17,664][02257] Avg episode reward: [(0, '-40927.609')]
+[2023-08-29 14:02:17,832][02270] Updated weights for policy 0, policy_version 3216 (0.0002)
+[2023-08-29 14:02:20,274][02270] Updated weights for policy 0, policy_version 3296 (0.0002)
+[2023-08-29 14:02:22,504][02270] Updated weights for policy 0, policy_version 3376 (0.0002)
+[2023-08-29 14:02:22,664][02257] Fps is (10 sec: 18022.4, 60 sec: 17680.8, 300 sec: 17749.0). Total num frames: 1728512. Throughput: 0: 17912.0. Samples: 1326240. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:22,664][02257] Avg episode reward: [(0, '-36912.494')]
+[2023-08-29 14:02:24,734][02270] Updated weights for policy 0, policy_version 3456 (0.0002)
+[2023-08-29 14:02:26,946][02270] Updated weights for policy 0, policy_version 3536 (0.0002)
+[2023-08-29 14:02:27,664][02257] Fps is (10 sec: 17612.8, 60 sec: 17748.9, 300 sec: 17766.0). Total num frames: 1818624. Throughput: 0: 17996.4. Samples: 1436530. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:02:27,665][02257] Avg episode reward: [(0, '-31034.878')]
+[2023-08-29 14:02:27,665][02269] Saving new best policy, reward=-31034.878!
+[2023-08-29 14:02:29,387][02270] Updated weights for policy 0, policy_version 3616 (0.0002)
+[2023-08-29 14:02:31,630][02270] Updated weights for policy 0, policy_version 3696 (0.0002)
+[2023-08-29 14:02:32,663][02257] Fps is (10 sec: 18023.7, 60 sec: 17885.8, 300 sec: 17781.3). Total num frames: 1908736. Throughput: 0: 17997.7. Samples: 1488328. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:32,663][02257] Avg episode reward: [(0, '-31034.878')]
+[2023-08-29 14:02:33,925][02270] Updated weights for policy 0, policy_version 3776 (0.0002)
+[2023-08-29 14:02:36,152][02270] Updated weights for policy 0, policy_version 3856 (0.0002)
+[2023-08-29 14:02:36,643][02269] KL-divergence is very high: 697.4426
+[2023-08-29 14:02:37,663][02257] Fps is (10 sec: 17614.7, 60 sec: 17886.2, 300 sec: 17749.2). Total num frames: 1994752. Throughput: 0: 17938.8. Samples: 1596382. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:37,663][02257] Avg episode reward: [(0, '-26120.967')]
+[2023-08-29 14:02:37,663][02269] Saving new best policy, reward=-26120.967!
+[2023-08-29 14:02:38,647][02270] Updated weights for policy 0, policy_version 3936 (0.0002)
+[2023-08-29 14:02:40,980][02270] Updated weights for policy 0, policy_version 4016 (0.0002)
+[2023-08-29 14:02:42,663][02257] Fps is (10 sec: 17612.8, 60 sec: 17886.1, 300 sec: 17763.6). Total num frames: 2084864. Throughput: 0: 17879.0. Samples: 1699846. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:42,663][02257] Avg episode reward: [(0, '-26120.967')]
+[2023-08-29 14:02:42,665][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000004072_2084864.pth...
+[2023-08-29 14:02:42,667][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000224_114688.pth
+[2023-08-29 14:02:43,209][02270] Updated weights for policy 0, policy_version 4096 (0.0002)
+[2023-08-29 14:02:45,753][02269] KL-divergence is very high: 667.0187
+[2023-08-29 14:02:45,758][02270] Updated weights for policy 0, policy_version 4176 (0.0002)
+[2023-08-29 14:02:47,663][02257] Fps is (10 sec: 17612.6, 60 sec: 17817.5, 300 sec: 17735.5). Total num frames: 2170880. Throughput: 0: 17839.5. Samples: 1753104. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:47,663][02257] Avg episode reward: [(0, '-20283.983')]
+[2023-08-29 14:02:47,664][02269] Saving new best policy, reward=-20283.983!
+[2023-08-29 14:02:47,959][02270] Updated weights for policy 0, policy_version 4256 (0.0002)
+[2023-08-29 14:02:50,302][02270] Updated weights for policy 0, policy_version 4336 (0.0002)
+[2023-08-29 14:02:52,561][02270] Updated weights for policy 0, policy_version 4416 (0.0002)
+[2023-08-29 14:02:52,662][02257] Fps is (10 sec: 17613.6, 60 sec: 17886.4, 300 sec: 17749.3). Total num frames: 2260992. Throughput: 0: 17798.5. Samples: 1857953. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:02:52,663][02257] Avg episode reward: [(0, '-20283.983')]
+[2023-08-29 14:02:55,154][02270] Updated weights for policy 0, policy_version 4496 (0.0002)
+[2023-08-29 14:02:57,370][02270] Updated weights for policy 0, policy_version 4576 (0.0002)
+[2023-08-29 14:02:57,663][02257] Fps is (10 sec: 17612.6, 60 sec: 17749.3, 300 sec: 17724.4). Total num frames: 2347008. Throughput: 0: 17727.6. Samples: 1960817. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-29 14:02:57,663][02257] Avg episode reward: [(0, '-13399.593')]
+[2023-08-29 14:02:57,664][02269] Saving new best policy, reward=-13399.593!
+[2023-08-29 14:02:59,599][02270] Updated weights for policy 0, policy_version 4656 (0.0002)
+[2023-08-29 14:03:01,875][02270] Updated weights for policy 0, policy_version 4736 (0.0002)
+[2023-08-29 14:03:02,664][02257] Fps is (10 sec: 17610.2, 60 sec: 17816.9, 300 sec: 17737.2). Total num frames: 2437120. Throughput: 0: 17697.6. Samples: 2015892. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:02,664][02257] Avg episode reward: [(0, '-13399.593')]
+[2023-08-29 14:03:04,179][02269] KL-divergence is very high: 3411.2600
+[2023-08-29 14:03:04,436][02270] Updated weights for policy 0, policy_version 4816 (0.0002)
+[2023-08-29 14:03:06,679][02270] Updated weights for policy 0, policy_version 4896 (0.0002)
+[2023-08-29 14:03:07,663][02257] Fps is (10 sec: 17613.0, 60 sec: 17681.1, 300 sec: 17715.1). Total num frames: 2523136. Throughput: 0: 17633.1. Samples: 2119720. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:03:07,663][02257] Avg episode reward: [(0, '-11299.859')]
+[2023-08-29 14:03:07,664][02269] Saving new best policy, reward=-11299.859!
+[2023-08-29 14:03:09,081][02270] Updated weights for policy 0, policy_version 4976 (0.0002)
+[2023-08-29 14:03:11,401][02270] Updated weights for policy 0, policy_version 5056 (0.0002)
+[2023-08-29 14:03:12,664][02257] Fps is (10 sec: 17202.8, 60 sec: 17680.9, 300 sec: 17694.4). Total num frames: 2609152. Throughput: 0: 17502.6. Samples: 2224146. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:03:12,664][02257] Avg episode reward: [(0, '-11299.859')]
+[2023-08-29 14:03:13,260][02269] KL-divergence is very high: 3359.1050
+[2023-08-29 14:03:13,490][02269] KL-divergence is very high: 155.1156
+[2023-08-29 14:03:13,694][02269] KL-divergence is very high: 127.9870
+[2023-08-29 14:03:13,701][02269] KL-divergence is very high: 317.7355
+[2023-08-29 14:03:13,954][02269] KL-divergence is very high: 148.8682
+[2023-08-29 14:03:13,966][02270] Updated weights for policy 0, policy_version 5136 (0.0002)
+[2023-08-29 14:03:16,203][02270] Updated weights for policy 0, policy_version 5216 (0.0002)
+[2023-08-29 14:03:17,664][02257] Fps is (10 sec: 17202.3, 60 sec: 17544.7, 300 sec: 17675.6). Total num frames: 2695168. Throughput: 0: 17443.5. Samples: 2273296. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:03:17,664][02257] Avg episode reward: [(0, '-10466.034')]
+[2023-08-29 14:03:17,664][02269] Saving new best policy, reward=-10466.034!
+[2023-08-29 14:03:18,504][02270] Updated weights for policy 0, policy_version 5296 (0.0002)
+[2023-08-29 14:03:20,799][02270] Updated weights for policy 0, policy_version 5376 (0.0002)
+[2023-08-29 14:03:22,662][02257] Fps is (10 sec: 16796.7, 60 sec: 17476.7, 300 sec: 17628.0). Total num frames: 2777088. Throughput: 0: 17422.2. Samples: 2380371. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:22,663][02257] Avg episode reward: [(0, '-13499.459')]
+[2023-08-29 14:03:22,682][02269] KL-divergence is very high: 329.4608
+[2023-08-29 14:03:23,351][02270] Updated weights for policy 0, policy_version 5456 (0.0002)
+[2023-08-29 14:03:25,645][02270] Updated weights for policy 0, policy_version 5536 (0.0002)
+[2023-08-29 14:03:27,664][02257] Fps is (10 sec: 17202.2, 60 sec: 17476.2, 300 sec: 17641.8). Total num frames: 2867200. Throughput: 0: 17424.0. Samples: 2483949. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:03:27,664][02257] Avg episode reward: [(0, '-13499.459')]
+[2023-08-29 14:03:27,953][02270] Updated weights for policy 0, policy_version 5616 (0.0002)
+[2023-08-29 14:03:30,233][02270] Updated weights for policy 0, policy_version 5696 (0.0002)
+[2023-08-29 14:03:31,840][02269] KL-divergence is very high: 1499.4238
+[2023-08-29 14:03:32,663][02257] Fps is (10 sec: 17611.5, 60 sec: 17408.0, 300 sec: 17626.8). Total num frames: 2953216. Throughput: 0: 17412.5. Samples: 2536667. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:32,663][02257] Avg episode reward: [(0, '-14665.199')]
+[2023-08-29 14:03:32,795][02270] Updated weights for policy 0, policy_version 5776 (0.0002)
+[2023-08-29 14:03:35,072][02270] Updated weights for policy 0, policy_version 5856 (0.0002)
+[2023-08-29 14:03:37,322][02270] Updated weights for policy 0, policy_version 5936 (0.0002)
+[2023-08-29 14:03:37,663][02257] Fps is (10 sec: 17615.0, 60 sec: 17476.3, 300 sec: 17640.0). Total num frames: 3043328. Throughput: 0: 17365.7. Samples: 2639419. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:37,663][02257] Avg episode reward: [(0, '-14665.199')]
+[2023-08-29 14:03:39,632][02270] Updated weights for policy 0, policy_version 6016 (0.0002)
+[2023-08-29 14:03:41,187][02269] KL-divergence is very high: 270.1259
+[2023-08-29 14:03:41,190][02269] KL-divergence is very high: 1043.5261
+[2023-08-29 14:03:42,097][02270] Updated weights for policy 0, policy_version 6096 (0.0002)
+[2023-08-29 14:03:42,662][02257] Fps is (10 sec: 17614.1, 60 sec: 17408.2, 300 sec: 17626.0). Total num frames: 3129344. Throughput: 0: 17411.9. Samples: 2744336. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:42,663][02257] Avg episode reward: [(0, '-14139.799')]
+[2023-08-29 14:03:44,373][02270] Updated weights for policy 0, policy_version 6176 (0.0002)
+[2023-08-29 14:03:46,613][02270] Updated weights for policy 0, policy_version 6256 (0.0002)
+[2023-08-29 14:03:47,663][02257] Fps is (10 sec: 17613.5, 60 sec: 17476.4, 300 sec: 17638.4). Total num frames: 3219456. Throughput: 0: 17375.8. Samples: 2797781. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:03:47,663][02257] Avg episode reward: [(0, '-14139.799')]
+[2023-08-29 14:03:48,879][02270] Updated weights for policy 0, policy_version 6336 (0.0002)
+[2023-08-29 14:03:50,024][02269] KL-divergence is very high: 158.6016
+[2023-08-29 14:03:50,229][02269] KL-divergence is very high: 128.4095
+[2023-08-29 14:03:50,232][02269] KL-divergence is very high: 113.2888
+[2023-08-29 14:03:50,235][02269] KL-divergence is very high: 129.1388
+[2023-08-29 14:03:51,403][02270] Updated weights for policy 0, policy_version 6416 (0.0002)
+[2023-08-29 14:03:52,664][02257] Fps is (10 sec: 17610.0, 60 sec: 17407.6, 300 sec: 17625.0). Total num frames: 3305472. Throughput: 0: 17401.8. Samples: 2902816. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:03:52,664][02257] Avg episode reward: [(0, '-16637.548')]
+[2023-08-29 14:03:53,626][02270] Updated weights for policy 0, policy_version 6496 (0.0002)
+[2023-08-29 14:03:55,879][02270] Updated weights for policy 0, policy_version 6576 (0.0002)
+[2023-08-29 14:03:57,661][02257] Fps is (10 sec: 17614.8, 60 sec: 17476.8, 300 sec: 17637.0). Total num frames: 3395584. Throughput: 0: 17504.9. Samples: 3011818. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:03:57,662][02257] Avg episode reward: [(0, '-16637.548')]
+[2023-08-29 14:03:58,117][02270] Updated weights for policy 0, policy_version 6656 (0.0002)
+[2023-08-29 14:03:58,560][02269] KL-divergence is very high: 466.0750
+[2023-08-29 14:03:58,572][02269] KL-divergence is very high: 4378.1611
+[2023-08-29 14:03:59,046][02269] KL-divergence is very high: 4080.8794
+[2023-08-29 14:03:59,050][02269] KL-divergence is very high: 249.0270
+[2023-08-29 14:03:59,056][02269] KL-divergence is very high: 110.2269
+[2023-08-29 14:03:59,059][02269] KL-divergence is very high: 14969.0225
+[2023-08-29 14:03:59,062][02269] KL-divergence is very high: 14197.9629
+[2023-08-29 14:03:59,281][02269] KL-divergence is very high: 1017.9431
+[2023-08-29 14:03:59,284][02269] High loss value: l:254.6120 pl:-0.0215 vl:0.1524 exp_l:0.0000 kl_l:254.4810 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,284][02269] KL-divergence is very high: 92329.3047
+[2023-08-29 14:03:59,288][02269] High loss value: l:396.4715 pl:0.0286 vl:0.2348 exp_l:0.0000 kl_l:396.2082 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,288][02269] KL-divergence is very high: 162577.8906
+[2023-08-29 14:03:59,291][02269] High loss value: l:332.8129 pl:-0.0535 vl:0.4644 exp_l:0.0000 kl_l:332.4021 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,291][02269] KL-divergence is very high: 218388.5156
+[2023-08-29 14:03:59,295][02269] KL-divergence is very high: 11566.8867
+[2023-08-29 14:03:59,298][02269] High loss value: l:128.6794 pl:0.0220 vl:0.1553 exp_l:0.0000 kl_l:128.5021 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,298][02269] KL-divergence is very high: 45962.1953
+[2023-08-29 14:03:59,301][02269] High loss value: l:254.8789 pl:-0.0513 vl:0.2203 exp_l:0.0000 kl_l:254.7099 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,301][02269] KL-divergence is very high: 112328.7812
+[2023-08-29 14:03:59,305][02269] High loss value: l:254.8794 pl:-0.0452 vl:0.4378 exp_l:0.0000 kl_l:254.4868 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,305][02269] KL-divergence is very high: 142660.5000
+[2023-08-29 14:03:59,511][02269] High loss value: l:47.9729 pl:-0.0252 vl:1.0947 exp_l:0.0000 kl_l:46.9034 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,511][02269] KL-divergence is very high: 39611.0625
+[2023-08-29 14:03:59,515][02269] High loss value: l:109.1943 pl:-0.0416 vl:1.1069 exp_l:0.0000 kl_l:108.1290 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,515][02269] KL-divergence is very high: 80260.8438
+[2023-08-29 14:03:59,519][02269] KL-divergence is very high: 11330.1523
+[2023-08-29 14:03:59,522][02269] KL-divergence is very high: 8787.7402
+[2023-08-29 14:03:59,525][02269] KL-divergence is very high: 15297.0264
+[2023-08-29 14:03:59,528][02269] High loss value: l:77.6982 pl:-0.0359 vl:1.0193 exp_l:0.0000 kl_l:76.7148 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:03:59,528][02269] KL-divergence is very high: 48738.4297
+[2023-08-29 14:03:59,532][02269] KL-divergence is very high: 10601.1680
+[2023-08-29 14:03:59,736][02269] KL-divergence is very high: 544.1205
+[2023-08-29 14:03:59,738][02269] KL-divergence is very high: 4621.1294
+[2023-08-29 14:03:59,741][02269] KL-divergence is very high: 115.6930
+[2023-08-29 14:03:59,745][02269] KL-divergence is very high: 153.4109
+[2023-08-29 14:03:59,748][02269] KL-divergence is very high: 2167.7378
+[2023-08-29 14:03:59,750][02269] KL-divergence is very high: 13151.4131
+[2023-08-29 14:03:59,954][02269] KL-divergence is very high: 127.8784
+[2023-08-29 14:03:59,957][02269] KL-divergence is very high: 144.8802
+[2023-08-29 14:03:59,960][02269] KL-divergence is very high: 1745.6932
+[2023-08-29 14:03:59,966][02269] KL-divergence is very high: 278.9655
+[2023-08-29 14:03:59,970][02269] KL-divergence is very high: 1596.2111
+[2023-08-29 14:04:00,669][02270] Updated weights for policy 0, policy_version 6736 (0.0002)
+[2023-08-29 14:04:02,663][02257] Fps is (10 sec: 17614.6, 60 sec: 17408.3, 300 sec: 17624.4). Total num frames: 3481600. Throughput: 0: 17527.5. Samples: 3062020. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-29 14:04:02,663][02257] Avg episode reward: [(0, '-18933.096')]
+[2023-08-29 14:04:02,877][02270] Updated weights for policy 0, policy_version 6816 (0.0002)
+[2023-08-29 14:04:05,158][02270] Updated weights for policy 0, policy_version 6896 (0.0002)
+[2023-08-29 14:04:07,461][02270] Updated weights for policy 0, policy_version 6976 (0.0002)
+[2023-08-29 14:04:07,663][02257] Fps is (10 sec: 17610.1, 60 sec: 17476.3, 300 sec: 17635.5). Total num frames: 3571712. Throughput: 0: 17554.2. Samples: 3170323. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:07,663][02257] Avg episode reward: [(0, '-18933.096')]
+[2023-08-29 14:04:09,970][02270] Updated weights for policy 0, policy_version 7056 (0.0002)
+[2023-08-29 14:04:12,246][02270] Updated weights for policy 0, policy_version 7136 (0.0002)
+[2023-08-29 14:04:12,663][02257] Fps is (10 sec: 17612.6, 60 sec: 17476.6, 300 sec: 17623.8). Total num frames: 3657728. Throughput: 0: 17549.3. Samples: 3273648. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:12,663][02257] Avg episode reward: [(0, '-34051.541')]
+[2023-08-29 14:04:14,479][02270] Updated weights for policy 0, policy_version 7216 (0.0002)
+[2023-08-29 14:04:16,734][02270] Updated weights for policy 0, policy_version 7296 (0.0002)
+[2023-08-29 14:04:17,663][02257] Fps is (10 sec: 17612.6, 60 sec: 17544.7, 300 sec: 17634.3). Total num frames: 3747840. Throughput: 0: 17606.5. Samples: 3328962. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:17,664][02257] Avg episode reward: [(0, '-33459.126')]
+[2023-08-29 14:04:19,168][02270] Updated weights for policy 0, policy_version 7376 (0.0002)
+[2023-08-29 14:04:21,503][02270] Updated weights for policy 0, policy_version 7456 (0.0002)
+[2023-08-29 14:04:22,663][02257] Fps is (10 sec: 18022.2, 60 sec: 17680.8, 300 sec: 17644.2). Total num frames: 3837952. Throughput: 0: 17639.4. Samples: 3433194. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:04:22,663][02257] Avg episode reward: [(0, '-33459.126')]
+[2023-08-29 14:04:22,666][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000007496_3837952.pth...
+[2023-08-29 14:04:22,668][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000000736_376832.pth
+[2023-08-29 14:04:23,762][02270] Updated weights for policy 0, policy_version 7536 (0.0002)
+[2023-08-29 14:04:26,273][02270] Updated weights for policy 0, policy_version 7616 (0.0002)
+[2023-08-29 14:04:27,663][02257] Fps is (10 sec: 17613.7, 60 sec: 17613.3, 300 sec: 17633.2). Total num frames: 3923968. Throughput: 0: 17624.6. Samples: 3537446. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:04:27,664][02257] Avg episode reward: [(0, '-32372.235')]
+[2023-08-29 14:04:28,522][02270] Updated weights for policy 0, policy_version 7696 (0.0002)
+[2023-08-29 14:04:30,765][02270] Updated weights for policy 0, policy_version 7776 (0.0002)
+[2023-08-29 14:04:32,662][02257] Fps is (10 sec: 17614.0, 60 sec: 17681.2, 300 sec: 17642.8). Total num frames: 4014080. Throughput: 0: 17655.2. Samples: 3592265. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:32,663][02257] Avg episode reward: [(0, '-32372.235')]
+[2023-08-29 14:04:32,933][02270] Updated weights for policy 0, policy_version 7856 (0.0002)
+[2023-08-29 14:04:35,412][02270] Updated weights for policy 0, policy_version 7936 (0.0002)
+[2023-08-29 14:04:37,626][02270] Updated weights for policy 0, policy_version 8016 (0.0002)
+[2023-08-29 14:04:37,664][02257] Fps is (10 sec: 18020.3, 60 sec: 17680.8, 300 sec: 17651.7). Total num frames: 4104192. Throughput: 0: 17686.7. Samples: 3698713. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:37,664][02257] Avg episode reward: [(0, '-34263.295')]
+[2023-08-29 14:04:39,849][02270] Updated weights for policy 0, policy_version 8096 (0.0002)
+[2023-08-29 14:04:42,132][02270] Updated weights for policy 0, policy_version 8176 (0.0002)
+[2023-08-29 14:04:42,663][02257] Fps is (10 sec: 18021.5, 60 sec: 17749.2, 300 sec: 17660.4). Total num frames: 4194304. Throughput: 0: 17720.4. Samples: 3809264. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:04:42,663][02257] Avg episode reward: [(0, '-34263.295')]
+[2023-08-29 14:04:44,657][02270] Updated weights for policy 0, policy_version 8256 (0.0002)
+[2023-08-29 14:04:46,976][02270] Updated weights for policy 0, policy_version 8336 (0.0002)
+[2023-08-29 14:04:47,663][02257] Fps is (10 sec: 17204.7, 60 sec: 17612.7, 300 sec: 17631.4). Total num frames: 4276224. Throughput: 0: 17690.6. Samples: 3858095. Policy #0 lag: (min: 6.0, avg: 6.0, max: 6.0)
+[2023-08-29 14:04:47,663][02257] Avg episode reward: [(0, '-36905.953')]
+[2023-08-29 14:04:49,259][02270] Updated weights for policy 0, policy_version 8416 (0.0002)
+[2023-08-29 14:04:51,443][02270] Updated weights for policy 0, policy_version 8496 (0.0002)
+[2023-08-29 14:04:52,663][02257] Fps is (10 sec: 17612.8, 60 sec: 17749.6, 300 sec: 17658.3). Total num frames: 4370432. Throughput: 0: 17687.6. Samples: 3966266. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:52,663][02257] Avg episode reward: [(0, '-36905.953')]
+[2023-08-29 14:04:53,913][02270] Updated weights for policy 0, policy_version 8576 (0.0002)
+[2023-08-29 14:04:56,220][02270] Updated weights for policy 0, policy_version 8656 (0.0002)
+[2023-08-29 14:04:57,663][02257] Fps is (10 sec: 18022.2, 60 sec: 17680.6, 300 sec: 17648.4). Total num frames: 4456448. Throughput: 0: 17704.9. Samples: 4070370. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:04:57,663][02257] Avg episode reward: [(0, '-35662.948')]
+[2023-08-29 14:04:58,110][02269] KL-divergence is very high: 377.1249
+[2023-08-29 14:04:58,113][02269] KL-divergence is very high: 439.5258
+[2023-08-29 14:04:58,547][02270] Updated weights for policy 0, policy_version 8736 (0.0002)
+[2023-08-29 14:05:00,752][02270] Updated weights for policy 0, policy_version 8816 (0.0002)
+[2023-08-29 14:05:01,898][02269] KL-divergence is very high: 560.1690
+[2023-08-29 14:05:02,662][02257] Fps is (10 sec: 17205.6, 60 sec: 17681.5, 300 sec: 17639.0). Total num frames: 4542464. Throughput: 0: 17682.8. Samples: 4124659. Policy #0 lag: (min: 0.0, avg: 0.0, max: 0.0)
+[2023-08-29 14:05:02,662][02257] Avg episode reward: [(0, '-25706.690')]
+[2023-08-29 14:05:03,307][02270] Updated weights for policy 0, policy_version 8896 (0.0002)
+[2023-08-29 14:05:05,613][02270] Updated weights for policy 0, policy_version 8976 (0.0002)
+[2023-08-29 14:05:07,663][02257] Fps is (10 sec: 17203.4, 60 sec: 17612.8, 300 sec: 17629.8). Total num frames: 4628480. Throughput: 0: 17642.3. Samples: 4227092. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:07,663][02257] Avg episode reward: [(0, '-25706.690')]
+[2023-08-29 14:05:07,911][02270] Updated weights for policy 0, policy_version 9056 (0.0002)
+[2023-08-29 14:05:10,241][02270] Updated weights for policy 0, policy_version 9136 (0.0002)
+[2023-08-29 14:05:11,864][02269] KL-divergence is very high: 255.4448
+[2023-08-29 14:05:11,867][02269] High loss value: l:101.9697 pl:0.0202 vl:0.0474 exp_l:0.0000 kl_l:101.9021 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:11,868][02269] KL-divergence is very high: 102942.4219
+[2023-08-29 14:05:11,877][02269] High loss value: l:70.7525 pl:0.1419 vl:0.0130 exp_l:0.0000 kl_l:70.5977 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:11,877][02269] KL-divergence is very high: 52569.9375
+[2023-08-29 14:05:11,880][02269] KL-divergence is very high: 16281.8535
+[2023-08-29 14:05:11,883][02269] KL-divergence is very high: 150.1327
+[2023-08-29 14:05:12,133][02269] KL-divergence is very high: 653.5459
+[2023-08-29 14:05:12,136][02269] KL-divergence is very high: 1328.8704
+[2023-08-29 14:05:12,139][02269] KL-divergence is very high: 185.8762
+[2023-08-29 14:05:12,144][02269] KL-divergence is very high: 230.5563
+[2023-08-29 14:05:12,348][02269] KL-divergence is very high: 25730.9375
+[2023-08-29 14:05:12,351][02269] KL-divergence is very high: 116.7110
+[2023-08-29 14:05:12,355][02269] KL-divergence is very high: 119.7257
+[2023-08-29 14:05:12,358][02269] KL-divergence is very high: 116.9390
+[2023-08-29 14:05:12,361][02269] High loss value: l:117.2373 pl:0.0861 vl:0.1485 exp_l:0.0000 kl_l:117.0027 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,361][02269] KL-divergence is very high: 574194.8125
+[2023-08-29 14:05:12,365][02269] KL-divergence is very high: 909.2070
+[2023-08-29 14:05:12,605][02269] KL-divergence is very high: 16825.3281
+[2023-08-29 14:05:12,608][02269] KL-divergence is very high: 80809.1875
+[2023-08-29 14:05:12,610][02269] High loss value: l:269.4311 pl:-0.0287 vl:0.9178 exp_l:0.0000 kl_l:268.5420 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,611][02269] KL-divergence is very high: 630892.3750
+[2023-08-29 14:05:12,614][02269] KL-divergence is very high: 7873.9766
+[2023-08-29 14:05:12,617][02269] KL-divergence is very high: 7061.5698
+[2023-08-29 14:05:12,620][02269] KL-divergence is very high: 31509.0742
+[2023-08-29 14:05:12,623][02269] High loss value: l:43.6385 pl:-0.0272 vl:0.8778 exp_l:0.0000 kl_l:42.7879 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,623][02269] KL-divergence is very high: 59242.1914
+[2023-08-29 14:05:12,663][02257] Fps is (10 sec: 17200.3, 60 sec: 17612.7, 300 sec: 17621.1). Total num frames: 4714496. Throughput: 0: 17583.4. Samples: 4328708. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:12,663][02257] Avg episode reward: [(0, '-19021.244')]
+[2023-08-29 14:05:12,825][02269] KL-divergence is very high: 335.4756
+[2023-08-29 14:05:12,828][02269] High loss value: l:2169.6594 pl:-0.0427 vl:0.5099 exp_l:0.0000 kl_l:2169.1921 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,828][02269] KL-divergence is very high: 434563.9688
+[2023-08-29 14:05:12,831][02269] High loss value: l:2985.5588 pl:-0.0373 vl:0.4207 exp_l:0.0000 kl_l:2985.1755 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,831][02269] KL-divergence is very high: 744654.1250
+[2023-08-29 14:05:12,834][02269] High loss value: l:2183.0200 pl:-0.0268 vl:0.7129 exp_l:0.0000 kl_l:2182.3340 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,834][02269] KL-divergence is very high: 1132371.5000
+[2023-08-29 14:05:12,838][02269] High loss value: l:579.0637 pl:-0.0234 vl:1.3857 exp_l:0.0000 kl_l:577.7015 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,838][02269] KL-divergence is very high: 225883.5938
+[2023-08-29 14:05:12,842][02269] High loss value: l:2749.4138 pl:-0.0322 vl:0.4833 exp_l:0.0000 kl_l:2748.9626 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,842][02269] KL-divergence is very high: 445505.8125
+[2023-08-29 14:05:12,845][02269] High loss value: l:3870.2283 pl:-0.0345 vl:0.5050 exp_l:0.0000 kl_l:3869.7578 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,845][02269] KL-divergence is very high: 1092729.7500
+[2023-08-29 14:05:12,849][02269] High loss value: l:5715.3301 pl:-0.0154 vl:0.8643 exp_l:0.0000 kl_l:5714.4814 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:12,849][02269] KL-divergence is very high: 2629551.5000
+[2023-08-29 14:05:12,853][02270] Updated weights for policy 0, policy_version 9216 (0.0002)
+[2023-08-29 14:05:13,054][02269] KL-divergence is very high: 369.0032
+[2023-08-29 14:05:13,056][02269] KL-divergence is very high: 333.0984
+[2023-08-29 14:05:13,059][02269] KL-divergence is very high: 185.5498
+[2023-08-29 14:05:13,062][02269] KL-divergence is very high: 1119.8888
+[2023-08-29 14:05:13,065][02269] KL-divergence is very high: 1805.7213
+[2023-08-29 14:05:13,069][02269] KL-divergence is very high: 1166.5697
+[2023-08-29 14:05:13,292][02269] KL-divergence is very high: 265.9895
+[2023-08-29 14:05:13,295][02269] KL-divergence is very high: 293.1416
+[2023-08-29 14:05:13,300][02269] KL-divergence is very high: 162.0991
+[2023-08-29 14:05:13,303][02269] KL-divergence is very high: 189.2346
+[2023-08-29 14:05:13,307][02269] KL-divergence is very high: 182.0590
+[2023-08-29 14:05:13,310][02269] KL-divergence is very high: 435.4019
+[2023-08-29 14:05:13,540][02269] KL-divergence is very high: 2522.8826
+[2023-08-29 14:05:13,543][02269] KL-divergence is very high: 1667.5056
+[2023-08-29 14:05:13,545][02269] KL-divergence is very high: 335.0720
+[2023-08-29 14:05:13,548][02269] KL-divergence is very high: 3258.5496
+[2023-08-29 14:05:13,551][02269] KL-divergence is very high: 6059.7817
+[2023-08-29 14:05:13,554][02269] KL-divergence is very high: 2171.6685
+[2023-08-29 14:05:13,558][02269] KL-divergence is very high: 1383.0406
+[2023-08-29 14:05:13,757][02269] KL-divergence is very high: 2523.0588
+[2023-08-29 14:05:13,759][02269] KL-divergence is very high: 4046.4834
+[2023-08-29 14:05:13,763][02269] KL-divergence is very high: 1776.8835
+[2023-08-29 14:05:13,765][02269] KL-divergence is very high: 1501.9344
+[2023-08-29 14:05:13,768][02269] KL-divergence is very high: 2154.8770
+[2023-08-29 14:05:13,770][02269] KL-divergence is very high: 3988.2891
+[2023-08-29 14:05:13,774][02269] KL-divergence is very high: 1817.4935
+[2023-08-29 14:05:13,979][02269] KL-divergence is very high: 1018.3633
+[2023-08-29 14:05:13,982][02269] KL-divergence is very high: 1823.3926
+[2023-08-29 14:05:13,984][02269] KL-divergence is very high: 1208.1263
+[2023-08-29 14:05:13,987][02269] KL-divergence is very high: 839.1346
+[2023-08-29 14:05:13,991][02269] KL-divergence is very high: 1027.7970
+[2023-08-29 14:05:13,993][02269] KL-divergence is very high: 1467.1227
+[2023-08-29 14:05:13,996][02269] KL-divergence is very high: 484.5173
+[2023-08-29 14:05:14,220][02269] KL-divergence is very high: 2719.7673
+[2023-08-29 14:05:14,223][02269] KL-divergence is very high: 2576.0303
+[2023-08-29 14:05:14,226][02269] KL-divergence is very high: 801.9417
+[2023-08-29 14:05:14,229][02269] KL-divergence is very high: 2393.9912
+[2023-08-29 14:05:14,232][02269] KL-divergence is very high: 403.4016
+[2023-08-29 14:05:14,235][02269] KL-divergence is very high: 869.4836
+[2023-08-29 14:05:14,239][02269] KL-divergence is very high: 698.6886
+[2023-08-29 14:05:14,438][02269] KL-divergence is very high: 655.1866
+[2023-08-29 14:05:14,440][02269] High loss value: l:3737.1270 pl:-0.0514 vl:4.4182 exp_l:0.0000 kl_l:3732.7603 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,441][02269] KL-divergence is very high: 946586.9375
+[2023-08-29 14:05:14,444][02269] High loss value: l:1953.9850 pl:-0.0520 vl:4.5499 exp_l:0.0000 kl_l:1949.4872 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,444][02269] KL-divergence is very high: 733107.0625
+[2023-08-29 14:05:14,447][02269] High loss value: l:43.8721 pl:-0.0455 vl:4.4439 exp_l:0.0000 kl_l:39.4737 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,447][02269] KL-divergence is very high: 10463.8945
+[2023-08-29 14:05:14,451][02269] High loss value: l:7027.4966 pl:-0.0146 vl:3.9917 exp_l:0.0000 kl_l:7023.5195 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,451][02269] KL-divergence is very high: 1853461.0000
+[2023-08-29 14:05:14,454][02269] High loss value: l:14995.4268 pl:-0.0391 vl:4.2798 exp_l:0.0000 kl_l:14991.1865 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,454][02269] KL-divergence is very high: 4143271.5000
+[2023-08-29 14:05:14,457][02269] High loss value: l:6460.1050 pl:-0.0377 vl:4.4499 exp_l:0.0000 kl_l:6455.6929 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,458][02269] KL-divergence is very high: 2531784.5000
+[2023-08-29 14:05:14,461][02269] High loss value: l:2033.2765 pl:-0.0321 vl:4.3982 exp_l:0.0000 kl_l:2028.9104 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,461][02269] KL-divergence is very high: 640539.0000
+[2023-08-29 14:05:14,701][02269] High loss value: l:893.7085 pl:-0.0506 vl:4.3547 exp_l:0.0000 kl_l:889.4044 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,701][02269] KL-divergence is very high: 253178.2812
+[2023-08-29 14:05:14,705][02269] High loss value: l:472.5727 pl:-0.0528 vl:4.2877 exp_l:0.0000 kl_l:468.3377 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,705][02269] KL-divergence is very high: 163275.8281
+[2023-08-29 14:05:14,708][02269] High loss value: l:224.6534 pl:-0.0516 vl:4.3080 exp_l:0.0000 kl_l:220.3970 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,709][02269] KL-divergence is very high: 50059.8047
+[2023-08-29 14:05:14,712][02269] High loss value: l:370.6410 pl:-0.0459 vl:4.2253 exp_l:0.0000 kl_l:366.4615 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,713][02269] KL-divergence is very high: 64321.3594
+[2023-08-29 14:05:14,716][02269] High loss value: l:128.0340 pl:-0.0447 vl:4.2840 exp_l:0.0000 kl_l:123.7948 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,717][02269] KL-divergence is very high: 63043.6836
+[2023-08-29 14:05:14,720][02269] High loss value: l:47.4225 pl:-0.0508 vl:4.2200 exp_l:0.0000 kl_l:43.2533 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,721][02269] KL-divergence is very high: 29278.1855
+[2023-08-29 14:05:14,724][02269] High loss value: l:590.5286 pl:-0.0481 vl:4.2362 exp_l:0.0000 kl_l:586.3405 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,724][02269] KL-divergence is very high: 144142.8750
+[2023-08-29 14:05:14,928][02269] KL-divergence is very high: 736.9821
+[2023-08-29 14:05:14,930][02269] KL-divergence is very high: 7560.9546
+[2023-08-29 14:05:14,933][02269] KL-divergence is very high: 2290.1033
+[2023-08-29 14:05:14,936][02269] High loss value: l:133.8610 pl:-0.0503 vl:4.3907 exp_l:0.0000 kl_l:129.5206 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:14,936][02269] KL-divergence is very high: 59700.5664
+[2023-08-29 14:05:14,940][02269] KL-divergence is very high: 33318.1562
+[2023-08-29 14:05:14,943][02269] KL-divergence is very high: 7496.6411
+[2023-08-29 14:05:14,946][02269] KL-divergence is very high: 7157.6777
+[2023-08-29 14:05:15,151][02269] High loss value: l:49.0701 pl:-0.0319 vl:3.4836 exp_l:0.0000 kl_l:45.6184 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,151][02269] KL-divergence is very high: 46036.1328
+[2023-08-29 14:05:15,155][02269] KL-divergence is very high: 5409.5376
+[2023-08-29 14:05:15,157][02269] KL-divergence is very high: 1567.4900
+[2023-08-29 14:05:15,160][02269] KL-divergence is very high: 876.9507
+[2023-08-29 14:05:15,163][02269] High loss value: l:115.3207 pl:-0.0480 vl:2.8085 exp_l:0.0000 kl_l:112.5602 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,164][02269] KL-divergence is very high: 105313.7031
+[2023-08-29 14:05:15,167][02270] Updated weights for policy 0, policy_version 9296 (0.0002)
+[2023-08-29 14:05:15,366][02269] High loss value: l:130.8144 pl:-0.0517 vl:1.8811 exp_l:0.0000 kl_l:128.9850 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,366][02269] KL-divergence is very high: 38904.2109
+[2023-08-29 14:05:15,369][02269] High loss value: l:82.8575 pl:-0.0513 vl:1.9565 exp_l:0.0000 kl_l:80.9524 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,370][02269] KL-divergence is very high: 31538.3535
+[2023-08-29 14:05:15,373][02269] High loss value: l:65.4417 pl:-0.0288 vl:2.1814 exp_l:0.0000 kl_l:63.2891 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,373][02269] KL-divergence is very high: 46787.0781
+[2023-08-29 14:05:15,376][02269] KL-divergence is very high: 6062.4580
+[2023-08-29 14:05:15,379][02269] High loss value: l:49.6802 pl:-0.0480 vl:1.3815 exp_l:0.0000 kl_l:48.3467 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,379][02269] KL-divergence is very high: 25126.1738
+[2023-08-29 14:05:15,383][02269] High loss value: l:110.6069 pl:-0.0506 vl:1.4360 exp_l:0.0000 kl_l:109.2215 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,383][02269] KL-divergence is very high: 32907.1328
+[2023-08-29 14:05:15,387][02269] High loss value: l:68.9336 pl:-0.0407 vl:1.7472 exp_l:0.0000 kl_l:67.2271 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,387][02269] KL-divergence is very high: 34971.8711
+[2023-08-29 14:05:15,587][02269] KL-divergence is very high: 25380.2656
+[2023-08-29 14:05:15,590][02269] KL-divergence is very high: 167.9472
+[2023-08-29 14:05:15,592][02269] High loss value: l:198.8770 pl:-0.0412 vl:1.3677 exp_l:0.0000 kl_l:197.5505 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,592][02269] KL-divergence is very high: 316202.0938
+[2023-08-29 14:05:15,596][02269] KL-divergence is very high: 16972.0254
+[2023-08-29 14:05:15,600][02269] High loss value: l:32.5674 pl:0.0444 vl:1.7712 exp_l:0.0000 kl_l:30.7518 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,600][02269] KL-divergence is very high: 91549.4219
+[2023-08-29 14:05:15,603][02269] KL-divergence is very high: 1472.6411
+[2023-08-29 14:05:15,606][02269] High loss value: l:225.0730 pl:0.0478 vl:1.1650 exp_l:0.0000 kl_l:223.8602 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,606][02269] KL-divergence is very high: 363651.7500
+[2023-08-29 14:05:15,812][02269] KL-divergence is very high: 61563.9219
+[2023-08-29 14:05:15,815][02269] KL-divergence is very high: 446.1510
+[2023-08-29 14:05:15,818][02269] High loss value: l:100.0890 pl:-0.0524 vl:0.3076 exp_l:0.0000 kl_l:99.8339 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,818][02269] KL-divergence is very high: 58487.7383
+[2023-08-29 14:05:15,822][02269] KL-divergence is very high: 709.1168
+[2023-08-29 14:05:15,825][02269] KL-divergence is very high: 1015.5912
+[2023-08-29 14:05:15,828][02269] High loss value: l:107.5457 pl:-0.0152 vl:1.1908 exp_l:0.0000 kl_l:106.3700 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,828][02269] KL-divergence is very high: 148800.7500
+[2023-08-29 14:05:15,832][02269] High loss value: l:112.6151 pl:-0.0523 vl:0.2105 exp_l:0.0000 kl_l:112.4569 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:15,832][02269] KL-divergence is very high: 67104.9531
+[2023-08-29 14:05:16,039][02269] High loss value: l:372.7328 pl:-0.0520 vl:0.6062 exp_l:0.0000 kl_l:372.1786 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,039][02269] KL-divergence is very high: 350204.9375
+[2023-08-29 14:05:16,042][02269] High loss value: l:369.1877 pl:-0.0513 vl:0.9055 exp_l:0.0000 kl_l:368.3334 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,042][02269] KL-divergence is very high: 856987.5625
+[2023-08-29 14:05:16,045][02269] High loss value: l:6428.5469 pl:-0.0523 vl:0.2354 exp_l:0.0000 kl_l:6428.3638 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,046][02269] KL-divergence is very high: 3192508.2500
+[2023-08-29 14:05:16,049][02269] High loss value: l:293.9118 pl:-0.0511 vl:0.4038 exp_l:0.0000 kl_l:293.5591 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,049][02269] KL-divergence is very high: 253114.2500
+[2023-08-29 14:05:16,052][02269] High loss value: l:103.1052 pl:-0.0512 vl:0.5501 exp_l:0.0000 kl_l:102.6063 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,053][02269] KL-divergence is very high: 163041.7812
+[2023-08-29 14:05:16,056][02269] High loss value: l:118.3130 pl:-0.0511 vl:0.8339 exp_l:0.0000 kl_l:117.5303 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,056][02269] KL-divergence is very high: 306277.7812
+[2023-08-29 14:05:16,060][02269] High loss value: l:1109.6511 pl:-0.0510 vl:0.2077 exp_l:0.0000 kl_l:1109.4945 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,060][02269] KL-divergence is very high: 746650.6875
+[2023-08-29 14:05:16,259][02269] KL-divergence is very high: 369.7854
+[2023-08-29 14:05:16,262][02269] High loss value: l:3424.4194 pl:-0.0519 vl:0.2052 exp_l:0.0000 kl_l:3424.2661 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,262][02269] KL-divergence is very high: 1527769.1250
+[2023-08-29 14:05:16,265][02269] High loss value: l:7807.6001 pl:-0.0509 vl:0.1787 exp_l:0.0000 kl_l:7807.4722 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,265][02269] KL-divergence is very high: 3042960.0000
+[2023-08-29 14:05:16,268][02269] High loss value: l:8860.4834 pl:-0.0517 vl:0.1496 exp_l:0.0000 kl_l:8860.3857 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,269][02269] KL-divergence is very high: 3066821.2500
+[2023-08-29 14:05:16,272][02269] High loss value: l:1659.2850 pl:-0.0513 vl:0.1844 exp_l:0.0000 kl_l:1659.1520 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,272][02269] KL-divergence is very high: 799043.5000
+[2023-08-29 14:05:16,276][02269] High loss value: l:352.2700 pl:-0.0522 vl:0.2133 exp_l:0.0000 kl_l:352.1089 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,276][02269] KL-divergence is very high: 197956.7969
+[2023-08-29 14:05:16,279][02269] High loss value: l:2126.2944 pl:-0.0497 vl:0.1886 exp_l:0.0000 kl_l:2126.1555 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,279][02269] KL-divergence is very high: 912675.6250
+[2023-08-29 14:05:16,282][02269] High loss value: l:2335.5825 pl:-0.0504 vl:0.1613 exp_l:0.0000 kl_l:2335.4714 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,283][02269] KL-divergence is very high: 874047.6250
+[2023-08-29 14:05:16,486][02269] High loss value: l:169.5155 pl:-0.0514 vl:0.1352 exp_l:0.0000 kl_l:169.4316 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,486][02269] KL-divergence is very high: 31582.7949
+[2023-08-29 14:05:16,490][02269] High loss value: l:456.6443 pl:-0.0517 vl:0.1316 exp_l:0.0000 kl_l:456.5644 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,490][02269] KL-divergence is very high: 63071.6797
+[2023-08-29 14:05:16,493][02269] High loss value: l:154.9889 pl:-0.0507 vl:0.1265 exp_l:0.0000 kl_l:154.9131 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,493][02269] KL-divergence is very high: 26047.7539
+[2023-08-29 14:05:16,497][02269] High loss value: l:2205.0767 pl:-0.0514 vl:0.1369 exp_l:0.0000 kl_l:2204.9910 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,497][02269] KL-divergence is very high: 440751.3125
+[2023-08-29 14:05:16,500][02269] High loss value: l:2782.5188 pl:-0.0509 vl:0.1369 exp_l:0.0000 kl_l:2782.4326 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,500][02269] KL-divergence is very high: 502714.8750
+[2023-08-29 14:05:16,504][02269] High loss value: l:285.0432 pl:-0.0508 vl:0.1416 exp_l:0.0000 kl_l:284.9523 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,504][02269] KL-divergence is very high: 58099.9844
+[2023-08-29 14:05:16,508][02269] High loss value: l:3386.0911 pl:-0.0503 vl:0.1421 exp_l:0.0000 kl_l:3385.9993 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,508][02269] KL-divergence is very high: 595094.1250
+[2023-08-29 14:05:16,745][02269] High loss value: l:1706.4659 pl:-0.0520 vl:0.1541 exp_l:0.0000 kl_l:1706.3639 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,745][02269] KL-divergence is very high: 289970.9375
+[2023-08-29 14:05:16,748][02269] High loss value: l:2118.8088 pl:-0.0528 vl:0.1724 exp_l:0.0000 kl_l:2118.6892 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,748][02269] KL-divergence is very high: 353127.4688
+[2023-08-29 14:05:16,752][02269] High loss value: l:590.7264 pl:-0.0516 vl:0.1871 exp_l:0.0000 kl_l:590.5909 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,752][02269] KL-divergence is very high: 78161.0234
+[2023-08-29 14:05:16,756][02269] High loss value: l:2059.3809 pl:-0.0525 vl:0.1942 exp_l:0.0000 kl_l:2059.2393 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,756][02269] KL-divergence is very high: 268723.2812
+[2023-08-29 14:05:16,760][02269] High loss value: l:3805.3315 pl:-0.0511 vl:0.1939 exp_l:0.0000 kl_l:3805.1887 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,760][02269] KL-divergence is very high: 551329.6875
+[2023-08-29 14:05:16,763][02269] High loss value: l:2186.4109 pl:-0.0510 vl:0.2022 exp_l:0.0000 kl_l:2186.2598 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,763][02269] KL-divergence is very high: 296662.7812
+[2023-08-29 14:05:16,767][02269] High loss value: l:335.2736 pl:-0.0521 vl:0.2027 exp_l:0.0000 kl_l:335.1230 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,767][02269] KL-divergence is very high: 43817.1133
+[2023-08-29 14:05:16,969][02269] High loss value: l:575.1199 pl:-0.0517 vl:0.1879 exp_l:0.0000 kl_l:574.9836 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,969][02269] KL-divergence is very high: 101661.7031
+[2023-08-29 14:05:16,972][02269] High loss value: l:369.5672 pl:-0.0524 vl:0.1939 exp_l:0.0000 kl_l:369.4257 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,972][02269] KL-divergence is very high: 72117.5000
+[2023-08-29 14:05:16,976][02269] High loss value: l:163.3996 pl:-0.0517 vl:0.2084 exp_l:0.0000 kl_l:163.2429 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,976][02269] KL-divergence is very high: 23314.3613
+[2023-08-29 14:05:16,980][02269] High loss value: l:207.2719 pl:-0.0517 vl:0.2212 exp_l:0.0000 kl_l:207.1023 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,980][02269] KL-divergence is very high: 31143.0762
+[2023-08-29 14:05:16,983][02269] High loss value: l:194.3551 pl:-0.0506 vl:0.2184 exp_l:0.0000 kl_l:194.1873 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,984][02269] KL-divergence is very high: 39710.5039
+[2023-08-29 14:05:16,987][02269] High loss value: l:129.0468 pl:-0.0507 vl:0.2242 exp_l:0.0000 kl_l:128.8733 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,987][02269] KL-divergence is very high: 24374.7520
+[2023-08-29 14:05:16,990][02269] High loss value: l:392.5935 pl:-0.0502 vl:0.2374 exp_l:0.0000 kl_l:392.4062 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:16,991][02269] KL-divergence is very high: 73732.1328
+[2023-08-29 14:05:17,216][02269] High loss value: l:491.7150 pl:-0.0504 vl:0.2494 exp_l:0.0000 kl_l:491.5160 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,216][02269] KL-divergence is very high: 78841.7734
+[2023-08-29 14:05:17,219][02269] High loss value: l:383.3303 pl:-0.0517 vl:0.2651 exp_l:0.0000 kl_l:383.1169 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,219][02269] KL-divergence is very high: 59952.3672
+[2023-08-29 14:05:17,223][02269] High loss value: l:88.8459 pl:-0.0495 vl:0.2582 exp_l:0.0000 kl_l:88.6372 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,223][02269] KL-divergence is very high: 12375.9150
+[2023-08-29 14:05:17,226][02269] High loss value: l:102.3913 pl:-0.0499 vl:0.2623 exp_l:0.0000 kl_l:102.1789 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,227][02269] KL-divergence is very high: 16206.3242
+[2023-08-29 14:05:17,230][02269] High loss value: l:126.6836 pl:-0.0494 vl:0.2647 exp_l:0.0000 kl_l:126.4683 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,230][02269] KL-divergence is very high: 27936.2832
+[2023-08-29 14:05:17,233][02269] High loss value: l:52.2651 pl:-0.0502 vl:0.2682 exp_l:0.0000 kl_l:52.0472 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,233][02269] KL-divergence is very high: 13621.7549
+[2023-08-29 14:05:17,237][02269] High loss value: l:408.2140 pl:-0.0472 vl:0.2550 exp_l:0.0000 kl_l:408.0062 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,237][02269] KL-divergence is very high: 59776.5391
+[2023-08-29 14:05:17,438][02269] High loss value: l:189.2802 pl:-0.0516 vl:0.2637 exp_l:0.0000 kl_l:189.0681 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,438][02269] KL-divergence is very high: 25528.4727
+[2023-08-29 14:05:17,441][02269] High loss value: l:56.8169 pl:-0.0469 vl:0.2728 exp_l:0.0000 kl_l:56.5909 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,441][02269] KL-divergence is very high: 7679.7427
+[2023-08-29 14:05:17,444][02269] High loss value: l:377.9084 pl:-0.0503 vl:0.2879 exp_l:0.0000 kl_l:377.6709 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,444][02269] KL-divergence is very high: 84002.0156
+[2023-08-29 14:05:17,448][02269] High loss value: l:501.4561 pl:-0.0468 vl:0.2693 exp_l:0.0000 kl_l:501.2336 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,448][02269] KL-divergence is very high: 116218.2422
+[2023-08-29 14:05:17,451][02269] High loss value: l:60.3886 pl:-0.0425 vl:0.2632 exp_l:0.0000 kl_l:60.1679 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,451][02269] KL-divergence is very high: 24306.1602
+[2023-08-29 14:05:17,454][02269] High loss value: l:758.8821 pl:-0.0323 vl:0.2647 exp_l:0.0000 kl_l:758.6497 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,454][02269] KL-divergence is very high: 103006.7812
+[2023-08-29 14:05:17,458][02269] High loss value: l:1455.0745 pl:-0.0370 vl:0.2776 exp_l:0.0000 kl_l:1454.8339 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,458][02269] KL-divergence is very high: 204571.0000
+[2023-08-29 14:05:17,462][02270] Updated weights for policy 0, policy_version 9376 (0.0003)
+[2023-08-29 14:05:17,663][02257] Fps is (10 sec: 17202.7, 60 sec: 17544.5, 300 sec: 17612.7). Total num frames: 4800512. Throughput: 0: 17537.0. Samples: 4381442. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:17,663][02257] Avg episode reward: [(0, '-19021.244')]
+[2023-08-29 14:05:17,687][02269] High loss value: l:520.5781 pl:-0.0492 vl:0.2589 exp_l:0.0000 kl_l:520.3685 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,688][02269] KL-divergence is very high: 84053.2109
+[2023-08-29 14:05:17,691][02269] High loss value: l:725.3877 pl:-0.0500 vl:0.2562 exp_l:0.0000 kl_l:725.1815 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,691][02269] KL-divergence is very high: 118880.9297
+[2023-08-29 14:05:17,694][02269] High loss value: l:234.8500 pl:-0.0519 vl:0.2589 exp_l:0.0000 kl_l:234.6430 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,694][02269] KL-divergence is very high: 38855.4688
+[2023-08-29 14:05:17,699][02269] High loss value: l:141.6427 pl:-0.0495 vl:0.2736 exp_l:0.0000 kl_l:141.4186 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,699][02269] KL-divergence is very high: 28105.2832
+[2023-08-29 14:05:17,702][02269] High loss value: l:388.3510 pl:-0.0478 vl:0.2632 exp_l:0.0000 kl_l:388.1356 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,703][02269] KL-divergence is very high: 71996.6875
+[2023-08-29 14:05:17,706][02269] High loss value: l:127.9258 pl:-0.0463 vl:0.2624 exp_l:0.0000 kl_l:127.7096 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,706][02269] KL-divergence is very high: 26800.0352
+[2023-08-29 14:05:17,710][02269] High loss value: l:170.4595 pl:-0.0497 vl:0.2671 exp_l:0.0000 kl_l:170.2422 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,710][02269] KL-divergence is very high: 31121.3457
+[2023-08-29 14:05:17,913][02269] High loss value: l:376.0434 pl:-0.0472 vl:0.2560 exp_l:0.0000 kl_l:375.8346 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,913][02269] KL-divergence is very high: 62457.3047
+[2023-08-29 14:05:17,916][02269] High loss value: l:461.7112 pl:-0.0490 vl:0.2492 exp_l:0.0000 kl_l:461.5111 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,916][02269] KL-divergence is very high: 78044.8125
+[2023-08-29 14:05:17,919][02269] High loss value: l:90.7641 pl:-0.0385 vl:0.1402 exp_l:0.0000 kl_l:90.6625 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,919][02269] KL-divergence is very high: 12854.3477
+[2023-08-29 14:05:17,923][02269] High loss value: l:368.9054 pl:-0.0466 vl:0.2681 exp_l:0.0000 kl_l:368.6839 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,923][02269] KL-divergence is very high: 57031.2617
+[2023-08-29 14:05:17,926][02269] High loss value: l:762.7256 pl:-0.0468 vl:0.2687 exp_l:0.0000 kl_l:762.5037 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,926][02269] KL-divergence is very high: 120274.8203
+[2023-08-29 14:05:17,930][02269] High loss value: l:411.8039 pl:-0.0468 vl:0.2548 exp_l:0.0000 kl_l:411.5959 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:17,930][02269] KL-divergence is very high: 64880.1094
+[2023-08-29 14:05:17,933][02269] KL-divergence is very high: 1484.6018
+[2023-08-29 14:05:18,136][02269] High loss value: l:306.2855 pl:0.0341 vl:0.0481 exp_l:0.0000 kl_l:306.2032 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,136][02269] KL-divergence is very high: 52264.1211
+[2023-08-29 14:05:18,139][02269] High loss value: l:381.1845 pl:0.1138 vl:0.0620 exp_l:0.0000 kl_l:381.0086 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,139][02269] KL-divergence is very high: 64646.0078
+[2023-08-29 14:05:18,142][02269] High loss value: l:60.6808 pl:0.1884 vl:0.1004 exp_l:0.0000 kl_l:60.3919 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,142][02269] KL-divergence is very high: 10505.3174
+[2023-08-29 14:05:18,146][02269] High loss value: l:312.5222 pl:-0.0109 vl:0.0769 exp_l:0.0000 kl_l:312.4562 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,146][02269] KL-divergence is very high: 50160.9453
+[2023-08-29 14:05:18,150][02269] High loss value: l:659.6641 pl:0.0337 vl:0.0487 exp_l:0.0000 kl_l:659.5818 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,150][02269] KL-divergence is very high: 107653.9766
+[2023-08-29 14:05:18,153][02269] High loss value: l:383.9792 pl:0.1158 vl:0.0595 exp_l:0.0000 kl_l:383.8039 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,153][02269] KL-divergence is very high: 62011.5938
+[2023-08-29 14:05:18,156][02269] KL-divergence is very high: 571.9940
+[2023-08-29 14:05:18,355][02269] High loss value: l:1682.5554 pl:-0.0113 vl:0.0689 exp_l:0.0000 kl_l:1682.4977 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,355][02269] KL-divergence is very high: 281535.2188
+[2023-08-29 14:05:18,358][02269] High loss value: l:4146.8945 pl:-0.0366 vl:0.1037 exp_l:0.0000 kl_l:4146.8276 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,358][02269] KL-divergence is very high: 682389.0625
+[2023-08-29 14:05:18,361][02269] High loss value: l:5073.3965 pl:-0.0389 vl:0.1993 exp_l:0.0000 kl_l:5073.2363 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,361][02269] KL-divergence is very high: 835149.6250
+[2023-08-29 14:05:18,365][02269] High loss value: l:4087.7625 pl:0.0965 vl:0.0754 exp_l:0.0000 kl_l:4087.5906 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,365][02269] KL-divergence is very high: 661120.9375
+[2023-08-29 14:05:18,368][02269] High loss value: l:1797.2958 pl:-0.0120 vl:0.0753 exp_l:0.0000 kl_l:1797.2324 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,368][02269] KL-divergence is very high: 298603.9062
+[2023-08-29 14:05:18,372][02269] High loss value: l:171.9984 pl:-0.0361 vl:0.1271 exp_l:0.0000 kl_l:171.9074 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,372][02269] KL-divergence is very high: 24753.3027
+[2023-08-29 14:05:18,376][02269] High loss value: l:1035.6160 pl:-0.0463 vl:0.2403 exp_l:0.0000 kl_l:1035.4220 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,376][02269] KL-divergence is very high: 158499.2500
+[2023-08-29 14:05:18,582][02269] KL-divergence is very high: 4334.1113
+[2023-08-29 14:05:18,585][02269] KL-divergence is very high: 119.9567
+[2023-08-29 14:05:18,588][02269] High loss value: l:126.8708 pl:-0.0519 vl:0.4685 exp_l:0.0000 kl_l:126.4543 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,588][02269] KL-divergence is very high: 20350.4004
+[2023-08-29 14:05:18,591][02269] High loss value: l:180.9191 pl:-0.0456 vl:0.3320 exp_l:0.0000 kl_l:180.6327 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,591][02269] KL-divergence is very high: 26344.1797
+[2023-08-29 14:05:18,594][02269] High loss value: l:52.2748 pl:-0.0484 vl:0.4396 exp_l:0.0000 kl_l:51.8836 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,595][02269] KL-divergence is very high: 6326.2422
+[2023-08-29 14:05:18,597][02269] High loss value: l:103.1346 pl:-0.0523 vl:0.4886 exp_l:0.0000 kl_l:102.6982 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,598][02269] KL-divergence is very high: 16631.4629
+[2023-08-29 14:05:18,601][02269] High loss value: l:199.0722 pl:-0.0507 vl:0.5008 exp_l:0.0000 kl_l:198.6220 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,602][02269] KL-divergence is very high: 33114.5977
+[2023-08-29 14:05:18,858][02269] High loss value: l:84.2581 pl:-0.0526 vl:0.5158 exp_l:0.0000 kl_l:83.7948 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,858][02269] KL-divergence is very high: 13134.2461
+[2023-08-29 14:05:18,861][02269] High loss value: l:105.1190 pl:-0.0525 vl:0.5299 exp_l:0.0000 kl_l:104.6416 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,861][02269] KL-divergence is very high: 15578.1387
+[2023-08-29 14:05:18,864][02269] KL-divergence is very high: 2075.7217
+[2023-08-29 14:05:18,868][02269] High loss value: l:81.1611 pl:-0.0514 vl:0.5252 exp_l:0.0000 kl_l:80.6873 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,868][02269] KL-divergence is very high: 14235.0186
+[2023-08-29 14:05:18,871][02269] High loss value: l:167.7913 pl:-0.0524 vl:0.5320 exp_l:0.0000 kl_l:167.3117 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,871][02269] KL-divergence is very high: 29333.3828
+[2023-08-29 14:05:18,875][02269] High loss value: l:93.7006 pl:-0.0521 vl:0.5351 exp_l:0.0000 kl_l:93.2175 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:18,875][02269] KL-divergence is very high: 16266.7832
+[2023-08-29 14:05:18,879][02269] KL-divergence is very high: 612.9665
+[2023-08-29 14:05:19,106][02269] High loss value: l:143.4451 pl:-0.0522 vl:0.5947 exp_l:0.0000 kl_l:142.9025 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,106][02269] KL-divergence is very high: 20228.3945
+[2023-08-29 14:05:19,110][02269] High loss value: l:263.8923 pl:-0.0511 vl:0.6178 exp_l:0.0000 kl_l:263.3257 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,110][02269] KL-divergence is very high: 36057.2539
+[2023-08-29 14:05:19,113][02269] High loss value: l:205.7218 pl:-0.0513 vl:0.6220 exp_l:0.0000 kl_l:205.1511 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,113][02269] KL-divergence is very high: 25632.9922
+[2023-08-29 14:05:19,117][02269] High loss value: l:76.4154 pl:-0.0514 vl:0.6232 exp_l:0.0000 kl_l:75.8436 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,117][02269] KL-divergence is very high: 10614.7607
+[2023-08-29 14:05:19,120][02269] High loss value: l:95.9235 pl:-0.0510 vl:0.6193 exp_l:0.0000 kl_l:95.3552 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,120][02269] KL-divergence is very high: 13292.2139
+[2023-08-29 14:05:19,124][02269] High loss value: l:155.4202 pl:-0.0531 vl:0.5981 exp_l:0.0000 kl_l:154.8752 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,124][02269] KL-divergence is very high: 23675.0137
+[2023-08-29 14:05:19,127][02269] High loss value: l:109.4649 pl:-0.0493 vl:0.5686 exp_l:0.0000 kl_l:108.9457 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,127][02269] KL-divergence is very high: 13524.7051
+[2023-08-29 14:05:19,328][02269] High loss value: l:215.2463 pl:-0.0527 vl:0.5498 exp_l:0.0000 kl_l:214.7492 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,328][02269] KL-divergence is very high: 34468.6367
+[2023-08-29 14:05:19,331][02269] High loss value: l:460.7997 pl:-0.0513 vl:0.5378 exp_l:0.0000 kl_l:460.3132 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,331][02269] KL-divergence is very high: 73829.7031
+[2023-08-29 14:05:19,334][02269] High loss value: l:460.1409 pl:-0.0524 vl:0.5693 exp_l:0.0000 kl_l:459.6240 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,334][02269] KL-divergence is very high: 73199.2344
+[2023-08-29 14:05:19,338][02269] High loss value: l:239.0587 pl:-0.0518 vl:0.5593 exp_l:0.0000 kl_l:238.5513 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,338][02269] KL-divergence is very high: 36906.3164
+[2023-08-29 14:05:19,342][02269] KL-divergence is very high: 3044.0757
+[2023-08-29 14:05:19,344][02269] High loss value: l:156.5869 pl:-0.0502 vl:0.5877 exp_l:0.0000 kl_l:156.0494 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,344][02269] KL-divergence is very high: 24929.6211
+[2023-08-29 14:05:19,347][02269] High loss value: l:395.6743 pl:-0.0504 vl:0.6483 exp_l:0.0000 kl_l:395.0765 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,348][02269] KL-divergence is very high: 64310.9258
+[2023-08-29 14:05:19,550][02269] KL-divergence is very high: 2970.4014
+[2023-08-29 14:05:19,553][02269] High loss value: l:33.7955 pl:-0.0526 vl:0.7227 exp_l:0.0000 kl_l:33.1255 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,553][02269] KL-divergence is very high: 4044.8599
+[2023-08-29 14:05:19,556][02269] KL-divergence is very high: 2293.2539
+[2023-08-29 14:05:19,559][02269] KL-divergence is very high: 1528.1556
+[2023-08-29 14:05:19,562][02269] KL-divergence is very high: 1341.7806
+[2023-08-29 14:05:19,565][02269] KL-divergence is very high: 2142.8630
+[2023-08-29 14:05:19,569][02269] KL-divergence is very high: 1065.0594
+[2023-08-29 14:05:19,772][02269] KL-divergence is very high: 1510.8547
+[2023-08-29 14:05:19,775][02269] KL-divergence is very high: 1581.3517
+[2023-08-29 14:05:19,778][02269] KL-divergence is very high: 146.2796
+[2023-08-29 14:05:19,782][02269] KL-divergence is very high: 2612.1406
+[2023-08-29 14:05:19,785][02269] High loss value: l:38.4495 pl:-0.0482 vl:0.6743 exp_l:0.0000 kl_l:37.8234 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:19,785][02269] KL-divergence is very high: 5394.1118
+[2023-08-29 14:05:19,789][02269] KL-divergence is very high: 3758.6990
+[2023-08-29 14:05:19,792][02269] KL-divergence is very high: 415.7375
+[2023-08-29 14:05:19,796][02270] Updated weights for policy 0, policy_version 9456 (0.0003)
+[2023-08-29 14:05:20,030][02269] High loss value: l:60.3006 pl:-0.0513 vl:0.8328 exp_l:0.0000 kl_l:59.5191 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,030][02269] KL-divergence is very high: 7190.5381
+[2023-08-29 14:05:20,034][02269] High loss value: l:132.7356 pl:-0.0515 vl:0.8555 exp_l:0.0000 kl_l:131.9316 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,034][02269] KL-divergence is very high: 16414.6465
+[2023-08-29 14:05:20,038][02269] High loss value: l:142.4647 pl:-0.0520 vl:0.9013 exp_l:0.0000 kl_l:141.6154 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,038][02269] KL-divergence is very high: 17871.3398
+[2023-08-29 14:05:20,041][02269] High loss value: l:90.9624 pl:-0.0512 vl:0.8822 exp_l:0.0000 kl_l:90.1315 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,041][02269] KL-divergence is very high: 12109.0244
+[2023-08-29 14:05:20,045][02269] High loss value: l:38.7633 pl:-0.0531 vl:0.8497 exp_l:0.0000 kl_l:37.9667 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,045][02269] KL-divergence is very high: 4707.2217
+[2023-08-29 14:05:20,049][02269] KL-divergence is very high: 3458.6038
+[2023-08-29 14:05:20,052][02269] High loss value: l:32.5124 pl:-0.0436 vl:0.7760 exp_l:0.0000 kl_l:31.7800 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,052][02269] KL-divergence is very high: 3890.1707
+[2023-08-29 14:05:20,267][02269] High loss value: l:44.4263 pl:-0.0530 vl:0.7416 exp_l:0.0000 kl_l:43.7377 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,267][02269] KL-divergence is very high: 7258.0649
+[2023-08-29 14:05:20,271][02269] High loss value: l:84.8270 pl:-0.0518 vl:0.7331 exp_l:0.0000 kl_l:84.1456 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,271][02269] KL-divergence is very high: 13744.9482
+[2023-08-29 14:05:20,275][02269] High loss value: l:64.5480 pl:-0.0503 vl:0.7136 exp_l:0.0000 kl_l:63.8846 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,275][02269] KL-divergence is very high: 10281.8594
+[2023-08-29 14:05:20,279][02269] KL-divergence is very high: 2027.3120
+[2023-08-29 14:05:20,282][02269] KL-divergence is very high: 2687.8794
+[2023-08-29 14:05:20,285][02269] High loss value: l:49.4264 pl:-0.0504 vl:0.7745 exp_l:0.0000 kl_l:48.7022 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,286][02269] KL-divergence is very high: 8467.5020
+[2023-08-29 14:05:20,290][02269] High loss value: l:40.4150 pl:-0.0485 vl:0.7705 exp_l:0.0000 kl_l:39.6930 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,290][02269] KL-divergence is very high: 7155.3364
+[2023-08-29 14:05:20,504][02269] High loss value: l:35.3741 pl:-0.0522 vl:0.8082 exp_l:0.0000 kl_l:34.6181 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,504][02269] KL-divergence is very high: 5020.7842
+[2023-08-29 14:05:20,507][02269] High loss value: l:70.3786 pl:-0.0512 vl:0.8265 exp_l:0.0000 kl_l:69.6033 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,507][02269] KL-divergence is very high: 9708.9092
+[2023-08-29 14:05:20,511][02269] High loss value: l:59.9737 pl:-0.0517 vl:0.8193 exp_l:0.0000 kl_l:59.2061 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:20,511][02269] KL-divergence is very high: 7688.9600
+[2023-08-29 14:05:20,514][02269] KL-divergence is very high: 2169.9265
+[2023-08-29 14:05:20,518][02269] KL-divergence is very high: 1162.7036
+[2023-08-29 14:05:20,520][02269] KL-divergence is very high: 3818.0767
+[2023-08-29 14:05:20,523][02269] KL-divergence is very high: 3283.3643
+[2023-08-29 14:05:21,046][02269] KL-divergence is very high: 4097.3809
+[2023-08-29 14:05:21,050][02269] KL-divergence is very high: 7412.2759
+[2023-08-29 14:05:21,056][02269] KL-divergence is very high: 3272.1499
+[2023-08-29 14:05:21,059][02269] KL-divergence is very high: 275.7736
+[2023-08-29 14:05:21,063][02269] KL-divergence is very high: 3976.3440
+[2023-08-29 14:05:22,552][02270] Updated weights for policy 0, policy_version 9536 (0.0002)
+[2023-08-29 14:05:22,662][02257] Fps is (10 sec: 16795.7, 60 sec: 17408.3, 300 sec: 17588.7). Total num frames: 4882432. Throughput: 0: 17389.8. Samples: 4481222. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:05:22,662][02257] Avg episode reward: [(0, '-39691.204')]
+[2023-08-29 14:05:24,151][02269] KL-divergence is very high: 6866.9541
+[2023-08-29 14:05:24,364][02269] KL-divergence is very high: 189.0965
+[2023-08-29 14:05:24,367][02269] KL-divergence is very high: 331.8179
+[2023-08-29 14:05:24,371][02269] KL-divergence is very high: 473.1398
+[2023-08-29 14:05:24,373][02269] KL-divergence is very high: 970.7754
+[2023-08-29 14:05:24,376][02269] KL-divergence is very high: 284.0141
+[2023-08-29 14:05:24,379][02269] KL-divergence is very high: 2786.7534
+[2023-08-29 14:05:24,382][02269] KL-divergence is very high: 4389.3628
+[2023-08-29 14:05:24,622][02269] KL-divergence is very high: 4825.5503
+[2023-08-29 14:05:24,625][02269] High loss value: l:30.4702 pl:0.0152 vl:0.0565 exp_l:0.0000 kl_l:30.3986 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:24,625][02269] KL-divergence is very high: 30281.1191
+[2023-08-29 14:05:24,629][02269] KL-divergence is very high: 14106.5615
+[2023-08-29 14:05:24,631][02269] KL-divergence is very high: 3556.4927
+[2023-08-29 14:05:24,635][02269] KL-divergence is very high: 7255.5835
+[2023-08-29 14:05:24,638][02269] KL-divergence is very high: 17607.6309
+[2023-08-29 14:05:24,640][02269] KL-divergence is very high: 8962.6416
+[2023-08-29 14:05:24,863][02270] Updated weights for policy 0, policy_version 9616 (0.0002)
+[2023-08-29 14:05:26,043][02269] KL-divergence is very high: 3621.5627
+[2023-08-29 14:05:26,046][02269] KL-divergence is very high: 2469.3547
+[2023-08-29 14:05:26,049][02269] KL-divergence is very high: 2575.6992
+[2023-08-29 14:05:26,052][02269] KL-divergence is very high: 7955.3716
+[2023-08-29 14:05:26,056][02269] KL-divergence is very high: 880.5578
+[2023-08-29 14:05:26,059][02269] KL-divergence is very high: 971.4490
+[2023-08-29 14:05:26,063][02269] KL-divergence is very high: 7163.5176
+[2023-08-29 14:05:26,291][02269] High loss value: l:51.0863 pl:-0.0470 vl:0.7724 exp_l:0.0000 kl_l:50.3609 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:26,292][02269] KL-divergence is very high: 84669.6562
+[2023-08-29 14:05:26,295][02269] High loss value: l:50.7369 pl:-0.0340 vl:0.6219 exp_l:0.0000 kl_l:50.1490 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:05:26,295][02269] KL-divergence is very high: 115741.6484
+[2023-08-29 14:05:26,298][02269] KL-divergence is very high: 15613.8662
+[2023-08-29 14:05:26,301][02269] KL-divergence is very high: 18658.8184
+[2023-08-29 14:05:26,304][02269] KL-divergence is very high: 48790.5703
+[2023-08-29 14:05:26,307][02269] KL-divergence is very high: 13751.9131
+[2023-08-29 14:05:26,310][02269] KL-divergence is very high: 8543.5195
+[2023-08-29 14:05:26,549][02269] KL-divergence is very high: 1896.7792
+[2023-08-29 14:05:26,559][02269] KL-divergence is very high: 4075.7878
+[2023-08-29 14:05:26,561][02269] KL-divergence is very high: 751.1550
+[2023-08-29 14:05:27,269][02270] Updated weights for policy 0, policy_version 9696 (0.0002)
+[2023-08-29 14:05:27,663][02257] Fps is (10 sec: 16794.3, 60 sec: 17408.0, 300 sec: 17581.3). Total num frames: 4968448. Throughput: 0: 17219.1. Samples: 4584123. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:05:27,663][02257] Avg episode reward: [(0, '-39691.204')]
+[2023-08-29 14:05:29,581][02270] Updated weights for policy 0, policy_version 9776 (0.0002)
+[2023-08-29 14:05:31,990][02270] Updated weights for policy 0, policy_version 9856 (0.0002)
+[2023-08-29 14:05:32,663][02257] Fps is (10 sec: 17201.6, 60 sec: 17339.6, 300 sec: 17574.1). Total num frames: 5054464. Throughput: 0: 17332.5. Samples: 4638059. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:05:32,663][02257] Avg episode reward: [(0, '-44431.631')]
+[2023-08-29 14:05:34,252][02270] Updated weights for policy 0, policy_version 9936 (0.0002)
+[2023-08-29 14:05:36,618][02270] Updated weights for policy 0, policy_version 10016 (0.0002)
+[2023-08-29 14:05:37,663][02257] Fps is (10 sec: 17612.1, 60 sec: 17339.9, 300 sec: 17582.4). Total num frames: 5144576. Throughput: 0: 17221.8. Samples: 4741249. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:37,663][02257] Avg episode reward: [(0, '-44431.631')]
+[2023-08-29 14:05:38,894][02270] Updated weights for policy 0, policy_version 10096 (0.0002)
+[2023-08-29 14:05:41,431][02270] Updated weights for policy 0, policy_version 10176 (0.0002)
+[2023-08-29 14:05:42,664][02257] Fps is (10 sec: 17610.7, 60 sec: 17271.1, 300 sec: 17575.4). Total num frames: 5230592. Throughput: 0: 17225.9. Samples: 4845554. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:42,664][02257] Avg episode reward: [(0, '-40006.113')]
+[2023-08-29 14:05:43,513][02269] KL-divergence is very high: 538.7574
+[2023-08-29 14:05:43,516][02269] KL-divergence is very high: 983.7418
+[2023-08-29 14:05:43,519][02269] KL-divergence is very high: 525.2870
+[2023-08-29 14:05:43,526][02269] KL-divergence is very high: 7335.5962
+[2023-08-29 14:05:43,529][02269] KL-divergence is very high: 4546.9707
+[2023-08-29 14:05:43,532][02269] KL-divergence is very high: 6680.5161
+[2023-08-29 14:05:43,769][02269] KL-divergence is very high: 1349.5940
+[2023-08-29 14:05:43,779][02270] Updated weights for policy 0, policy_version 10256 (0.0002)
+[2023-08-29 14:05:46,149][02270] Updated weights for policy 0, policy_version 10336 (0.0002)
+[2023-08-29 14:05:47,662][02257] Fps is (10 sec: 17205.7, 60 sec: 17340.1, 300 sec: 17568.9). Total num frames: 5316608. Throughput: 0: 17172.9. Samples: 4897444. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:05:47,662][02257] Avg episode reward: [(0, '-40006.113')]
+[2023-08-29 14:05:48,421][02270] Updated weights for policy 0, policy_version 10416 (0.0002)
+[2023-08-29 14:05:50,638][02269] KL-divergence is very high: 1691.7527
+[2023-08-29 14:05:50,647][02269] KL-divergence is very high: 2053.0464
+[2023-08-29 14:05:50,650][02269] KL-divergence is very high: 2561.4370
+[2023-08-29 14:05:50,879][02269] KL-divergence is very high: 2242.7634
+[2023-08-29 14:05:50,882][02269] KL-divergence is very high: 743.6378
+[2023-08-29 14:05:50,885][02269] KL-divergence is very high: 459.2630
+[2023-08-29 14:05:50,888][02269] KL-divergence is very high: 1253.5909
+[2023-08-29 14:05:50,892][02269] KL-divergence is very high: 355.0304
+[2023-08-29 14:05:50,894][02269] KL-divergence is very high: 160.7854
+[2023-08-29 14:05:50,898][02269] KL-divergence is very high: 118.2320
+[2023-08-29 14:05:50,900][02270] Updated weights for policy 0, policy_version 10496 (0.0002)
+[2023-08-29 14:05:51,136][02269] KL-divergence is very high: 4122.2222
+[2023-08-29 14:05:51,139][02269] KL-divergence is very high: 272.7761
+[2023-08-29 14:05:51,374][02269] KL-divergence is very high: 627.3469
+[2023-08-29 14:05:51,377][02269] KL-divergence is very high: 4086.2092
+[2023-08-29 14:05:51,380][02269] KL-divergence is very high: 207.8328
+[2023-08-29 14:05:51,383][02269] KL-divergence is very high: 117.1795
+[2023-08-29 14:05:51,386][02269] KL-divergence is very high: 39908.9961
+[2023-08-29 14:05:51,389][02269] KL-divergence is very high: 39271.3320
+[2023-08-29 14:05:51,392][02269] KL-divergence is very high: 867.4716
+[2023-08-29 14:05:51,596][02269] KL-divergence is very high: 1475.5148
+[2023-08-29 14:05:51,601][02269] KL-divergence is very high: 3700.8511
+[2023-08-29 14:05:51,604][02269] KL-divergence is very high: 317.2466
+[2023-08-29 14:05:51,607][02269] KL-divergence is very high: 490.4350
+[2023-08-29 14:05:51,613][02269] KL-divergence is very high: 5344.4854
+[2023-08-29 14:05:51,845][02269] KL-divergence is very high: 225.5555
+[2023-08-29 14:05:51,848][02269] KL-divergence is very high: 908.0386
+[2023-08-29 14:05:51,851][02269] KL-divergence is very high: 735.7924
+[2023-08-29 14:05:51,854][02269] KL-divergence is very high: 423.7685
+[2023-08-29 14:05:51,857][02269] KL-divergence is very high: 243.7964
+[2023-08-29 14:05:51,861][02269] KL-divergence is very high: 4935.4199
+[2023-08-29 14:05:51,864][02269] KL-divergence is very high: 4497.6519
+[2023-08-29 14:05:52,092][02269] KL-divergence is very high: 235.7561
+[2023-08-29 14:05:52,095][02269] KL-divergence is very high: 503.3214
+[2023-08-29 14:05:52,100][02269] KL-divergence is very high: 226.3194
+[2023-08-29 14:05:52,103][02269] KL-divergence is very high: 208.9021
+[2023-08-29 14:05:52,106][02269] KL-divergence is very high: 680.1140
+[2023-08-29 14:05:52,110][02269] KL-divergence is very high: 4948.4302
+[2023-08-29 14:05:52,338][02269] KL-divergence is very high: 449.7518
+[2023-08-29 14:05:52,347][02269] KL-divergence is very high: 18386.6562
+[2023-08-29 14:05:52,350][02269] KL-divergence is very high: 320.9675
+[2023-08-29 14:05:52,353][02269] KL-divergence is very high: 789.4053
+[2023-08-29 14:05:52,663][02257] Fps is (10 sec: 17205.0, 60 sec: 17203.2, 300 sec: 17562.4). Total num frames: 5402624. Throughput: 0: 17196.4. Samples: 5000931. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:05:52,663][02257] Avg episode reward: [(0, '-36670.979')]
+[2023-08-29 14:05:53,309][02270] Updated weights for policy 0, policy_version 10576 (0.0002)
+[2023-08-29 14:05:55,609][02270] Updated weights for policy 0, policy_version 10656 (0.0002)
+[2023-08-29 14:05:57,663][02257] Fps is (10 sec: 17201.5, 60 sec: 17203.3, 300 sec: 17556.3). Total num frames: 5488640. Throughput: 0: 17266.1. Samples: 5105675. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:05:57,663][02257] Avg episode reward: [(0, '-36670.979')]
+[2023-08-29 14:05:58,038][02270] Updated weights for policy 0, policy_version 10736 (0.0002)
+[2023-08-29 14:06:00,479][02270] Updated weights for policy 0, policy_version 10816 (0.0002)
+[2023-08-29 14:06:02,663][02257] Fps is (10 sec: 17202.9, 60 sec: 17202.7, 300 sec: 17550.3). Total num frames: 5574656. Throughput: 0: 17181.3. Samples: 5154600. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:06:02,663][02257] Avg episode reward: [(0, '-38262.171')]
+[2023-08-29 14:06:02,666][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000010888_5574656.pth...
+[2023-08-29 14:06:02,668][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000004072_2084864.pth
+[2023-08-29 14:06:02,764][02270] Updated weights for policy 0, policy_version 10896 (0.0002)
+[2023-08-29 14:06:05,056][02269] KL-divergence is very high: 1594.0121
+[2023-08-29 14:06:05,058][02269] KL-divergence is very high: 117.0337
+[2023-08-29 14:06:05,063][02270] Updated weights for policy 0, policy_version 10976 (0.0002)
+[2023-08-29 14:06:05,286][02269] KL-divergence is very high: 156.2416
+[2023-08-29 14:06:05,289][02269] KL-divergence is very high: 147.0213
+[2023-08-29 14:06:05,768][02269] KL-divergence is very high: 314.9628
+[2023-08-29 14:06:05,771][02269] KL-divergence is very high: 1210.6757
+[2023-08-29 14:06:05,773][02269] KL-divergence is very high: 4230.5752
+[2023-08-29 14:06:05,779][02269] KL-divergence is very high: 339.8400
+[2023-08-29 14:06:05,782][02269] KL-divergence is very high: 1726.4797
+[2023-08-29 14:06:06,008][02269] KL-divergence is very high: 270.1195
+[2023-08-29 14:06:06,014][02269] KL-divergence is very high: 210.6634
+[2023-08-29 14:06:06,020][02269] KL-divergence is very high: 3323.1047
+[2023-08-29 14:06:06,026][02269] KL-divergence is very high: 3754.5769
+[2023-08-29 14:06:06,255][02269] KL-divergence is very high: 486.4020
+[2023-08-29 14:06:06,257][02269] KL-divergence is very high: 607.6324
+[2023-08-29 14:06:06,260][02269] KL-divergence is very high: 489.9193
+[2023-08-29 14:06:06,263][02269] KL-divergence is very high: 273.1667
+[2023-08-29 14:06:06,266][02269] KL-divergence is very high: 1102.9561
+[2023-08-29 14:06:06,269][02269] KL-divergence is very high: 410.6522
+[2023-08-29 14:06:06,272][02269] KL-divergence is very high: 1023.3153
+[2023-08-29 14:06:06,473][02269] KL-divergence is very high: 658.5802
+[2023-08-29 14:06:06,476][02269] KL-divergence is very high: 206.7787
+[2023-08-29 14:06:06,482][02269] KL-divergence is very high: 2414.4373
+[2023-08-29 14:06:06,485][02269] KL-divergence is very high: 383.6399
+[2023-08-29 14:06:06,488][02269] KL-divergence is very high: 411.8894
+[2023-08-29 14:06:07,619][02270] Updated weights for policy 0, policy_version 11056 (0.0002)
+[2023-08-29 14:06:07,663][02257] Fps is (10 sec: 17202.4, 60 sec: 17203.1, 300 sec: 17536.4). Total num frames: 5660672. Throughput: 0: 17312.3. Samples: 5260295. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:06:07,663][02257] Avg episode reward: [(0, '-38341.907')]
+[2023-08-29 14:06:09,808][02270] Updated weights for policy 0, policy_version 11136 (0.0002)
+[2023-08-29 14:06:12,045][02270] Updated weights for policy 0, policy_version 11216 (0.0002)
+[2023-08-29 14:06:12,663][02257] Fps is (10 sec: 17613.1, 60 sec: 17271.5, 300 sec: 17536.4). Total num frames: 5750784. Throughput: 0: 17385.4. Samples: 5366471. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:06:12,663][02257] Avg episode reward: [(0, '-38341.907')]
+[2023-08-29 14:06:14,299][02270] Updated weights for policy 0, policy_version 11296 (0.0002)
+[2023-08-29 14:06:16,608][02269] KL-divergence is very high: 124.6645
+[2023-08-29 14:06:16,611][02269] KL-divergence is very high: 349.3945
+[2023-08-29 14:06:16,846][02269] KL-divergence is very high: 135.4873
+[2023-08-29 14:06:16,851][02269] KL-divergence is very high: 243.1500
+[2023-08-29 14:06:16,854][02269] KL-divergence is very high: 336.1958
+[2023-08-29 14:06:16,857][02269] KL-divergence is very high: 601.9877
+[2023-08-29 14:06:16,860][02270] Updated weights for policy 0, policy_version 11376 (0.0002)
+[2023-08-29 14:06:17,064][02269] KL-divergence is very high: 16280.6299
+[2023-08-29 14:06:17,663][02257] Fps is (10 sec: 17613.1, 60 sec: 17271.5, 300 sec: 17522.5). Total num frames: 5836800. Throughput: 0: 17394.0. Samples: 5420791. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:06:17,663][02257] Avg episode reward: [(0, '-27851.606')]
+[2023-08-29 14:06:19,108][02270] Updated weights for policy 0, policy_version 11456 (0.0002)
+[2023-08-29 14:06:21,360][02269] KL-divergence is very high: 126.2598
+[2023-08-29 14:06:21,362][02269] KL-divergence is very high: 190.4182
+[2023-08-29 14:06:21,364][02270] Updated weights for policy 0, policy_version 11536 (0.0002)
+[2023-08-29 14:06:22,664][02257] Fps is (10 sec: 17610.5, 60 sec: 17407.3, 300 sec: 17536.3). Total num frames: 5926912. Throughput: 0: 17403.5. Samples: 5524428. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:06:22,665][02257] Avg episode reward: [(0, '-27851.606')]
+[2023-08-29 14:06:23,638][02270] Updated weights for policy 0, policy_version 11616 (0.0002)
+[2023-08-29 14:06:26,160][02270] Updated weights for policy 0, policy_version 11696 (0.0002)
+[2023-08-29 14:06:27,663][02257] Fps is (10 sec: 17612.9, 60 sec: 17407.9, 300 sec: 17550.3). Total num frames: 6012928. Throughput: 0: 17397.1. Samples: 5628401. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:27,663][02257] Avg episode reward: [(0, '-18064.830')]
+[2023-08-29 14:06:28,433][02270] Updated weights for policy 0, policy_version 11776 (0.0002)
+[2023-08-29 14:06:30,761][02270] Updated weights for policy 0, policy_version 11856 (0.0002)
+[2023-08-29 14:06:32,661][02257] Fps is (10 sec: 17618.2, 60 sec: 17476.8, 300 sec: 17564.4). Total num frames: 6103040. Throughput: 0: 17428.1. Samples: 5681702. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:32,661][02257] Avg episode reward: [(0, '-18064.830')]
+[2023-08-29 14:06:32,996][02270] Updated weights for policy 0, policy_version 11936 (0.0002)
+[2023-08-29 14:06:33,199][02269] KL-divergence is very high: 721.5854
+[2023-08-29 14:06:33,211][02269] KL-divergence is very high: 323.6070
+[2023-08-29 14:06:33,456][02269] KL-divergence is very high: 15349.9951
+[2023-08-29 14:06:33,459][02269] KL-divergence is very high: 187.5093
+[2023-08-29 14:06:33,465][02269] KL-divergence is very high: 67620.2734
+[2023-08-29 14:06:33,469][02269] KL-divergence is very high: 2091.6724
+[2023-08-29 14:06:33,472][02269] KL-divergence is very high: 912.6551
+[2023-08-29 14:06:33,475][02269] KL-divergence is very high: 763.2825
+[2023-08-29 14:06:33,712][02269] KL-divergence is very high: 244.7830
+[2023-08-29 14:06:35,529][02270] Updated weights for policy 0, policy_version 12016 (0.0002)
+[2023-08-29 14:06:37,663][02257] Fps is (10 sec: 17612.8, 60 sec: 17408.1, 300 sec: 17550.4). Total num frames: 6189056. Throughput: 0: 17434.6. Samples: 5785487. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:37,663][02257] Avg episode reward: [(0, '-15772.698')]
+[2023-08-29 14:06:37,799][02270] Updated weights for policy 0, policy_version 12096 (0.0002)
+[2023-08-29 14:06:39,183][02269] KL-divergence is very high: 1813.7976
+[2023-08-29 14:06:40,153][02270] Updated weights for policy 0, policy_version 12176 (0.0002)
+[2023-08-29 14:06:41,964][02269] KL-divergence is very high: 199.1216
+[2023-08-29 14:06:42,426][02270] Updated weights for policy 0, policy_version 12256 (0.0002)
+[2023-08-29 14:06:42,663][02257] Fps is (10 sec: 17200.3, 60 sec: 17408.3, 300 sec: 17536.4). Total num frames: 6275072. Throughput: 0: 17481.1. Samples: 5892330. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:42,663][02257] Avg episode reward: [(0, '-15772.698')]
+[2023-08-29 14:06:42,896][02269] KL-divergence is very high: 297.5592
+[2023-08-29 14:06:42,907][02269] KL-divergence is very high: 4158.7368
+[2023-08-29 14:06:42,910][02269] KL-divergence is very high: 4899.7329
+[2023-08-29 14:06:44,992][02270] Updated weights for policy 0, policy_version 12336 (0.0002)
+[2023-08-29 14:06:47,286][02270] Updated weights for policy 0, policy_version 12416 (0.0002)
+[2023-08-29 14:06:47,663][02257] Fps is (10 sec: 17203.0, 60 sec: 17407.6, 300 sec: 17536.5). Total num frames: 6361088. Throughput: 0: 17476.7. Samples: 5941048. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:47,663][02257] Avg episode reward: [(0, '-16113.299')]
+[2023-08-29 14:06:49,587][02270] Updated weights for policy 0, policy_version 12496 (0.0002)
+[2023-08-29 14:06:51,801][02270] Updated weights for policy 0, policy_version 12576 (0.0002)
+[2023-08-29 14:06:52,664][02257] Fps is (10 sec: 17611.1, 60 sec: 17476.0, 300 sec: 17522.5). Total num frames: 6451200. Throughput: 0: 17522.7. Samples: 6048830. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:06:52,664][02257] Avg episode reward: [(0, '-16113.299')]
+[2023-08-29 14:06:54,295][02270] Updated weights for policy 0, policy_version 12656 (0.0002)
+[2023-08-29 14:06:54,959][02269] KL-divergence is very high: 89644.3750
+[2023-08-29 14:06:54,970][02269] KL-divergence is very high: 32709.2246
+[2023-08-29 14:06:55,194][02269] High loss value: l:164.7911 pl:-0.0365 vl:0.0629 exp_l:0.0000 kl_l:164.7647 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:55,194][02269] KL-divergence is very high: 92527.7812
+[2023-08-29 14:06:55,198][02269] High loss value: l:137.3851 pl:-0.0224 vl:0.0876 exp_l:0.0000 kl_l:137.3199 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:55,198][02269] KL-divergence is very high: 122388.8047
+[2023-08-29 14:06:55,204][02269] KL-divergence is very high: 5294.3330
+[2023-08-29 14:06:55,207][02269] High loss value: l:168.6167 pl:-0.0365 vl:0.0482 exp_l:0.0000 kl_l:168.6050 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:55,207][02269] KL-divergence is very high: 97483.3750
+[2023-08-29 14:06:55,210][02269] High loss value: l:184.1619 pl:-0.0189 vl:0.0654 exp_l:0.0000 kl_l:184.1154 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:55,211][02269] KL-divergence is very high: 173441.2031
+[2023-08-29 14:06:55,880][02269] KL-divergence is very high: 597.7069
+[2023-08-29 14:06:55,882][02269] KL-divergence is very high: 1919.9673
+[2023-08-29 14:06:56,596][02270] Updated weights for policy 0, policy_version 12736 (0.0002)
+[2023-08-29 14:06:56,826][02269] KL-divergence is very high: 2237.6328
+[2023-08-29 14:06:56,829][02269] High loss value: l:39.9232 pl:0.0756 vl:0.0840 exp_l:0.0000 kl_l:39.7637 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:56,829][02269] KL-divergence is very high: 49821.8438
+[2023-08-29 14:06:56,833][02269] KL-divergence is very high: 398.5371
+[2023-08-29 14:06:56,836][02269] KL-divergence is very high: 37347.6523
+[2023-08-29 14:06:56,839][02269] KL-divergence is very high: 9141.2197
+[2023-08-29 14:06:56,842][02269] High loss value: l:86.2796 pl:0.0716 vl:0.0931 exp_l:0.0000 kl_l:86.1149 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:56,842][02269] KL-divergence is very high: 107826.1016
+[2023-08-29 14:06:56,846][02269] KL-divergence is very high: 443.9901
+[2023-08-29 14:06:57,056][02269] High loss value: l:3065.8691 pl:0.1120 vl:0.0938 exp_l:0.0000 kl_l:3065.6633 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:06:57,056][02269] KL-divergence is very high: 2641372.2500
+[2023-08-29 14:06:57,304][02269] KL-divergence is very high: 319.9493
+[2023-08-29 14:06:57,309][02269] KL-divergence is very high: 103.0979
+[2023-08-29 14:06:57,546][02269] KL-divergence is very high: 690.9847
+[2023-08-29 14:06:57,555][02269] KL-divergence is very high: 5081.0034
+[2023-08-29 14:06:57,558][02269] KL-divergence is very high: 690.0901
+[2023-08-29 14:06:57,663][02257] Fps is (10 sec: 17613.0, 60 sec: 17476.2, 300 sec: 17522.5). Total num frames: 6537216. Throughput: 0: 17465.9. Samples: 6152436. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:06:57,663][02257] Avg episode reward: [(0, '-17080.361')]
+[2023-08-29 14:06:58,936][02270] Updated weights for policy 0, policy_version 12816 (0.0002)
+[2023-08-29 14:07:01,187][02270] Updated weights for policy 0, policy_version 12896 (0.0002)
+[2023-08-29 14:07:02,662][02257] Fps is (10 sec: 17206.2, 60 sec: 17476.6, 300 sec: 17494.8). Total num frames: 6623232. Throughput: 0: 17447.7. Samples: 6205923. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:07:02,662][02257] Avg episode reward: [(0, '-18930.824')]
+[2023-08-29 14:07:02,840][02269] KL-divergence is very high: 539.4114
+[2023-08-29 14:07:02,843][02269] KL-divergence is very high: 336.8919
+[2023-08-29 14:07:02,849][02269] KL-divergence is very high: 2046.6466
+[2023-08-29 14:07:02,853][02269] KL-divergence is very high: 1794.8438
+[2023-08-29 14:07:02,855][02269] KL-divergence is very high: 214.1741
+[2023-08-29 14:07:03,086][02269] High loss value: l:34.8308 pl:0.0145 vl:0.0605 exp_l:0.0000 kl_l:34.7558 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:03,086][02269] KL-divergence is very high: 26076.2812
+[2023-08-29 14:07:03,089][02269] High loss value: l:37.2824 pl:-0.0370 vl:0.0614 exp_l:0.0000 kl_l:37.2581 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:03,089][02269] KL-divergence is very high: 9821.2822
+[2023-08-29 14:07:03,098][02269] High loss value: l:167.5012 pl:0.0192 vl:0.0562 exp_l:0.0000 kl_l:167.4258 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:03,099][02269] KL-divergence is very high: 135771.3750
+[2023-08-29 14:07:03,102][02269] High loss value: l:285.8097 pl:-0.0350 vl:0.0660 exp_l:0.0000 kl_l:285.7788 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:03,102][02269] KL-divergence is very high: 102851.6875
+[2023-08-29 14:07:03,304][02269] KL-divergence is very high: 238.4485
+[2023-08-29 14:07:03,309][02269] High loss value: l:849.9264 pl:-0.0377 vl:0.1064 exp_l:0.0000 kl_l:849.8576 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:03,309][02269] KL-divergence is very high: 362773.9062
+[2023-08-29 14:07:03,556][02269] KL-divergence is very high: 9096.1494
+[2023-08-29 14:07:03,564][02269] KL-divergence is very high: 3991.4880
+[2023-08-29 14:07:03,568][02269] KL-divergence is very high: 4965.2886
+[2023-08-29 14:07:03,779][02269] KL-divergence is very high: 273.7988
+[2023-08-29 14:07:03,784][02269] KL-divergence is very high: 137.2400
+[2023-08-29 14:07:03,791][02269] KL-divergence is very high: 213.7540
+[2023-08-29 14:07:03,794][02270] Updated weights for policy 0, policy_version 12976 (0.0002)
+[2023-08-29 14:07:04,022][02269] KL-divergence is very high: 1371.1837
+[2023-08-29 14:07:04,031][02269] KL-divergence is very high: 3347.8457
+[2023-08-29 14:07:04,034][02269] KL-divergence is very high: 1098.4897
+[2023-08-29 14:07:04,264][02269] KL-divergence is very high: 141.2015
+[2023-08-29 14:07:04,267][02269] KL-divergence is very high: 131.1198
+[2023-08-29 14:07:04,269][02269] KL-divergence is very high: 501.8257
+[2023-08-29 14:07:04,273][02269] KL-divergence is very high: 11334.7314
+[2023-08-29 14:07:04,275][02269] KL-divergence is very high: 425.7415
+[2023-08-29 14:07:04,278][02269] KL-divergence is very high: 949.5765
+[2023-08-29 14:07:04,281][02269] KL-divergence is very high: 189.5012
+[2023-08-29 14:07:04,493][02269] KL-divergence is very high: 121.9795
+[2023-08-29 14:07:05,408][02269] KL-divergence is very high: 137.8764
+[2023-08-29 14:07:05,643][02269] KL-divergence is very high: 418.8350
+[2023-08-29 14:07:05,655][02269] KL-divergence is very high: 3033.9993
+[2023-08-29 14:07:05,857][02269] High loss value: l:34.7866 pl:0.0690 vl:1.2742 exp_l:0.0000 kl_l:33.4434 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:05,857][02269] KL-divergence is very high: 19325.3965
+[2023-08-29 14:07:05,861][02269] High loss value: l:62.3977 pl:0.0365 vl:0.9415 exp_l:0.0000 kl_l:61.4197 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:05,861][02269] KL-divergence is very high: 35836.7773
+[2023-08-29 14:07:05,864][02269] High loss value: l:31.6173 pl:0.0920 vl:1.0934 exp_l:0.0000 kl_l:30.4319 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:05,864][02269] KL-divergence is very high: 14227.4150
+[2023-08-29 14:07:05,868][02269] KL-divergence is very high: 818.2848
+[2023-08-29 14:07:05,871][02269] High loss value: l:30.7259 pl:0.1180 vl:1.2610 exp_l:0.0000 kl_l:29.3468 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:05,871][02269] KL-divergence is very high: 21264.0996
+[2023-08-29 14:07:05,875][02269] High loss value: l:36.3598 pl:0.0628 vl:1.0219 exp_l:0.0000 kl_l:35.2751 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:05,875][02269] KL-divergence is very high: 21311.1543
+[2023-08-29 14:07:05,879][02269] KL-divergence is very high: 10214.6143
+[2023-08-29 14:07:06,107][02269] KL-divergence is very high: 17502.9922
+[2023-08-29 14:07:06,110][02269] High loss value: l:93.5536 pl:0.1219 vl:0.8442 exp_l:0.0000 kl_l:92.5876 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,110][02269] KL-divergence is very high: 64499.6367
+[2023-08-29 14:07:06,114][02269] High loss value: l:120.2519 pl:0.1543 vl:0.7588 exp_l:0.0000 kl_l:119.3387 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,114][02269] KL-divergence is very high: 33409.0469
+[2023-08-29 14:07:06,118][02269] KL-divergence is very high: 4861.8867
+[2023-08-29 14:07:06,121][02269] KL-divergence is very high: 18893.2344
+[2023-08-29 14:07:06,124][02269] KL-divergence is very high: 21028.2617
+[2023-08-29 14:07:06,127][02269] High loss value: l:83.8711 pl:0.1969 vl:0.7651 exp_l:0.0000 kl_l:82.9091 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,127][02269] KL-divergence is very high: 25757.6465
+[2023-08-29 14:07:06,131][02270] Updated weights for policy 0, policy_version 13056 (0.0002)
+[2023-08-29 14:07:06,348][02269] KL-divergence is very high: 1382.5269
+[2023-08-29 14:07:06,351][02269] High loss value: l:298.7619 pl:0.1694 vl:0.6379 exp_l:0.0000 kl_l:297.9545 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,352][02269] KL-divergence is very high: 167967.8750
+[2023-08-29 14:07:06,355][02269] KL-divergence is very high: 21203.2090
+[2023-08-29 14:07:06,359][02269] KL-divergence is very high: 71016.2109
+[2023-08-29 14:07:06,362][02269] High loss value: l:97.9786 pl:0.0926 vl:0.8769 exp_l:0.0000 kl_l:97.0090 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,362][02269] KL-divergence is very high: 29494.3672
+[2023-08-29 14:07:06,366][02269] High loss value: l:219.0503 pl:0.1846 vl:0.6363 exp_l:0.0000 kl_l:218.2295 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,366][02269] KL-divergence is very high: 121232.0625
+[2023-08-29 14:07:06,369][02269] KL-divergence is very high: 16684.8262
+[2023-08-29 14:07:06,372][02269] High loss value: l:33.5318 pl:0.1241 vl:0.7968 exp_l:0.0000 kl_l:32.6109 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,372][02269] KL-divergence is very high: 48938.6172
+[2023-08-29 14:07:06,570][02269] KL-divergence is very high: 367.7357
+[2023-08-29 14:07:06,572][02269] High loss value: l:132.9310 pl:0.0878 vl:1.1324 exp_l:0.0000 kl_l:131.7109 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,573][02269] KL-divergence is very high: 94396.5703
+[2023-08-29 14:07:06,576][02269] High loss value: l:1166.8885 pl:0.0600 vl:1.1791 exp_l:0.0000 kl_l:1165.6494 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,576][02269] KL-divergence is very high: 426876.6875
+[2023-08-29 14:07:06,580][02269] High loss value: l:337.7818 pl:0.0625 vl:1.0289 exp_l:0.0000 kl_l:336.6904 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,580][02269] KL-divergence is very high: 136059.0938
+[2023-08-29 14:07:06,584][02269] High loss value: l:138.8877 pl:0.0949 vl:0.9334 exp_l:0.0000 kl_l:137.8594 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,584][02269] KL-divergence is very high: 64019.6523
+[2023-08-29 14:07:06,587][02269] High loss value: l:225.3700 pl:0.1152 vl:1.1385 exp_l:0.0000 kl_l:224.1164 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,587][02269] KL-divergence is very high: 148473.0625
+[2023-08-29 14:07:06,591][02269] High loss value: l:892.6998 pl:0.0633 vl:1.1802 exp_l:0.0000 kl_l:891.4562 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,591][02269] KL-divergence is very high: 273686.5000
+[2023-08-29 14:07:06,595][02269] High loss value: l:94.9040 pl:0.0798 vl:1.0364 exp_l:0.0000 kl_l:93.7878 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,595][02269] KL-divergence is very high: 17658.8145
+[2023-08-29 14:07:06,791][02269] KL-divergence is very high: 2093.5837
+[2023-08-29 14:07:06,794][02269] High loss value: l:3365.5706 pl:0.0723 vl:1.0387 exp_l:0.0000 kl_l:3364.4595 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,794][02269] KL-divergence is very high: 608616.3125
+[2023-08-29 14:07:06,797][02269] High loss value: l:5318.1729 pl:0.0746 vl:1.0676 exp_l:0.0000 kl_l:5317.0308 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,797][02269] KL-divergence is very high: 1168715.0000
+[2023-08-29 14:07:06,801][02269] High loss value: l:3603.8770 pl:0.0214 vl:0.9806 exp_l:0.0000 kl_l:3602.8750 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,801][02269] KL-divergence is very high: 884923.5625
+[2023-08-29 14:07:06,805][02269] High loss value: l:1718.3949 pl:0.1060 vl:0.8262 exp_l:0.0000 kl_l:1717.4628 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,805][02269] KL-divergence is very high: 354954.1250
+[2023-08-29 14:07:06,808][02269] High loss value: l:126.0949 pl:0.0609 vl:1.0468 exp_l:0.0000 kl_l:124.9872 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,808][02269] KL-divergence is very high: 15345.3896
+[2023-08-29 14:07:06,812][02269] High loss value: l:1468.2153 pl:0.0657 vl:1.0728 exp_l:0.0000 kl_l:1467.0768 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,812][02269] KL-divergence is very high: 287958.4688
+[2023-08-29 14:07:06,816][02269] High loss value: l:1635.3838 pl:0.0120 vl:0.9911 exp_l:0.0000 kl_l:1634.3807 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:06,816][02269] KL-divergence is very high: 358372.6562
+[2023-08-29 14:07:07,021][02269] KL-divergence is very high: 648.0622
+[2023-08-29 14:07:07,024][02269] High loss value: l:658.9745 pl:-0.0181 vl:0.7718 exp_l:0.0000 kl_l:658.2208 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,024][02269] KL-divergence is very high: 245909.5000
+[2023-08-29 14:07:07,027][02269] High loss value: l:112.8800 pl:0.0439 vl:1.9222 exp_l:0.0000 kl_l:110.9138 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,027][02269] KL-divergence is very high: 304862.6562
+[2023-08-29 14:07:07,033][02269] High loss value: l:205.0291 pl:-0.0261 vl:0.6743 exp_l:0.0000 kl_l:204.3809 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,034][02269] KL-divergence is very high: 54814.1719
+[2023-08-29 14:07:07,037][02269] High loss value: l:142.3768 pl:0.0043 vl:0.7517 exp_l:0.0000 kl_l:141.6208 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,037][02269] KL-divergence is very high: 50905.2500
+[2023-08-29 14:07:07,041][02269] High loss value: l:36.1428 pl:0.0671 vl:1.8375 exp_l:0.0000 kl_l:34.2381 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,041][02269] KL-divergence is very high: 88889.1016
+[2023-08-29 14:07:07,270][02269] High loss value: l:37.4102 pl:0.0203 vl:1.1593 exp_l:0.0000 kl_l:36.2307 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,270][02269] KL-divergence is very high: 17580.2891
+[2023-08-29 14:07:07,274][02269] KL-divergence is very high: 325.2848
+[2023-08-29 14:07:07,279][02269] KL-divergence is very high: 1780.2581
+[2023-08-29 14:07:07,283][02269] High loss value: l:48.7619 pl:0.0532 vl:1.0089 exp_l:0.0000 kl_l:47.6998 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,283][02269] KL-divergence is very high: 23909.9316
+[2023-08-29 14:07:07,286][02269] KL-divergence is very high: 943.5992
+[2023-08-29 14:07:07,289][02269] KL-divergence is very high: 230.3802
+[2023-08-29 14:07:07,493][02269] KL-divergence is very high: 21657.5312
+[2023-08-29 14:07:07,496][02269] High loss value: l:69.3770 pl:0.0126 vl:0.8816 exp_l:0.0000 kl_l:68.4829 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,496][02269] KL-divergence is very high: 26251.6035
+[2023-08-29 14:07:07,500][02269] KL-divergence is very high: 3024.6313
+[2023-08-29 14:07:07,506][02269] High loss value: l:204.2420 pl:0.0507 vl:0.4757 exp_l:0.0000 kl_l:203.7156 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,506][02269] KL-divergence is very high: 198277.9531
+[2023-08-29 14:07:07,510][02269] High loss value: l:654.4818 pl:0.0561 vl:0.8990 exp_l:0.0000 kl_l:653.5267 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,510][02269] KL-divergence is very high: 201454.0156
+[2023-08-29 14:07:07,514][02269] High loss value: l:249.2777 pl:0.1305 vl:1.8369 exp_l:0.0000 kl_l:247.3103 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,514][02269] KL-divergence is very high: 137644.3906
+[2023-08-29 14:07:07,661][02257] Fps is (10 sec: 17206.2, 60 sec: 17476.8, 300 sec: 17494.9). Total num frames: 6709248. Throughput: 0: 17410.7. Samples: 6307856. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:07:07,661][02257] Avg episode reward: [(0, '-18930.824')]
+[2023-08-29 14:07:07,711][02269] KL-divergence is very high: 576.1398
+[2023-08-29 14:07:07,714][02269] KL-divergence is very high: 3905.3645
+[2023-08-29 14:07:07,717][02269] High loss value: l:164.4293 pl:0.0972 vl:2.1990 exp_l:0.0000 kl_l:162.1330 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,717][02269] KL-divergence is very high: 136064.0000
+[2023-08-29 14:07:07,720][02269] KL-divergence is very high: 3173.2803
+[2023-08-29 14:07:07,723][02269] KL-divergence is very high: 18431.4512
+[2023-08-29 14:07:07,726][02269] High loss value: l:39.6067 pl:0.2437 vl:2.5271 exp_l:0.0000 kl_l:36.8359 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,726][02269] KL-divergence is very high: 15048.1777
+[2023-08-29 14:07:07,730][02269] High loss value: l:215.2262 pl:0.1385 vl:2.0331 exp_l:0.0000 kl_l:213.0546 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,730][02269] KL-divergence is very high: 66163.5703
+[2023-08-29 14:07:07,733][02269] High loss value: l:118.7838 pl:0.2075 vl:2.1758 exp_l:0.0000 kl_l:116.4006 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,733][02269] KL-divergence is very high: 34565.4375
+[2023-08-29 14:07:07,925][02269] High loss value: l:78.5172 pl:0.1348 vl:2.0372 exp_l:0.0000 kl_l:76.3452 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,926][02269] KL-divergence is very high: 15918.8105
+[2023-08-29 14:07:07,929][02269] High loss value: l:106.2610 pl:0.0942 vl:2.0501 exp_l:0.0000 kl_l:104.1167 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,929][02269] KL-divergence is very high: 33960.5039
+[2023-08-29 14:07:07,932][02269] High loss value: l:83.0366 pl:0.1305 vl:2.0631 exp_l:0.0000 kl_l:80.8430 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,932][02269] KL-divergence is very high: 27218.7578
+[2023-08-29 14:07:07,936][02269] High loss value: l:55.9516 pl:0.1157 vl:2.2609 exp_l:0.0000 kl_l:53.5750 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,936][02269] KL-divergence is very high: 11498.0293
+[2023-08-29 14:07:07,940][02269] High loss value: l:63.5033 pl:0.1362 vl:1.9711 exp_l:0.0000 kl_l:61.3960 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,940][02269] KL-divergence is very high: 10834.4316
+[2023-08-29 14:07:07,944][02269] High loss value: l:73.5139 pl:0.0980 vl:1.9776 exp_l:0.0000 kl_l:71.4383 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,944][02269] KL-divergence is very high: 31172.5469
+[2023-08-29 14:07:07,948][02269] High loss value: l:64.3113 pl:0.1082 vl:2.0170 exp_l:0.0000 kl_l:62.1861 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:07,948][02269] KL-divergence is very high: 36893.0312
+[2023-08-29 14:07:08,140][02269] KL-divergence is very high: 1037.2914
+[2023-08-29 14:07:08,143][02269] High loss value: l:112.6028 pl:0.0532 vl:2.0354 exp_l:0.0000 kl_l:110.5142 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,143][02269] KL-divergence is very high: 54790.5898
+[2023-08-29 14:07:08,146][02269] High loss value: l:411.1358 pl:0.0374 vl:1.8048 exp_l:0.0000 kl_l:409.2935 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,146][02269] KL-divergence is very high: 89907.8281
+[2023-08-29 14:07:08,150][02269] High loss value: l:269.5577 pl:0.0468 vl:1.9242 exp_l:0.0000 kl_l:267.5867 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,150][02269] KL-divergence is very high: 58288.1562
+[2023-08-29 14:07:08,153][02269] KL-divergence is very high: 18475.9785
+[2023-08-29 14:07:08,156][02269] High loss value: l:234.4820 pl:0.0836 vl:2.0119 exp_l:0.0000 kl_l:232.3865 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,157][02269] KL-divergence is very high: 116730.6094
+[2023-08-29 14:07:08,160][02269] High loss value: l:993.5223 pl:0.0483 vl:1.7781 exp_l:0.0000 kl_l:991.6959 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,160][02269] KL-divergence is very high: 205153.7344
+[2023-08-29 14:07:08,163][02269] High loss value: l:1139.6086 pl:0.0601 vl:1.8990 exp_l:0.0000 kl_l:1137.6497 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,163][02269] KL-divergence is very high: 196164.7031
+[2023-08-29 14:07:08,357][02269] KL-divergence is very high: 132.9570
+[2023-08-29 14:07:08,360][02269] KL-divergence is very high: 34673.1914
+[2023-08-29 14:07:08,362][02269] KL-divergence is very high: 13423.8486
+[2023-08-29 14:07:08,365][02269] High loss value: l:40.9775 pl:0.0799 vl:0.8648 exp_l:0.0000 kl_l:40.0328 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,366][02269] KL-divergence is very high: 34710.6836
+[2023-08-29 14:07:08,369][02269] High loss value: l:205.2534 pl:0.1306 vl:2.2486 exp_l:0.0000 kl_l:202.8742 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,369][02269] KL-divergence is very high: 250950.3125
+[2023-08-29 14:07:08,373][02269] High loss value: l:57.9480 pl:0.1128 vl:1.8085 exp_l:0.0000 kl_l:56.0266 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,373][02269] KL-divergence is very high: 26319.4414
+[2023-08-29 14:07:08,377][02269] High loss value: l:70.6270 pl:0.0621 vl:1.1664 exp_l:0.0000 kl_l:69.3985 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,377][02269] KL-divergence is very high: 59252.4492
+[2023-08-29 14:07:08,380][02269] High loss value: l:218.7227 pl:0.0723 vl:0.8616 exp_l:0.0000 kl_l:217.7888 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,380][02269] KL-divergence is very high: 71047.0469
+[2023-08-29 14:07:08,384][02270] Updated weights for policy 0, policy_version 13136 (0.0003)
+[2023-08-29 14:07:08,580][02269] KL-divergence is very high: 7228.5293
+[2023-08-29 14:07:08,583][02269] KL-divergence is very high: 102.6834
+[2023-08-29 14:07:08,586][02269] KL-divergence is very high: 196.5097
+[2023-08-29 14:07:08,590][02269] High loss value: l:135.7525 pl:0.0963 vl:0.9887 exp_l:0.0000 kl_l:134.6675 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,590][02269] KL-divergence is very high: 44830.9414
+[2023-08-29 14:07:08,593][02269] High loss value: l:35.6425 pl:0.0321 vl:1.0471 exp_l:0.0000 kl_l:34.5632 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:08,594][02269] KL-divergence is very high: 23524.6211
+[2023-08-29 14:07:08,597][02269] KL-divergence is very high: 653.9144
+[2023-08-29 14:07:08,603][02269] KL-divergence is very high: 8653.4805
+[2023-08-29 14:07:08,851][02269] KL-divergence is very high: 291.3439
+[2023-08-29 14:07:08,854][02269] KL-divergence is very high: 308.3998
+[2023-08-29 14:07:08,857][02269] KL-divergence is very high: 121.9036
+[2023-08-29 14:07:08,860][02269] KL-divergence is very high: 170.5655
+[2023-08-29 14:07:08,863][02269] KL-divergence is very high: 1029.0853
+[2023-08-29 14:07:08,866][02269] KL-divergence is very high: 161.3455
+[2023-08-29 14:07:09,072][02269] KL-divergence is very high: 694.0084
+[2023-08-29 14:07:09,075][02269] KL-divergence is very high: 1946.8116
+[2023-08-29 14:07:09,078][02269] KL-divergence is very high: 147.4969
+[2023-08-29 14:07:09,084][02269] KL-divergence is very high: 871.6055
+[2023-08-29 14:07:09,088][02269] KL-divergence is very high: 3250.9004
+[2023-08-29 14:07:09,318][02269] High loss value: l:109.6974 pl:-0.0244 vl:0.7527 exp_l:0.0000 kl_l:108.9691 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:09,318][02269] KL-divergence is very high: 31828.7129
+[2023-08-29 14:07:09,327][02269] KL-divergence is very high: 6711.8540
+[2023-08-29 14:07:09,330][02269] High loss value: l:35.8481 pl:0.0112 vl:0.6272 exp_l:0.0000 kl_l:35.2097 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:09,330][02269] KL-divergence is very high: 24273.0293
+[2023-08-29 14:07:09,566][02269] KL-divergence is very high: 2815.6138
+[2023-08-29 14:07:09,568][02269] KL-divergence is very high: 4697.5444
+[2023-08-29 14:07:09,571][02269] KL-divergence is very high: 17068.9941
+[2023-08-29 14:07:09,577][02269] KL-divergence is very high: 1909.5962
+[2023-08-29 14:07:09,580][02269] KL-divergence is very high: 61387.4375
+[2023-08-29 14:07:09,780][02269] High loss value: l:406.3573 pl:0.0546 vl:0.6472 exp_l:0.0000 kl_l:405.6555 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:09,780][02269] KL-divergence is very high: 262716.0312
+[2023-08-29 14:07:09,783][02269] KL-divergence is very high: 14378.9551
+[2023-08-29 14:07:09,786][02269] KL-divergence is very high: 5231.5400
+[2023-08-29 14:07:09,789][02269] High loss value: l:48.1527 pl:0.0163 vl:0.4875 exp_l:0.0000 kl_l:47.6489 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:09,789][02269] KL-divergence is very high: 34555.7383
+[2023-08-29 14:07:09,792][02269] High loss value: l:244.1865 pl:0.0666 vl:0.6533 exp_l:0.0000 kl_l:243.4667 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:09,793][02269] KL-divergence is very high: 184583.1719
+[2023-08-29 14:07:09,796][02269] KL-divergence is very high: 8031.9009
+[2023-08-29 14:07:09,799][02269] KL-divergence is very high: 351.1533
+[2023-08-29 14:07:10,028][02269] KL-divergence is very high: 309.2083
+[2023-08-29 14:07:10,031][02269] KL-divergence is very high: 2492.0803
+[2023-08-29 14:07:10,034][02269] High loss value: l:34.1615 pl:0.0968 vl:1.2074 exp_l:0.0000 kl_l:32.8574 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,034][02269] KL-divergence is very high: 202993.5938
+[2023-08-29 14:07:10,037][02269] KL-divergence is very high: 953.2724
+[2023-08-29 14:07:10,041][02269] KL-divergence is very high: 180.7247
+[2023-08-29 14:07:10,043][02269] KL-divergence is very high: 2526.4419
+[2023-08-29 14:07:10,046][02269] KL-divergence is very high: 12963.2676
+[2023-08-29 14:07:10,242][02269] KL-divergence is very high: 2112.3086
+[2023-08-29 14:07:10,245][02269] High loss value: l:277.4522 pl:0.1426 vl:1.4793 exp_l:0.0000 kl_l:275.8303 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,245][02269] KL-divergence is very high: 43441.8711
+[2023-08-29 14:07:10,248][02269] High loss value: l:220.9173 pl:0.1726 vl:1.7244 exp_l:0.0000 kl_l:219.0203 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,248][02269] KL-divergence is very high: 28152.5000
+[2023-08-29 14:07:10,252][02269] High loss value: l:88.4680 pl:0.1299 vl:1.5139 exp_l:0.0000 kl_l:86.8242 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,252][02269] KL-divergence is very high: 15572.8184
+[2023-08-29 14:07:10,256][02269] High loss value: l:42.8063 pl:0.2071 vl:1.6115 exp_l:0.0000 kl_l:40.9877 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,256][02269] KL-divergence is very high: 16205.8291
+[2023-08-29 14:07:10,260][02269] High loss value: l:49.4050 pl:0.1508 vl:1.4548 exp_l:0.0000 kl_l:47.7993 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,260][02269] KL-divergence is very high: 11705.8096
+[2023-08-29 14:07:10,264][02269] High loss value: l:137.9516 pl:0.2059 vl:1.6936 exp_l:0.0000 kl_l:136.0520 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,264][02269] KL-divergence is very high: 16208.3584
+[2023-08-29 14:07:10,267][02269] High loss value: l:131.0056 pl:0.1264 vl:1.4870 exp_l:0.0000 kl_l:129.3923 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,268][02269] KL-divergence is very high: 19903.5703
+[2023-08-29 14:07:10,489][02269] KL-divergence is very high: 554.2827
+[2023-08-29 14:07:10,492][02269] High loss value: l:1492.1917 pl:0.0579 vl:1.6826 exp_l:0.0000 kl_l:1490.4512 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,492][02269] KL-divergence is very high: 201368.0156
+[2023-08-29 14:07:10,495][02269] High loss value: l:2946.8306 pl:0.0679 vl:1.3334 exp_l:0.0000 kl_l:2945.4292 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,495][02269] KL-divergence is very high: 398787.5312
+[2023-08-29 14:07:10,499][02269] High loss value: l:2429.4934 pl:0.0044 vl:1.8720 exp_l:0.0000 kl_l:2427.6169 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,499][02269] KL-divergence is very high: 313515.0938
+[2023-08-29 14:07:10,502][02269] High loss value: l:625.5206 pl:0.1099 vl:1.1816 exp_l:0.0000 kl_l:624.2292 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,502][02269] KL-divergence is very high: 92829.1562
+[2023-08-29 14:07:10,506][02269] High loss value: l:299.1374 pl:0.1296 vl:1.6524 exp_l:0.0000 kl_l:297.3553 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,507][02269] KL-divergence is very high: 39629.0977
+[2023-08-29 14:07:10,510][02269] High loss value: l:1143.6257 pl:0.0520 vl:1.2976 exp_l:0.0000 kl_l:1142.2761 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,511][02269] KL-divergence is very high: 151177.2500
+[2023-08-29 14:07:10,514][02269] High loss value: l:928.8061 pl:-0.0047 vl:1.8380 exp_l:0.0000 kl_l:926.9728 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,514][02269] KL-divergence is very high: 117406.8203
+[2023-08-29 14:07:10,740][02269] High loss value: l:154.9445 pl:0.0069 vl:1.3615 exp_l:0.0000 kl_l:153.5762 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,740][02269] KL-divergence is very high: 14226.1074
+[2023-08-29 14:07:10,744][02269] High loss value: l:112.6402 pl:0.0667 vl:1.4826 exp_l:0.0000 kl_l:111.0909 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,744][02269] KL-divergence is very high: 10725.2676
+[2023-08-29 14:07:10,747][02269] KL-divergence is very high: 1591.3981
+[2023-08-29 14:07:10,751][02269] KL-divergence is very high: 3394.7156
+[2023-08-29 14:07:10,754][02269] High loss value: l:80.6311 pl:0.0050 vl:1.3583 exp_l:0.0000 kl_l:79.2678 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,754][02269] KL-divergence is very high: 8589.7285
+[2023-08-29 14:07:10,758][02269] High loss value: l:46.0053 pl:0.0596 vl:1.4799 exp_l:0.0000 kl_l:44.4658 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,758][02269] KL-divergence is very high: 4956.7139
+[2023-08-29 14:07:10,762][02269] High loss value: l:92.9815 pl:0.0223 vl:1.5242 exp_l:0.0000 kl_l:91.4350 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,762][02269] KL-divergence is very high: 11404.0713
+[2023-08-29 14:07:10,765][02270] Updated weights for policy 0, policy_version 13216 (0.0002)
+[2023-08-29 14:07:10,963][02269] High loss value: l:115.7470 pl:0.0320 vl:1.9561 exp_l:0.0000 kl_l:113.7589 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,963][02269] KL-divergence is very high: 13125.3496
+[2023-08-29 14:07:10,966][02269] High loss value: l:111.3140 pl:-0.0009 vl:1.5007 exp_l:0.0000 kl_l:109.8142 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,966][02269] KL-divergence is very high: 14266.4316
+[2023-08-29 14:07:10,970][02269] High loss value: l:310.8131 pl:0.0153 vl:1.6626 exp_l:0.0000 kl_l:309.1352 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,970][02269] KL-divergence is very high: 41941.8594
+[2023-08-29 14:07:10,973][02269] High loss value: l:273.4856 pl:0.0177 vl:1.3931 exp_l:0.0000 kl_l:272.0748 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,973][02269] KL-divergence is very high: 30970.9023
+[2023-08-29 14:07:10,977][02269] High loss value: l:59.6588 pl:0.0295 vl:1.9473 exp_l:0.0000 kl_l:57.6821 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,977][02269] KL-divergence is very high: 5206.2451
+[2023-08-29 14:07:10,980][02269] High loss value: l:378.3316 pl:0.0060 vl:1.5118 exp_l:0.0000 kl_l:376.8137 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,980][02269] KL-divergence is very high: 40695.4609
+[2023-08-29 14:07:10,984][02269] High loss value: l:789.9119 pl:0.0127 vl:1.6899 exp_l:0.0000 kl_l:788.2093 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:10,984][02269] KL-divergence is very high: 83410.8984
+[2023-08-29 14:07:11,186][02269] KL-divergence is very high: 1971.9344
+[2023-08-29 14:07:11,189][02269] High loss value: l:724.2115 pl:0.0311 vl:1.7322 exp_l:0.0000 kl_l:722.4482 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,189][02269] KL-divergence is very high: 128727.7578
+[2023-08-29 14:07:11,192][02269] High loss value: l:669.5386 pl:0.0468 vl:1.9782 exp_l:0.0000 kl_l:667.5136 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,192][02269] KL-divergence is very high: 121095.0312
+[2023-08-29 14:07:11,196][02269] High loss value: l:72.4357 pl:0.0387 vl:1.7258 exp_l:0.0000 kl_l:70.6713 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,196][02269] KL-divergence is very high: 18894.4980
+[2023-08-29 14:07:11,200][02269] High loss value: l:411.4669 pl:0.0533 vl:1.5644 exp_l:0.0000 kl_l:409.8492 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,200][02269] KL-divergence is very high: 39938.5781
+[2023-08-29 14:07:11,203][02269] High loss value: l:386.4980 pl:0.0338 vl:1.6870 exp_l:0.0000 kl_l:384.7772 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,203][02269] KL-divergence is very high: 30210.6211
+[2023-08-29 14:07:11,207][02269] High loss value: l:139.9270 pl:0.0435 vl:1.9273 exp_l:0.0000 kl_l:137.9562 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,207][02269] KL-divergence is very high: 46933.4609
+[2023-08-29 14:07:11,211][02269] High loss value: l:320.3650 pl:0.0394 vl:1.6870 exp_l:0.0000 kl_l:318.6386 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,211][02269] KL-divergence is very high: 37496.1992
+[2023-08-29 14:07:11,641][02269] KL-divergence is very high: 123.9593
+[2023-08-29 14:07:11,644][02269] High loss value: l:71.6658 pl:0.0049 vl:2.4880 exp_l:0.0000 kl_l:69.1730 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,644][02269] KL-divergence is very high: 10964.4209
+[2023-08-29 14:07:11,654][02269] High loss value: l:86.2440 pl:-0.0029 vl:1.9908 exp_l:0.0000 kl_l:84.2561 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,654][02269] KL-divergence is very high: 12207.7842
+[2023-08-29 14:07:11,658][02269] High loss value: l:32.9371 pl:-0.0000 vl:2.3419 exp_l:0.0000 kl_l:30.5953 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:11,658][02269] KL-divergence is very high: 5960.4868
+[2023-08-29 14:07:12,663][02257] Fps is (10 sec: 17201.7, 60 sec: 17408.0, 300 sec: 17467.1). Total num frames: 6795264. Throughput: 0: 17365.1. Samples: 6409830. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:07:12,663][02257] Avg episode reward: [(0, '-45907.110')]
+[2023-08-29 14:07:13,280][02270] Updated weights for policy 0, policy_version 13296 (0.0002)
+[2023-08-29 14:07:15,553][02270] Updated weights for policy 0, policy_version 13376 (0.0002)
+[2023-08-29 14:07:17,662][02257] Fps is (10 sec: 17611.2, 60 sec: 17476.5, 300 sec: 17481.0). Total num frames: 6885376. Throughput: 0: 17377.6. Samples: 6463709. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:07:17,662][02257] Avg episode reward: [(0, '-45907.110')]
+[2023-08-29 14:07:17,801][02270] Updated weights for policy 0, policy_version 13456 (0.0002)
+[2023-08-29 14:07:20,039][02270] Updated weights for policy 0, policy_version 13536 (0.0002)
+[2023-08-29 14:07:22,598][02270] Updated weights for policy 0, policy_version 13616 (0.0002)
+[2023-08-29 14:07:22,663][02257] Fps is (10 sec: 17612.9, 60 sec: 17408.4, 300 sec: 17467.1). Total num frames: 6971392. Throughput: 0: 17371.9. Samples: 6567221. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:07:22,663][02257] Avg episode reward: [(0, '-41693.643')]
+[2023-08-29 14:07:24,208][02269] KL-divergence is very high: 1545.3812
+[2023-08-29 14:07:24,442][02269] KL-divergence is very high: 820.0391
+[2023-08-29 14:07:24,936][02270] Updated weights for policy 0, policy_version 13696 (0.0002)
+[2023-08-29 14:07:26,978][02269] KL-divergence is very high: 15787.1406
+[2023-08-29 14:07:27,176][02269] KL-divergence is very high: 10636.9717
+[2023-08-29 14:07:27,179][02269] KL-divergence is very high: 6271.6562
+[2023-08-29 14:07:27,182][02269] KL-divergence is very high: 2462.8784
+[2023-08-29 14:07:27,185][02269] KL-divergence is very high: 7307.7944
+[2023-08-29 14:07:27,188][02269] KL-divergence is very high: 6905.0903
+[2023-08-29 14:07:27,192][02269] KL-divergence is very high: 6041.2954
+[2023-08-29 14:07:27,195][02269] KL-divergence is very high: 569.9950
+[2023-08-29 14:07:27,198][02270] Updated weights for policy 0, policy_version 13776 (0.0002)
+[2023-08-29 14:07:27,394][02269] KL-divergence is very high: 364.7785
+[2023-08-29 14:07:27,402][02269] KL-divergence is very high: 4060.6416
+[2023-08-29 14:07:27,405][02269] KL-divergence is very high: 1925.4886
+[2023-08-29 14:07:27,619][02269] KL-divergence is very high: 6634.2446
+[2023-08-29 14:07:27,631][02269] KL-divergence is very high: 2733.0740
+[2023-08-29 14:07:27,663][02257] Fps is (10 sec: 17610.9, 60 sec: 17476.2, 300 sec: 17467.0). Total num frames: 7061504. Throughput: 0: 17382.1. Samples: 6674530. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:07:27,663][02257] Avg episode reward: [(0, '-41693.643')]
+[2023-08-29 14:07:27,833][02269] KL-divergence is very high: 2714.1946
+[2023-08-29 14:07:27,841][02269] KL-divergence is very high: 571.3431
+[2023-08-29 14:07:27,844][02269] KL-divergence is very high: 2735.8098
+[2023-08-29 14:07:27,847][02269] KL-divergence is very high: 234.4427
+[2023-08-29 14:07:28,064][02269] High loss value: l:64.3932 pl:0.2266 vl:0.0445 exp_l:0.0000 kl_l:64.1221 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:28,064][02269] KL-divergence is very high: 36360.7773
+[2023-08-29 14:07:28,076][02269] KL-divergence is very high: 7401.7798
+[2023-08-29 14:07:28,283][02269] High loss value: l:47.6915 pl:0.2074 vl:0.0895 exp_l:0.0000 kl_l:47.3946 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:28,283][02269] KL-divergence is very high: 46037.4180
+[2023-08-29 14:07:29,446][02269] KL-divergence is very high: 126.1420
+[2023-08-29 14:07:29,448][02270] Updated weights for policy 0, policy_version 13856 (0.0002)
+[2023-08-29 14:07:31,928][02270] Updated weights for policy 0, policy_version 13936 (0.0002)
+[2023-08-29 14:07:32,661][02257] Fps is (10 sec: 17616.1, 60 sec: 17408.0, 300 sec: 17467.1). Total num frames: 7147520. Throughput: 0: 17433.9. Samples: 6725541. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:07:32,661][02257] Avg episode reward: [(0, '-45711.216')]
+[2023-08-29 14:07:34,021][02269] KL-divergence is very high: 1989.0743
+[2023-08-29 14:07:34,257][02269] KL-divergence is very high: 738.2981
+[2023-08-29 14:07:34,267][02270] Updated weights for policy 0, policy_version 14016 (0.0002)
+[2023-08-29 14:07:35,179][02269] KL-divergence is very high: 159.9797
+[2023-08-29 14:07:35,182][02269] KL-divergence is very high: 196.9583
+[2023-08-29 14:07:35,191][02269] KL-divergence is very high: 534.4442
+[2023-08-29 14:07:35,194][02269] KL-divergence is very high: 348.6779
+[2023-08-29 14:07:35,196][02269] KL-divergence is very high: 444.9312
+[2023-08-29 14:07:35,405][02269] High loss value: l:58.4030 pl:0.2039 vl:0.0770 exp_l:0.0000 kl_l:58.1221 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:35,405][02269] KL-divergence is very high: 45199.7578
+[2023-08-29 14:07:35,417][02269] High loss value: l:903.4162 pl:0.2082 vl:0.0734 exp_l:0.0000 kl_l:903.1346 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:35,417][02269] KL-divergence is very high: 666488.0000
+[2023-08-29 14:07:35,622][02269] KL-divergence is very high: 578.7803
+[2023-08-29 14:07:35,625][02269] KL-divergence is very high: 3302.1611
+[2023-08-29 14:07:35,628][02269] KL-divergence is very high: 291.8220
+[2023-08-29 14:07:35,634][02269] KL-divergence is very high: 3001.8308
+[2023-08-29 14:07:35,845][02269] KL-divergence is very high: 226.6030
+[2023-08-29 14:07:35,850][02269] KL-divergence is very high: 820.8433
+[2023-08-29 14:07:35,853][02269] KL-divergence is very high: 545.4387
+[2023-08-29 14:07:35,856][02269] KL-divergence is very high: 1144.6479
+[2023-08-29 14:07:36,549][02269] KL-divergence is very high: 2947.8704
+[2023-08-29 14:07:36,552][02269] KL-divergence is very high: 522.1161
+[2023-08-29 14:07:36,561][02269] KL-divergence is very high: 33614.2031
+[2023-08-29 14:07:36,564][02269] KL-divergence is very high: 1179.4773
+[2023-08-29 14:07:36,567][02270] Updated weights for policy 0, policy_version 14096 (0.0002)
+[2023-08-29 14:07:36,764][02269] KL-divergence is very high: 3662.9319
+[2023-08-29 14:07:36,767][02269] KL-divergence is very high: 29906.7227
+[2023-08-29 14:07:36,769][02269] KL-divergence is very high: 187.8395
+[2023-08-29 14:07:36,772][02269] KL-divergence is very high: 3702.2410
+[2023-08-29 14:07:36,775][02269] KL-divergence is very high: 5309.1450
+[2023-08-29 14:07:36,778][02269] KL-divergence is very high: 755.1548
+[2023-08-29 14:07:36,781][02269] KL-divergence is very high: 621.4516
+[2023-08-29 14:07:37,016][02269] KL-divergence is very high: 168.4981
+[2023-08-29 14:07:37,266][02269] KL-divergence is very high: 780.7217
+[2023-08-29 14:07:37,277][02269] KL-divergence is very high: 9949.2344
+[2023-08-29 14:07:37,486][02269] High loss value: l:110.0362 pl:0.0858 vl:0.0854 exp_l:0.0000 kl_l:109.8649 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,486][02269] KL-divergence is very high: 90486.4922
+[2023-08-29 14:07:37,490][02269] High loss value: l:67.8517 pl:0.1127 vl:0.0800 exp_l:0.0000 kl_l:67.6590 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,490][02269] KL-divergence is very high: 13787.9990
+[2023-08-29 14:07:37,500][02269] High loss value: l:1001.4010 pl:0.0830 vl:0.0825 exp_l:0.0000 kl_l:1001.2355 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,500][02269] KL-divergence is very high: 981588.6875
+[2023-08-29 14:07:37,504][02269] High loss value: l:1819.6992 pl:0.1143 vl:0.0837 exp_l:0.0000 kl_l:1819.5012 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,504][02269] KL-divergence is very high: 559350.8750
+[2023-08-29 14:07:37,663][02257] Fps is (10 sec: 17203.0, 60 sec: 17407.9, 300 sec: 17453.1). Total num frames: 7233536. Throughput: 0: 17407.2. Samples: 6832144. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:07:37,664][02257] Avg episode reward: [(0, '-45711.216')]
+[2023-08-29 14:07:37,731][02269] High loss value: l:34.4757 pl:0.0743 vl:0.0981 exp_l:0.0000 kl_l:34.3033 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,731][02269] KL-divergence is very high: 61169.2500
+[2023-08-29 14:07:37,734][02269] KL-divergence is very high: 74844.6953
+[2023-08-29 14:07:37,737][02269] KL-divergence is very high: 19463.4707
+[2023-08-29 14:07:37,740][02269] High loss value: l:43.0611 pl:0.1015 vl:0.0859 exp_l:0.0000 kl_l:42.8737 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:37,740][02269] KL-divergence is very high: 25312.8301
+[2023-08-29 14:07:37,744][02269] KL-divergence is very high: 28754.2773
+[2023-08-29 14:07:37,747][02269] KL-divergence is very high: 62016.3867
+[2023-08-29 14:07:37,750][02269] KL-divergence is very high: 11891.5488
+[2023-08-29 14:07:37,981][02269] KL-divergence is very high: 3297.5798
+[2023-08-29 14:07:37,983][02269] KL-divergence is very high: 307.8429
+[2023-08-29 14:07:37,986][02269] KL-divergence is very high: 327.5798
+[2023-08-29 14:07:37,992][02269] KL-divergence is very high: 724.8161
+[2023-08-29 14:07:37,996][02269] KL-divergence is very high: 160.5533
+[2023-08-29 14:07:38,222][02269] KL-divergence is very high: 565.3522
+[2023-08-29 14:07:38,233][02269] KL-divergence is very high: 561.7212
+[2023-08-29 14:07:39,168][02269] KL-divergence is very high: 150.1015
+[2023-08-29 14:07:39,176][02270] Updated weights for policy 0, policy_version 14176 (0.0002)
+[2023-08-29 14:07:41,382][02270] Updated weights for policy 0, policy_version 14256 (0.0002)
+[2023-08-29 14:07:41,622][02269] KL-divergence is very high: 276.9124
+[2023-08-29 14:07:42,528][02269] KL-divergence is very high: 2231.6013
+[2023-08-29 14:07:42,534][02269] KL-divergence is very high: 247.6217
+[2023-08-29 14:07:42,540][02269] KL-divergence is very high: 15964.4717
+[2023-08-29 14:07:42,664][02257] Fps is (10 sec: 17198.4, 60 sec: 17407.7, 300 sec: 17453.1). Total num frames: 7319552. Throughput: 0: 17380.0. Samples: 6934551. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:07:42,664][02257] Avg episode reward: [(0, '-48243.066')]
+[2023-08-29 14:07:42,667][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000014296_7319552.pth...
+[2023-08-29 14:07:42,668][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000007496_3837952.pth
+[2023-08-29 14:07:42,780][02269] KL-divergence is very high: 6824.2432
+[2023-08-29 14:07:42,783][02269] KL-divergence is very high: 974.2292
+[2023-08-29 14:07:42,785][02269] High loss value: l:63.8907 pl:0.2196 vl:0.0625 exp_l:0.0000 kl_l:63.6085 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:42,785][02269] KL-divergence is very high: 17906.7871
+[2023-08-29 14:07:42,789][02269] High loss value: l:54.1686 pl:0.1627 vl:0.2657 exp_l:0.0000 kl_l:53.7401 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:42,789][02269] KL-divergence is very high: 25276.9668
+[2023-08-29 14:07:42,793][02269] KL-divergence is very high: 7499.9756
+[2023-08-29 14:07:42,795][02269] High loss value: l:42.6164 pl:0.1667 vl:0.1335 exp_l:0.0000 kl_l:42.3162 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:42,796][02269] KL-divergence is very high: 17042.2637
+[2023-08-29 14:07:42,800][02269] High loss value: l:111.1779 pl:0.2316 vl:0.0558 exp_l:0.0000 kl_l:110.8905 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:42,800][02269] KL-divergence is very high: 37086.5352
+[2023-08-29 14:07:43,010][02269] High loss value: l:66.7343 pl:0.0565 vl:0.1374 exp_l:0.0000 kl_l:66.5404 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:43,011][02269] KL-divergence is very high: 72278.7344
+[2023-08-29 14:07:43,014][02269] KL-divergence is very high: 34155.2695
+[2023-08-29 14:07:43,017][02269] KL-divergence is very high: 2105.7261
+[2023-08-29 14:07:43,023][02269] High loss value: l:86.6422 pl:0.0530 vl:0.1358 exp_l:0.0000 kl_l:86.4535 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:43,023][02269] KL-divergence is very high: 97951.9141
+[2023-08-29 14:07:43,027][02269] High loss value: l:37.6673 pl:0.1911 vl:0.1163 exp_l:0.0000 kl_l:37.3599 (recommended to adjust the --reward_scale parameter)
+[2023-08-29 14:07:43,027][02269] KL-divergence is very high: 69067.1406
+[2023-08-29 14:07:43,527][02269] KL-divergence is very high: 132.3494
+[2023-08-29 14:07:43,762][02269] KL-divergence is very high: 34862.4922
+[2023-08-29 14:07:43,773][02270] Updated weights for policy 0, policy_version 14336 (0.0002)
+[2023-08-29 14:07:44,039][02269] KL-divergence is very high: 450.8875
+[2023-08-29 14:07:44,048][02269] KL-divergence is very high: 103.4223
+[2023-08-29 14:07:44,052][02269] KL-divergence is very high: 6731.7192
+[2023-08-29 14:07:44,055][02269] KL-divergence is very high: 420.2974
+[2023-08-29 14:07:44,728][02269] KL-divergence is very high: 243.7616
+[2023-08-29 14:07:44,739][02269] KL-divergence is very high: 876.9836
+[2023-08-29 14:07:44,742][02269] KL-divergence is very high: 158.3471
+[2023-08-29 14:07:44,945][02269] KL-divergence is very high: 119.8564
+[2023-08-29 14:07:46,044][02269] KL-divergence is very high: 112.7863
+[2023-08-29 14:07:46,052][02269] KL-divergence is very high: 105.5768
+[2023-08-29 14:07:46,056][02269] KL-divergence is very high: 185.1767
+[2023-08-29 14:07:46,058][02270] Updated weights for policy 0, policy_version 14416 (0.0002)
+[2023-08-29 14:07:47,663][02257] Fps is (10 sec: 17203.5, 60 sec: 17408.0, 300 sec: 17439.2). Total num frames: 7405568. Throughput: 0: 17340.2. Samples: 6986251. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:07:47,663][02257] Avg episode reward: [(0, '-48243.066')]
+[2023-08-29 14:07:47,679][02269] KL-divergence is very high: 232.8849
+[2023-08-29 14:07:47,886][02269] KL-divergence is very high: 3383.6025
+[2023-08-29 14:07:48,612][02270] Updated weights for policy 0, policy_version 14496 (0.0002)
+[2023-08-29 14:07:49,495][02269] KL-divergence is very high: 1358.8883
+[2023-08-29 14:07:49,503][02269] KL-divergence is very high: 100.3594
+[2023-08-29 14:07:49,506][02269] KL-divergence is very high: 2707.3401
+[2023-08-29 14:07:49,972][02269] KL-divergence is very high: 1471.1527
+[2023-08-29 14:07:49,975][02269] KL-divergence is very high: 529.0118
+[2023-08-29 14:07:49,983][02269] KL-divergence is very high: 1196.6912
+[2023-08-29 14:07:49,986][02269] KL-divergence is very high: 442.6955
+[2023-08-29 14:07:50,188][02269] KL-divergence is very high: 580.2992
+[2023-08-29 14:07:50,199][02269] KL-divergence is very high: 112.2373
+[2023-08-29 14:07:50,647][02269] KL-divergence is very high: 280.8906
+[2023-08-29 14:07:50,658][02269] KL-divergence is very high: 219.2920
+[2023-08-29 14:07:50,879][02270] Updated weights for policy 0, policy_version 14576 (0.0002)
+[2023-08-29 14:07:51,093][02269] KL-divergence is very high: 309.1498
+[2023-08-29 14:07:51,324][02269] KL-divergence is very high: 143.0033
+[2023-08-29 14:07:51,333][02269] KL-divergence is very high: 8156.0273
+[2023-08-29 14:07:51,336][02269] KL-divergence is very high: 292.1244
+[2023-08-29 14:07:51,542][02269] KL-divergence is very high: 115.0383
+[2023-08-29 14:07:51,545][02269] KL-divergence is very high: 378.9860
+[2023-08-29 14:07:51,548][02269] KL-divergence is very high: 204.5343
+[2023-08-29 14:07:51,553][02269] KL-divergence is very high: 341.0117
+[2023-08-29 14:07:51,557][02269] KL-divergence is very high: 1256.6940
+[2023-08-29 14:07:52,663][02257] Fps is (10 sec: 17204.5, 60 sec: 17340.0, 300 sec: 17439.2). Total num frames: 7491584. Throughput: 0: 17384.7. Samples: 7090201. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:07:52,663][02257] Avg episode reward: [(0, '-50133.942')]
+[2023-08-29 14:07:53,184][02270] Updated weights for policy 0, policy_version 14656 (0.0002)
+[2023-08-29 14:07:54,335][02269] KL-divergence is very high: 175.2237
+[2023-08-29 14:07:54,347][02269] KL-divergence is very high: 2130.0256
+[2023-08-29 14:07:55,505][02270] Updated weights for policy 0, policy_version 14736 (0.0002)
+[2023-08-29 14:07:55,960][02269] KL-divergence is very high: 155.3420
+[2023-08-29 14:07:55,963][02269] KL-divergence is very high: 2222.6243
+[2023-08-29 14:07:55,971][02269] KL-divergence is very high: 318.4874
+[2023-08-29 14:07:55,975][02269] KL-divergence is very high: 5769.2329
+[2023-08-29 14:07:56,180][02269] KL-divergence is very high: 3364.4924
+[2023-08-29 14:07:57,584][02269] KL-divergence is very high: 385.6371
+[2023-08-29 14:07:57,663][02257] Fps is (10 sec: 17203.4, 60 sec: 17339.7, 300 sec: 17425.4). Total num frames: 7577600. Throughput: 0: 17485.8. Samples: 7196691. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:07:57,663][02257] Avg episode reward: [(0, '-55153.702')]
+[2023-08-29 14:07:58,069][02270] Updated weights for policy 0, policy_version 14816 (0.0002)
+[2023-08-29 14:07:58,958][02269] KL-divergence is very high: 303.0348
+[2023-08-29 14:08:00,344][02270] Updated weights for policy 0, policy_version 14896 (0.0002)
+[2023-08-29 14:08:01,760][02269] KL-divergence is very high: 278.9695
+[2023-08-29 14:08:02,648][02270] Updated weights for policy 0, policy_version 14976 (0.0002)
+[2023-08-29 14:08:02,662][02257] Fps is (10 sec: 17614.1, 60 sec: 17407.9, 300 sec: 17439.3). Total num frames: 7667712. Throughput: 0: 17380.5. Samples: 7245836. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:02,663][02257] Avg episode reward: [(0, '-55153.702')]
+[2023-08-29 14:08:03,512][02269] KL-divergence is very high: 590.2270
+[2023-08-29 14:08:03,521][02269] KL-divergence is very high: 158.2572
+[2023-08-29 14:08:03,524][02269] KL-divergence is very high: 309.8405
+[2023-08-29 14:08:04,914][02270] Updated weights for policy 0, policy_version 15056 (0.0002)
+[2023-08-29 14:08:07,398][02270] Updated weights for policy 0, policy_version 15136 (0.0002)
+[2023-08-29 14:08:07,664][02257] Fps is (10 sec: 17610.9, 60 sec: 17407.2, 300 sec: 17439.2). Total num frames: 7753728. Throughput: 0: 17466.9. Samples: 7353250. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:08:07,664][02257] Avg episode reward: [(0, '-37206.633')]
+[2023-08-29 14:08:09,658][02270] Updated weights for policy 0, policy_version 15216 (0.0002)
+[2023-08-29 14:08:10,322][02269] KL-divergence is very high: 101.6827
+[2023-08-29 14:08:10,330][02269] KL-divergence is very high: 477.4763
+[2023-08-29 14:08:10,333][02269] KL-divergence is very high: 392.9258
+[2023-08-29 14:08:11,863][02270] Updated weights for policy 0, policy_version 15296 (0.0002)
+[2023-08-29 14:08:12,663][02257] Fps is (10 sec: 17611.7, 60 sec: 17476.3, 300 sec: 17453.2). Total num frames: 7843840. Throughput: 0: 17429.1. Samples: 7458834. Policy #0 lag: (min: 4.0, avg: 4.0, max: 4.0)
+[2023-08-29 14:08:12,663][02257] Avg episode reward: [(0, '-37206.633')]
+[2023-08-29 14:08:14,157][02270] Updated weights for policy 0, policy_version 15376 (0.0002)
+[2023-08-29 14:08:14,629][02269] KL-divergence is very high: 317.0595
+[2023-08-29 14:08:15,299][02269] KL-divergence is very high: 125.8953
+[2023-08-29 14:08:16,643][02270] Updated weights for policy 0, policy_version 15456 (0.0002)
+[2023-08-29 14:08:17,663][02257] Fps is (10 sec: 17614.8, 60 sec: 17407.8, 300 sec: 17467.0). Total num frames: 7929856. Throughput: 0: 17485.4. Samples: 7512415. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:08:17,663][02257] Avg episode reward: [(0, '-30395.484')]
+[2023-08-29 14:08:18,845][02270] Updated weights for policy 0, policy_version 15536 (0.0002)
+[2023-08-29 14:08:19,488][02269] KL-divergence is very high: 581.6305
+[2023-08-29 14:08:19,491][02269] KL-divergence is very high: 684.9551
+[2023-08-29 14:08:19,497][02269] KL-divergence is very high: 664.5197
+[2023-08-29 14:08:19,500][02269] KL-divergence is very high: 183.0240
+[2023-08-29 14:08:19,504][02269] KL-divergence is very high: 307.3160
+[2023-08-29 14:08:20,883][02269] KL-divergence is very high: 175.5180
+[2023-08-29 14:08:20,894][02269] KL-divergence is very high: 1270.6976
+[2023-08-29 14:08:21,114][02270] Updated weights for policy 0, policy_version 15616 (0.0002)
+[2023-08-29 14:08:22,664][02257] Fps is (10 sec: 17610.7, 60 sec: 17475.9, 300 sec: 17467.0). Total num frames: 8019968. Throughput: 0: 17472.2. Samples: 7618409. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:08:22,664][02257] Avg episode reward: [(0, '-30395.484')]
+[2023-08-29 14:08:23,381][02270] Updated weights for policy 0, policy_version 15696 (0.0002)
+[2023-08-29 14:08:23,584][02269] KL-divergence is very high: 152.4288
+[2023-08-29 14:08:25,813][02270] Updated weights for policy 0, policy_version 15776 (0.0002)
+[2023-08-29 14:08:27,448][02269] KL-divergence is very high: 16217.2861
+[2023-08-29 14:08:27,654][02269] KL-divergence is very high: 3452.8691
+[2023-08-29 14:08:27,661][02257] Fps is (10 sec: 17615.7, 60 sec: 17408.6, 300 sec: 17467.1). Total num frames: 8105984. Throughput: 0: 17530.5. Samples: 7723380. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:27,661][02257] Avg episode reward: [(0, '-30157.055')]
+[2023-08-29 14:08:28,116][02270] Updated weights for policy 0, policy_version 15856 (0.0002)
+[2023-08-29 14:08:30,347][02270] Updated weights for policy 0, policy_version 15936 (0.0002)
+[2023-08-29 14:08:30,788][02269] KL-divergence is very high: 136.4673
+[2023-08-29 14:08:32,663][02257] Fps is (10 sec: 18024.9, 60 sec: 17544.0, 300 sec: 17480.9). Total num frames: 8200192. Throughput: 0: 17601.4. Samples: 7778309. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:32,663][02257] Avg episode reward: [(0, '-30157.055')]
+[2023-08-29 14:08:32,663][02270] Updated weights for policy 0, policy_version 16016 (0.0002)
+[2023-08-29 14:08:35,159][02270] Updated weights for policy 0, policy_version 16096 (0.0002)
+[2023-08-29 14:08:37,458][02270] Updated weights for policy 0, policy_version 16176 (0.0002)
+[2023-08-29 14:08:37,663][02257] Fps is (10 sec: 17609.9, 60 sec: 17476.4, 300 sec: 17467.0). Total num frames: 8282112. Throughput: 0: 17567.1. Samples: 7880720. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:37,663][02257] Avg episode reward: [(0, '-28447.756')]
+[2023-08-29 14:08:39,750][02270] Updated weights for policy 0, policy_version 16256 (0.0002)
+[2023-08-29 14:08:41,795][02269] KL-divergence is very high: 113.7350
+[2023-08-29 14:08:42,014][02270] Updated weights for policy 0, policy_version 16336 (0.0002)
+[2023-08-29 14:08:42,663][02257] Fps is (10 sec: 17202.9, 60 sec: 17544.8, 300 sec: 17467.0). Total num frames: 8372224. Throughput: 0: 17598.3. Samples: 7988613. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:42,663][02257] Avg episode reward: [(0, '-28447.756')]
+[2023-08-29 14:08:43,103][02269] KL-divergence is very high: 115.7423
+[2023-08-29 14:08:43,764][02269] KL-divergence is very high: 201.4993
+[2023-08-29 14:08:43,979][02269] KL-divergence is very high: 635.2693
+[2023-08-29 14:08:44,467][02270] Updated weights for policy 0, policy_version 16416 (0.0002)
+[2023-08-29 14:08:46,717][02270] Updated weights for policy 0, policy_version 16496 (0.0002)
+[2023-08-29 14:08:47,663][02257] Fps is (10 sec: 18022.0, 60 sec: 17612.8, 300 sec: 17480.9). Total num frames: 8462336. Throughput: 0: 17648.0. Samples: 8040011. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:47,663][02257] Avg episode reward: [(0, '-25523.786')]
+[2023-08-29 14:08:48,976][02270] Updated weights for policy 0, policy_version 16576 (0.0002)
+[2023-08-29 14:08:51,294][02270] Updated weights for policy 0, policy_version 16656 (0.0002)
+[2023-08-29 14:08:52,663][02257] Fps is (10 sec: 17613.5, 60 sec: 17612.9, 300 sec: 17466.9). Total num frames: 8548352. Throughput: 0: 17645.1. Samples: 8147253. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:52,663][02257] Avg episode reward: [(0, '-19712.826')]
+[2023-08-29 14:08:53,763][02270] Updated weights for policy 0, policy_version 16736 (0.0002)
+[2023-08-29 14:08:54,189][02269] KL-divergence is very high: 108.3029
+[2023-08-29 14:08:54,617][02269] KL-divergence is very high: 121.3802
+[2023-08-29 14:08:55,287][02269] KL-divergence is very high: 102.8893
+[2023-08-29 14:08:55,995][02270] Updated weights for policy 0, policy_version 16816 (0.0002)
+[2023-08-29 14:08:57,367][02269] KL-divergence is very high: 622.2882
+[2023-08-29 14:08:57,604][02269] KL-divergence is very high: 773.8061
+[2023-08-29 14:08:57,613][02269] KL-divergence is very high: 190.5741
+[2023-08-29 14:08:57,663][02257] Fps is (10 sec: 17613.0, 60 sec: 17681.0, 300 sec: 17480.9). Total num frames: 8638464. Throughput: 0: 17642.5. Samples: 8252749. Policy #0 lag: (min: 7.0, avg: 7.0, max: 7.0)
+[2023-08-29 14:08:57,663][02257] Avg episode reward: [(0, '-19712.826')]
+[2023-08-29 14:08:58,262][02270] Updated weights for policy 0, policy_version 16896 (0.0002)
+[2023-08-29 14:09:00,273][02269] KL-divergence is very high: 991.2599
+[2023-08-29 14:09:00,284][02269] KL-divergence is very high: 679.9507
+[2023-08-29 14:09:00,484][02269] KL-divergence is very high: 1110.5978
+[2023-08-29 14:09:00,487][02269] KL-divergence is very high: 436.0970
+[2023-08-29 14:09:00,493][02269] KL-divergence is very high: 145.4747
+[2023-08-29 14:09:00,496][02269] KL-divergence is very high: 414.0157
+[2023-08-29 14:09:00,500][02269] KL-divergence is very high: 252.2464
+[2023-08-29 14:09:00,506][02270] Updated weights for policy 0, policy_version 16976 (0.0002)
+[2023-08-29 14:09:02,663][02257] Fps is (10 sec: 17611.9, 60 sec: 17612.6, 300 sec: 17467.0). Total num frames: 8724480. Throughput: 0: 17651.9. Samples: 8306752. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:02,664][02257] Avg episode reward: [(0, '-16945.831')]
+[2023-08-29 14:09:03,006][02270] Updated weights for policy 0, policy_version 17056 (0.0002)
+[2023-08-29 14:09:05,082][02269] KL-divergence is very high: 179.9186
+[2023-08-29 14:09:05,330][02270] Updated weights for policy 0, policy_version 17136 (0.0002)
+[2023-08-29 14:09:06,203][02269] KL-divergence is very high: 333.6711
+[2023-08-29 14:09:06,206][02269] KL-divergence is very high: 325.7532
+[2023-08-29 14:09:06,410][02269] KL-divergence is very high: 131.1154
+[2023-08-29 14:09:06,418][02269] KL-divergence is very high: 185.2010
+[2023-08-29 14:09:06,631][02269] KL-divergence is very high: 350.7987
+[2023-08-29 14:09:06,644][02269] KL-divergence is very high: 792.3060
+[2023-08-29 14:09:06,868][02269] KL-divergence is very high: 365.7035
+[2023-08-29 14:09:06,879][02269] KL-divergence is very high: 114.1643
+[2023-08-29 14:09:07,570][02269] KL-divergence is very high: 493.8705
+[2023-08-29 14:09:07,577][02270] Updated weights for policy 0, policy_version 17216 (0.0003)
+[2023-08-29 14:09:07,664][02257] Fps is (10 sec: 17610.8, 60 sec: 17681.0, 300 sec: 17480.8). Total num frames: 8814592. Throughput: 0: 17611.9. Samples: 8410946. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:07,664][02257] Avg episode reward: [(0, '-16945.831')]
+[2023-08-29 14:09:09,631][02269] KL-divergence is very high: 954.4609
+[2023-08-29 14:09:09,875][02270] Updated weights for policy 0, policy_version 17296 (0.0002)
+[2023-08-29 14:09:12,329][02270] Updated weights for policy 0, policy_version 17376 (0.0002)
+[2023-08-29 14:09:12,663][02257] Fps is (10 sec: 17612.8, 60 sec: 17612.8, 300 sec: 17467.0). Total num frames: 8900608. Throughput: 0: 17598.4. Samples: 8515341. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:12,663][02257] Avg episode reward: [(0, '-15373.723')]
+[2023-08-29 14:09:14,593][02270] Updated weights for policy 0, policy_version 17456 (0.0002)
+[2023-08-29 14:09:16,885][02270] Updated weights for policy 0, policy_version 17536 (0.0002)
+[2023-08-29 14:09:17,663][02257] Fps is (10 sec: 17614.9, 60 sec: 17681.0, 300 sec: 17467.0). Total num frames: 8990720. Throughput: 0: 17567.4. Samples: 8568848. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:09:17,663][02257] Avg episode reward: [(0, '-15373.723')]
+[2023-08-29 14:09:19,400][02270] Updated weights for policy 0, policy_version 17616 (0.0002)
+[2023-08-29 14:09:21,730][02270] Updated weights for policy 0, policy_version 17696 (0.0002)
+[2023-08-29 14:09:22,663][02257] Fps is (10 sec: 17612.6, 60 sec: 17613.1, 300 sec: 17467.0). Total num frames: 9076736. Throughput: 0: 17600.3. Samples: 8672739. Policy #0 lag: (min: 5.0, avg: 5.0, max: 5.0)
+[2023-08-29 14:09:22,663][02257] Avg episode reward: [(0, '-13983.978')]
+[2023-08-29 14:09:22,666][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000017728_9076736.pth...
+[2023-08-29 14:09:22,668][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000010888_5574656.pth
+[2023-08-29 14:09:23,976][02270] Updated weights for policy 0, policy_version 17776 (0.0002)
+[2023-08-29 14:09:26,308][02270] Updated weights for policy 0, policy_version 17856 (0.0002)
+[2023-08-29 14:09:27,664][02257] Fps is (10 sec: 17201.4, 60 sec: 17612.0, 300 sec: 17453.0). Total num frames: 9162752. Throughput: 0: 17573.7. Samples: 8779449. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:09:27,664][02257] Avg episode reward: [(0, '-13983.978')]
+[2023-08-29 14:09:28,735][02270] Updated weights for policy 0, policy_version 17936 (0.0002)
+[2023-08-29 14:09:31,037][02270] Updated weights for policy 0, policy_version 18016 (0.0002)
+[2023-08-29 14:09:32,662][02257] Fps is (10 sec: 17614.7, 60 sec: 17544.7, 300 sec: 17453.2). Total num frames: 9252864. Throughput: 0: 17570.1. Samples: 8830649. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:09:32,662][02257] Avg episode reward: [(0, '-13791.767')]
+[2023-08-29 14:09:33,261][02270] Updated weights for policy 0, policy_version 18096 (0.0002)
+[2023-08-29 14:09:35,634][02270] Updated weights for policy 0, policy_version 18176 (0.0002)
+[2023-08-29 14:09:37,664][02257] Fps is (10 sec: 17203.3, 60 sec: 17544.2, 300 sec: 17425.3). Total num frames: 9334784. Throughput: 0: 17564.5. Samples: 8937681. Policy #0 lag: (min: 2.0, avg: 2.0, max: 2.0)
+[2023-08-29 14:09:37,664][02257] Avg episode reward: [(0, '-14257.273')]
+[2023-08-29 14:09:38,174][02270] Updated weights for policy 0, policy_version 18256 (0.0002)
+[2023-08-29 14:09:40,379][02270] Updated weights for policy 0, policy_version 18336 (0.0002)
+[2023-08-29 14:09:42,663][02257] Fps is (10 sec: 17202.0, 60 sec: 17544.6, 300 sec: 17453.1). Total num frames: 9424896. Throughput: 0: 17521.0. Samples: 9041190. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:42,663][02257] Avg episode reward: [(0, '-14257.273')]
+[2023-08-29 14:09:42,721][02270] Updated weights for policy 0, policy_version 18416 (0.0002)
+[2023-08-29 14:09:44,952][02270] Updated weights for policy 0, policy_version 18496 (0.0002)
+[2023-08-29 14:09:47,403][02270] Updated weights for policy 0, policy_version 18576 (0.0002)
+[2023-08-29 14:09:47,664][02257] Fps is (10 sec: 18022.1, 60 sec: 17544.2, 300 sec: 17439.2). Total num frames: 9515008. Throughput: 0: 17535.4. Samples: 9095863. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:47,664][02257] Avg episode reward: [(0, '-11892.660')]
+[2023-08-29 14:09:49,598][02270] Updated weights for policy 0, policy_version 18656 (0.0002)
+[2023-08-29 14:09:51,867][02270] Updated weights for policy 0, policy_version 18736 (0.0002)
+[2023-08-29 14:09:52,662][02257] Fps is (10 sec: 18024.5, 60 sec: 17613.1, 300 sec: 17453.2). Total num frames: 9605120. Throughput: 0: 17580.9. Samples: 9202042. Policy #0 lag: (min: 1.0, avg: 1.0, max: 1.0)
+[2023-08-29 14:09:52,662][02257] Avg episode reward: [(0, '-11892.660')]
+[2023-08-29 14:09:54,090][02270] Updated weights for policy 0, policy_version 18816 (0.0002)
+[2023-08-29 14:09:56,702][02270] Updated weights for policy 0, policy_version 18896 (0.0002)
+[2023-08-29 14:09:57,664][02257] Fps is (10 sec: 17613.4, 60 sec: 17544.3, 300 sec: 17453.0). Total num frames: 9691136. Throughput: 0: 17559.2. Samples: 9305518. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:09:57,664][02257] Avg episode reward: [(0, '-11891.927')]
+[2023-08-29 14:09:58,993][02270] Updated weights for policy 0, policy_version 18976 (0.0002)
+[2023-08-29 14:10:01,308][02270] Updated weights for policy 0, policy_version 19056 (0.0002)
+[2023-08-29 14:10:02,662][02257] Fps is (10 sec: 17203.4, 60 sec: 17545.0, 300 sec: 17453.2). Total num frames: 9777152. Throughput: 0: 17567.9. Samples: 9359376. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:10:02,662][02257] Avg episode reward: [(0, '-11891.927')]
+[2023-08-29 14:10:03,529][02270] Updated weights for policy 0, policy_version 19136 (0.0002)
+[2023-08-29 14:10:06,029][02270] Updated weights for policy 0, policy_version 19216 (0.0002)
+[2023-08-29 14:10:07,663][02257] Fps is (10 sec: 17204.7, 60 sec: 17476.6, 300 sec: 17453.1). Total num frames: 9863168. Throughput: 0: 17557.7. Samples: 9462834. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:10:07,663][02257] Avg episode reward: [(0, '-11534.683')]
+[2023-08-29 14:10:08,409][02270] Updated weights for policy 0, policy_version 19296 (0.0002)
+[2023-08-29 14:10:10,710][02270] Updated weights for policy 0, policy_version 19376 (0.0002)
+[2023-08-29 14:10:12,662][02257] Fps is (10 sec: 17612.6, 60 sec: 17544.9, 300 sec: 17467.1). Total num frames: 9953280. Throughput: 0: 17529.5. Samples: 9568235. Policy #0 lag: (min: 3.0, avg: 3.0, max: 3.0)
+[2023-08-29 14:10:12,662][02257] Avg episode reward: [(0, '-11534.683')]
+[2023-08-29 14:10:13,053][02270] Updated weights for policy 0, policy_version 19456 (0.0002)
+[2023-08-29 14:10:15,571][02270] Updated weights for policy 0, policy_version 19536 (0.0002)
+[2023-08-29 14:10:15,784][02275] Stopping RolloutWorker_w5...
+[2023-08-29 14:10:15,784][02257] Component RolloutWorker_w5 stopped!
+[2023-08-29 14:10:15,784][02274] Stopping RolloutWorker_w4...
+[2023-08-29 14:10:15,784][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000019544_10006528.pth...
+[2023-08-29 14:10:15,784][02278] Stopping RolloutWorker_w3...
+[2023-08-29 14:10:15,784][02275] Loop rollout_proc5_evt_loop terminating...
+[2023-08-29 14:10:15,784][02257] Component RolloutWorker_w3 stopped!
+[2023-08-29 14:10:15,784][02257] Component RolloutWorker_w4 stopped!
+[2023-08-29 14:10:15,784][02278] Loop rollout_proc3_evt_loop terminating...
+[2023-08-29 14:10:15,784][02274] Loop rollout_proc4_evt_loop terminating...
+[2023-08-29 14:10:15,784][02277] Stopping RolloutWorker_w7...
+[2023-08-29 14:10:15,784][02272] Stopping RolloutWorker_w1...
+[2023-08-29 14:10:15,784][02257] Component RolloutWorker_w1 stopped!
+[2023-08-29 14:10:15,784][02277] Loop rollout_proc7_evt_loop terminating...
+[2023-08-29 14:10:15,784][02276] Stopping RolloutWorker_w6...
+[2023-08-29 14:10:15,784][02273] Stopping RolloutWorker_w2...
+[2023-08-29 14:10:15,785][02276] Loop rollout_proc6_evt_loop terminating...
+[2023-08-29 14:10:15,785][02273] Loop rollout_proc2_evt_loop terminating...
+[2023-08-29 14:10:15,785][02272] Loop rollout_proc1_evt_loop terminating...
+[2023-08-29 14:10:15,785][02257] Component RolloutWorker_w6 stopped!
+[2023-08-29 14:10:15,785][02257] Component RolloutWorker_w7 stopped!
+[2023-08-29 14:10:15,785][02257] Component RolloutWorker_w2 stopped!
+[2023-08-29 14:10:15,785][02257] Component RolloutWorker_w0 stopped!
+[2023-08-29 14:10:15,784][02271] Stopping RolloutWorker_w0...
+[2023-08-29 14:10:15,786][02269] Removing /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000014296_7319552.pth
+[2023-08-29 14:10:15,786][02271] Loop rollout_proc0_evt_loop terminating...
+[2023-08-29 14:10:15,787][02269] Saving new best policy, reward=-10330.609!
+[2023-08-29 14:10:15,790][02269] Stopping Batcher_0...
+[2023-08-29 14:10:15,790][02269] Loop batcher_evt_loop terminating...
+[2023-08-29 14:10:15,790][02257] Component Batcher_0 stopped!
+[2023-08-29 14:10:15,790][02269] Saving /Users/xinsonglin/Triped/train_dir/./example_gym_triped_sim-v0/checkpoint_p0/checkpoint_000019544_10006528.pth...
+[2023-08-29 14:10:15,793][02269] Stopping LearnerWorker_p0...
+[2023-08-29 14:10:15,793][02269] Loop learner_proc0_evt_loop terminating...
+[2023-08-29 14:10:15,794][02257] Component LearnerWorker_p0 stopped!
+[2023-08-29 14:10:15,872][02270] Weights refcount: 2 0
+[2023-08-29 14:10:15,872][02270] Stopping InferenceWorker_p0-w0...
+[2023-08-29 14:10:15,873][02270] Loop inference_proc0-0_evt_loop terminating...
+[2023-08-29 14:10:15,880][02257] Component InferenceWorker_p0-w0 stopped!
+[2023-08-29 14:10:15,880][02257] Waiting for process learner_proc0 to stop...
+[2023-08-29 14:10:16,237][02257] Waiting for process inference_proc0-0 to join...
+[2023-08-29 14:10:16,245][02257] Waiting for process rollout_proc0 to join...
+[2023-08-29 14:10:16,273][02257] Waiting for process rollout_proc1 to join...
+[2023-08-29 14:10:16,273][02257] Waiting for process rollout_proc2 to join...
+[2023-08-29 14:10:16,275][02257] Waiting for process rollout_proc3 to join...
+[2023-08-29 14:10:16,275][02257] Waiting for process rollout_proc4 to join...
+[2023-08-29 14:10:16,275][02257] Waiting for process rollout_proc5 to join...
+[2023-08-29 14:10:16,276][02257] Waiting for process rollout_proc6 to join...
+[2023-08-29 14:10:16,276][02257] Waiting for process rollout_proc7 to join...
+[2023-08-29 14:10:16,276][02257] Batcher 0 profile tree view:
+batching: 2.7798, releasing_batches: 0.7744
+[2023-08-29 14:10:16,276][02257] InferenceWorker_p0-w0 profile tree view:
+wait_policy: 0.0063
+  wait_policy_total: 111.7105
+update_model: 6.2085
+  weight_update: 0.0002
+one_step: 0.0004
+  handle_policy_step: 382.6014
+    deserialize: 12.7581, stack: 3.6665, obs_to_device_normalize: 62.9801, forward: 164.5476, send_messages: 71.3895
+    prepare_outputs: 33.3811
+      to_cpu: 4.6354
+[2023-08-29 14:10:16,276][02257] Learner 0 profile tree view:
+misc: 0.0036, prepare_batch: 5.4253
+train: 50.5547
+  epoch_init: 0.0216, minibatch_init: 0.5366, losses_postprocess: 0.7788, kl_divergence: 0.2874, after_optimizer: 0.3886
+  calculate_losses: 22.0665
+    losses_init: 0.0250, forward_head: 9.9836, bptt_initial: 0.0565, bptt: 0.0619, tail: 5.6179, advantages_returns: 0.5238, losses: 5.1515
+  update: 25.7374
+    clip: 2.3725
+[2023-08-29 14:10:16,276][02257] RolloutWorker_w0 profile tree view:
+wait_for_trajectories: 0.3376, enqueue_policy_requests: 22.5950, env_step: 117.5242, overhead: 16.5223, complete_rollouts: 0.9106
+save_policy_outputs: 48.0349
+  split_output_tensors: 16.7151
+[2023-08-29 14:10:16,276][02257] RolloutWorker_w7 profile tree view:
+wait_for_trajectories: 0.3140, enqueue_policy_requests: 22.7185, env_step: 117.8189, overhead: 16.0891, complete_rollouts: 0.9002
+save_policy_outputs: 47.8100
+  split_output_tensors: 16.5837
+[2023-08-29 14:10:16,277][02257] Loop Runner_EvtLoop terminating...
+[2023-08-29 14:10:16,277][02257] Runner profile tree view:
+main_loop: 552.3791
+[2023-08-29 14:10:16,277][02257] Collected {0: 10006528}, FPS: 17433.1

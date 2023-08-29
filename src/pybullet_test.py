@@ -22,21 +22,22 @@ print(p.getBasePositionAndOrientation(triped))
 revolute_indices = [3, 8, 13, 5, 10, 15, 7, 12, 17]
 
 start_time = time.time()
-for _ in range(1000):
-  # for i, joint_index in enumerate(revolute_indices):
-  #   try:
-  #     angle = p.readUserDebugParameter(angles_sliders[i])
-  #     p.setJointMotorControl2(triped, joint_index, p.POSITION_CONTROL, targetPosition=angle)
-  #   except:
-  #     print("Error reading user input")
-  # try:
-  #   finish = p.readUserDebugParameter(finish_button)
-  #   if finish:
-  #     p.resetSimulation()
-  #     plane = p.loadURDF('plane.urdf')
-  #     triped = p.loadURDF('../drawings/Triped_description/urdf/Triped.xacro', [0, 0, 0.1])
-  # except:
-  #   pass
+for _ in range(10000):
+  angles = []
+  try:
+    for i, joint_index in enumerate(revolute_indices):
+      angle = p.readUserDebugParameter(angles_sliders[i])
+      angles.append(angle)
+    p.setJointMotorControlArray(triped, revolute_indices, p.POSITION_CONTROL, targetPositions=angles)
+    
+    finish = p.readUserDebugParameter(finish_button)
+    if finish:
+      p.resetSimulation()
+      plane = p.loadURDF('plane.urdf')
+      triped = p.loadURDF('../drawings/Triped_description/urdf/Triped.xacro', [0, 0, 0.1])
+  except:
+    print("Error reading user input")
+
   p.stepSimulation()
-print(1000/(time.time()-start_time))
+print(10000/(time.time()-start_time))
 p.disconnect()

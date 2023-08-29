@@ -8,7 +8,10 @@ info = env.reset()
 print(env.observation_space)
 print(env.action_space)
 
-while True:
-  info = env.step(np.zeros(9))
-  print(info)
-  time.sleep(1)
+start_time = time.time()
+for _ in range(10000):
+  # we are gonna do a position controller
+  info = env.step([np.sin(time.time()/10)]*9)
+  # print(info)
+  # time.sleep(0.01)
+print(10000/(time.time()-start_time))

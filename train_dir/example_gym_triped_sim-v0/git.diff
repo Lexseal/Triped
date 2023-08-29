@@ -1,0 +1,193 @@
+diff --git a/.gitignore b/.gitignore
+index a326fca..f506dfa 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,3 +1,5 @@
+ .vscode/
+ .env/
+ **/.DS_Store
++sample-factory/
++
+diff --git a/readme.md b/readme.md
+index 0922563..3142fb1 100644
+--- a/readme.md
++++ b/readme.md
+@@ -31,3 +31,23 @@ After removing all the collision bodies other than the feet, the simulation ran
+ After reducing the complexity of the feet, the simulation ran 208fps???
+ 
+ Seems to be within run to run variation. I guess the simplification is not worth it.
++
++## Observation, Action, Reward
++
++### Observation
++
++In the spirit of making it easy to transfer the algorithm to real life, the observations will only consist of things that will be easy to obtain in real life. For now, the observations will consist of the angle and agular speed of the base_link in quarternion as well as the z-height of the base_link.
++
++### Action
++
++The action will be the desired angle of the 9 servos.
++
++### Reward
++
++This was a tricky one to design. For now I will just want the thing to follow the x-axis. There are three things to take into consideration:
++
++1. Higher the x value the better
++2. Cannot go off the x-axis
++3. Cannot tilt too much.
++
++Keeping these in mind, when the robot is at least the +-0.1m apart from the x-axis, the reward will be the negative y value. When the robot is within, it will be the x value times the normal vector of the base_link dotted with the z-axis. This means the further the robot walks the more reward it gets but it must also stay upright.
+diff --git a/src/gym_test.py b/src/gym_test.py
+index d0b40e0..d2278f5 100644
+--- a/src/gym_test.py
++++ b/src/gym_test.py
+@@ -8,7 +8,10 @@ info = env.reset()
+ print(env.observation_space)
+ print(env.action_space)
+ 
+-while True:
+-  info = env.step(np.zeros(9))
+-  print(info)
+-  time.sleep(1)
++start_time = time.time()
++for _ in range(10000):
++  # we are gonna do a position controller
++  info = env.step([np.sin(time.time()/10)]*9)
++  # print(info)
++  # time.sleep(0.01)
++print(10000/(time.time()-start_time))
+diff --git a/src/pybullet_test.py b/src/pybullet_test.py
+index c93702f..75c05cb 100644
+--- a/src/pybullet_test.py
++++ b/src/pybullet_test.py
+@@ -22,21 +22,22 @@ print(p.getBasePositionAndOrientation(triped))
+ revolute_indices = [3, 8, 13, 5, 10, 15, 7, 12, 17]
+ 
+ start_time = time.time()
+-for _ in range(1000):
+-  # for i, joint_index in enumerate(revolute_indices):
+-  #   try:
+-  #     angle = p.readUserDebugParameter(angles_sliders[i])
+-  #     p.setJointMotorControl2(triped, joint_index, p.POSITION_CONTROL, targetPosition=angle)
+-  #   except:
+-  #     print("Error reading user input")
+-  # try:
+-  #   finish = p.readUserDebugParameter(finish_button)
+-  #   if finish:
+-  #     p.resetSimulation()
+-  #     plane = p.loadURDF('plane.urdf')
+-  #     triped = p.loadURDF('../drawings/Triped_description/urdf/Triped.xacro', [0, 0, 0.1])
+-  # except:
+-  #   pass
++for _ in range(10000):
++  angles = []
++  try:
++    for i, joint_index in enumerate(revolute_indices):
++      angle = p.readUserDebugParameter(angles_sliders[i])
++      angles.append(angle)
++    p.setJointMotorControlArray(triped, revolute_indices, p.POSITION_CONTROL, targetPositions=angles)
++    
++    finish = p.readUserDebugParameter(finish_button)
++    if finish:
++      p.resetSimulation()
++      plane = p.loadURDF('plane.urdf')
++      triped = p.loadURDF('../drawings/Triped_description/urdf/Triped.xacro', [0, 0, 0.1])
++  except:
++    print("Error reading user input")
++
+   p.stepSimulation()
+-print(1000/(time.time()-start_time))
++print(10000/(time.time()-start_time))
+ p.disconnect()
+diff --git a/src/triped_sim/envs/triped_sim_env.py b/src/triped_sim/envs/triped_sim_env.py
+index 519d4dd..ed33cd0 100644
+--- a/src/triped_sim/envs/triped_sim_env.py
++++ b/src/triped_sim/envs/triped_sim_env.py
+@@ -11,44 +11,77 @@ class TripedSimSimpleEnv(gymnasium.Env):
+ 
+     output = p.GUI if render_mode == "human" else p.DIRECT
+     self.physicsClient = p.connect(output)
+-    p.setGravity(0, 0, -10)
+     p.setAdditionalSearchPath(pybullet_data.getDataPath())  # this adds urdf paths
+ 
+     self.revolute_indices = [3, 8, 13, 5, 10, 15, 7, 12, 17]
+ 
++    self.xyz = None
++    self.q = None
++    self.omega = None
++
++    self.frames = 0
++    self.frame_limit = 10000
++
+   def step(self, action):
+-    for i, joint_index in enumerate(self.revolute_indices):
+-      p.setJointMotorControl2(self.triped, joint_index, p.POSITION_CONTROL, targetPosition=action[i])
++    # print("action: ", action)
++    self.frames += 1
++    p.setJointMotorControlArray(self.triped, self.revolute_indices, p.POSITION_CONTROL, targetPositions=action)
+     p.stepSimulation()
+     observation = self._get_observation()
+     reward = self._get_reward()
+-    return observation, reward, False, False, {}
++    return observation, reward, self.frames>self.frame_limit, False, {}
+ 
+   def _load_models(self):
+     self.plane = p.loadURDF("plane.urdf")
+     current_dir = os.path.dirname(os.path.realpath(__file__))
+     urdf_path = os.path.join(current_dir, "../../../drawings/Triped_description/urdf/Triped.xacro")
+     self.triped = p.loadURDF(urdf_path, [0, 0, 0.1])  # drop the model at z height 0.1m
++    p.setGravity(0, 0, -10)
+ 
+-  def reset(self):
++  def reset(self, seed=None, options=None):
++    print("reset called")
++    self.frames = 0
+     p.resetSimulation()
+     self._load_models()
++    p.stepSimulation()
++    return self._get_observation(), {}
+ 
+   def render(self):
+     pass
+ 
+   def _get_reward(self):
+-    return 0
++    """ must have called _get_observation before calling this function """
++    # first check if we are within +-0.1m of the x-axis
++    if abs(self.xyz[1]) > 0.1:
++      return -abs(self.xyz[1])
++    else:
++      # get the z-axis of the baselink w.r.t. world
++      # to do so, we first the get the rotation matrix of the baselink w.r.t. world
++      rot_matrix = p.getMatrixFromQuaternion(self.q)
++      discount = rot_matrix[-1]  # discount is dotting the frame z-axis with the world z-axis
++      if discount < 0:
++        return discount*abs(self.xyz[0])
++      return discount*self.xyz[0]  # the further on x-axis the better
+ 
+   def _get_observation(self):
+-    (xyz, q) = p.getBasePositionAndOrientation(self.triped)
+-    obs = list(p.getMatrixFromQuaternion(q))
+-    obs.append(xyz[-1])
++    (self.xyz, self.q) = p.getBasePositionAndOrientation(self.triped)
++    self.omega = p.getBaseVelocity(self.triped)[1]
++    obs = list(self.q)  # start with the orientation
++    obs += list(self.omega)
++    obs.append(self.xyz[-1])  # add the height
++    # # get the joint angles for all 9 revolute joints
++    # for joint_index in self.revolute_indices:
++    #   joint_state = p.getJointState(self.triped, joint_index)
++    #   obs.append(joint_state[0])
++    # print("obs: ", obs)
+     return np.array(obs)
+ 
+   def _observation_spec(self):
+-    # we have the rotation matrix of the baselink w.r.t. word and its height
+-    return gymnasium.spaces.Box(-1, 1, shape=(10,))
++    """
++    we have the quaternion of the baselink w.r.t. word,
++    the height of the baselink w.r.t. word, and
++    """
++    return gymnasium.spaces.Box(-1, 1, shape=(8,))
+ 
+   def _action_spec(self):
+     # we have 9 revolute joints
