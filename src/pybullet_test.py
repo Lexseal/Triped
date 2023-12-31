@@ -28,7 +28,8 @@ for _ in range(10000):
     for i, joint_index in enumerate(revolute_indices):
       angle = p.readUserDebugParameter(angles_sliders[i])
       angles.append(angle)
-    p.setJointMotorControlArray(triped, revolute_indices, p.POSITION_CONTROL, targetPositions=angles)
+    p.setJointMotorControlArray(triped, revolute_indices, \
+                                p.POSITION_CONTROL, targetPositions=angles, forces=[0.25]*9)
     
     finish = p.readUserDebugParameter(finish_button)
     if finish:

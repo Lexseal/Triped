@@ -2,6 +2,9 @@
 
 This is a repo containing hardware, electrical and software components of a tripedal walker robot.
 
+## Demo
+![demo.gif](demo.gif)
+
 ## Motivation
 
 Ever since the early 2000s, people have been developing quadrupeds and bipeds such as robot dogs and humanoids. However, there is less effort directed towards tripedal robots. Although they lack the stability of quadrupedal robots and also may be more mechanically complex than bipedal robots, tripeds are interesting in two regards:
@@ -51,3 +54,7 @@ This was a tricky one to design. For now I will just want the thing to follow th
 3. Cannot tilt too much.
 
 Keeping these in mind, when the robot is at least the +-0.1m apart from the x-axis, the reward will be the negative y value. When the robot is within, it will be the x value times the normal vector of the base_link dotted with the z-axis. This means the further the robot walks the more reward it gets but it must also stay upright.
+
+## Notes
+
+Robot did walk but badly. It was creeping on the floor. Now, after long training, it figured out a strategy to launch itself in the air. This means I need to lower the maximum joint speed and torque in the simulation.
